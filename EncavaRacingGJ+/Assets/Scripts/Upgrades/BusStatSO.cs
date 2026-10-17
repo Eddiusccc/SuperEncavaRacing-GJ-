@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BusStat", menuName = "BusStat")]
 public class BusStatSO : ScriptableObject
 {
-    public Stat[] stats = new Stat[Enum.GetValues(typeof(BusStats)).Length];
+    public Stat[] stats = new Stat[Enum.GetValues(typeof(BusStatsLegacy)).Length];
 
 
 
@@ -12,7 +12,7 @@ public class BusStatSO : ScriptableObject
     {
         for (int i = 0; i < stats.Length; i++)
         {
-            stats[i].stat = (BusStats)i;
+            stats[i].stat = (BusStatsLegacy)i;
 
             stats[i].statName = stats[i].stat.ToString();
         }
@@ -23,7 +23,7 @@ public struct Stat
 {
     public string statName;
     public float value;
-    public BusStats stat;
+    public BusStatsLegacy stat;
 
     public void AddValue(float value)
     {

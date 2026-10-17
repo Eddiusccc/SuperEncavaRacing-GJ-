@@ -9,7 +9,7 @@ public class UpgradeHandler : MonoBehaviour
 
     #region UPGRADE STAT
 
-    public Stat GetStat(BusStats type)
+    public Stat GetStat(BusStatsLegacy type)
     {
         foreach (var item in busStats.stats)
         {
@@ -21,7 +21,7 @@ public class UpgradeHandler : MonoBehaviour
         return new Stat();
     }
 
-    public void UpgradeBusStat(BusStats type, float value, bool isMulti = false)
+    public void UpgradeBusStat(BusStatsLegacy type, float value, bool isMulti = false)
     {
         float valueToAdd = value;
         Stat s = GetStat(type);

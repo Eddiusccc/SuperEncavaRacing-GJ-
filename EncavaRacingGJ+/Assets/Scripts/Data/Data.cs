@@ -17,7 +17,7 @@ public enum GameState
 {
     Gameplay, UpgradeTree, Pause
 }
-public enum BusStats
+public enum BusStatsLegacy
 {
     TopSpeed, Acceleration, BrakeForce, TractionForce, SuspensionForce,
     SteeringForce, NitroCooldownReduction, TotalCapacity, Tips,
