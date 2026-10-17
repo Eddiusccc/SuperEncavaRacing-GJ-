@@ -4,10 +4,12 @@ using InputMap;
 public class InputController : MonoBehaviour, InputMap.PlayerInput.IGameplayActions
 {
     InputMap.PlayerInput input;
+    CarController carController;
     private void Awake()
     {
         input = new InputMap.PlayerInput();
         input.Gameplay.AddCallbacks(this);
+        carController = FindAnyObjectByType<CarController>();
     }
     private void OnEnable()
     {
@@ -25,16 +27,16 @@ public class InputController : MonoBehaviour, InputMap.PlayerInput.IGameplayActi
 
     public void OnBreak(InputAction.CallbackContext context)
     {
-        Debug.Log("Break");
+        carController.SetBrakeInput(context.ReadValue<float>());
     }
 
     public void OnGas(InputAction.CallbackContext context)
     {
-        Debug.Log("Gas");
+        carController.SetGasInput(context.ReadValue<float>());
     }
 
     public void OnSteer(InputAction.CallbackContext context)
     {
-        Debug.Log("Steer");
+        carController.SetSteerInput(context.ReadValue<float>());
     }
 }
