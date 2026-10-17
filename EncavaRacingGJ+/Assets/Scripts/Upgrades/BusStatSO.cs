@@ -24,4 +24,9 @@ public struct Stat
     public string statName;
     public float value;
     public BusStats stat;
+
+    public void AddValue(float value)
+    {
+        this.value += value;
+    }
 }
