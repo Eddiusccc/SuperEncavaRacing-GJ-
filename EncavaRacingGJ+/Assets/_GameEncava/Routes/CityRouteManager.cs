@@ -280,7 +280,6 @@ public class CityRouteManager : MonoBehaviour
         // Publicar eventos específicos
         EventBus.Publish(new PickupStopsCountChanged(waitingOriginStops.Count, totalWaitingPassengers));
         EventBus.Publish(new DropoffStopsCountChanged(pendingDestStops.Count, totalOnboardPassengers));
-        EventBus.Publish(new CityCallsUpdated(waitingOriginStops.Count));
     }
 
     /// <summary>
