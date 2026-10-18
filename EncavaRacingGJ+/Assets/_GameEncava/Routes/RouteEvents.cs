@@ -68,3 +68,42 @@ public readonly struct TargetDestinationChanged
         IsDropOff = isDropOff;
     }
 }
+
+/// <summary>
+/// Evento que notifica la cantidad de paradas de la ciudad que están esperando recogida.
+/// </summary>
+public readonly struct PickupStopsCountChanged
+{
+    public readonly int WaitingStopsCount;
+    public readonly int TotalWaitingPassengers;
+
+    public PickupStopsCountChanged(int waitingStopsCount, int totalWaitingPassengers)
+    {
+        WaitingStopsCount = waitingStopsCount;
+        TotalWaitingPassengers = totalWaitingPassengers;
+    }
+}
+
+/// <summary>
+/// Evento que notifica la cantidad de paradas destino pendientes de entrega según los pasajeros a bordo.
+/// </summary>
+public readonly struct DropoffStopsCountChanged
+{
+    public readonly int PendingDropoffStopsCount;
+    public readonly int TotalOnboardPassengers;
+
+    public DropoffStopsCountChanged(int pendingDropoffStopsCount, int totalOnboardPassengers)
+    {
+        PendingDropoffStopsCount = pendingDropoffStopsCount;
+        TotalOnboardPassengers = totalOnboardPassengers;
+    }
+}
+
+/// <summary>
+/// Evento de conveniencia que reporta el total de llamadas en espera.
+/// </summary>
+public readonly struct CityCallsUpdated
+{
+    public readonly int WaitingCalls;
+    public CityCallsUpdated(int waitingCalls) => WaitingCalls = waitingCalls;
+}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// Controla el flujo de la interfaz de usuario basándose en el estado global del juego.
-/// Escucha los cambios de estado del juego y activa las pantallas correspondientes.
+/// Utiliza ScreenManager para apilar y desapilar pantallas ordenadamente.
 /// </summary>
 public class UIFlowController : MonoBehaviour
 {
@@ -18,54 +18,68 @@ public class UIFlowController : MonoBehaviour
     [SerializeField] UIScreen gameOverScreen;
     [SerializeField] UIScreen shopScreen;
 
-    /// <summary>
-    /// Inicializa las referencias necesarias si no han sido asignadas en el inspector.
-    /// </summary>
     void Awake()
     {
         if (screens == null) screens = GetComponent<ScreenManager>();
     }
 
-    /// <summary>
-    /// Se suscribe a los eventos de cambio de estado del juego al activarse el componente.
-    /// </summary>
     void OnEnable()  => EventBus.Subscribe<GameStateChanged>(OnGameStateChanged);
-
-    /// <summary>
-    /// Se desuscribe de los eventos de cambio de estado del juego al desactivarse el componente.
-    /// </summary>
     void OnDisable() => EventBus.Unsubscribe<GameStateChanged>(OnGameStateChanged);
 
-    /// <summary>
-    /// Maneja el cambio de estado del juego y activa la pantalla correspondiente.
-    /// </summary>
-    /// <param name="e">Datos del evento de cambio de estado.</param>
+    void Start()
+    {
+        // Garantiza que al iniciar el juego se muestre la pantalla correcta según GameFlow,
+        // incluso si el evento inicial se disparó antes de OnEnable.
+        var flow = FindFirstObjectByType<GameFlow>();
+        GameState initial = flow != null ? flow.CurrentState : GameState.Menu;
+        ApplyState(initial, GameState.Menu);
+    }
+
     void OnGameStateChanged(GameStateChanged e)
+    {
+        ApplyState(e.Current, e.Previous);
+    }
+
+    void ApplyState(GameState current, GameState previous)
     {
         if (screens == null) return;
 
-        screens.Clear();
-
-        switch (e.Current)
+        switch (current)
         {
             case GameState.Menu:
-                if (menuScreen != null) menuScreen.Show();
+                screens.Clear();
+                if (menuScreen != null) screens.Push(menuScreen);
                 break;
 
             case GameState.Playing:
-                if (hudScreen != null) hudScreen.Show();
+                // Si venimos de Pausa, basta con hacer Pop() de la pantalla de pausa
+                if (previous == GameState.Paused && screens.ActiveScreensCount > 1)
+                {
+                    screens.Pop();
+                }
+                else
+                {
+                    screens.Clear();
+                    if (hudScreen != null) screens.Push(hudScreen);
+                }
                 break;
 
             case GameState.Paused:
-                if (pauseScreen != null) pauseScreen.Show();
+                // Apilar la pausa encima del HUD sin destruirlo
+                if (pauseScreen != null)
+                {
+                    screens.Push(pauseScreen, hidePrevious: false);
+                }
                 break;
 
             case GameState.GameOver:
-                if (gameOverScreen != null) gameOverScreen.Show();
+                screens.Clear();
+                if (gameOverScreen != null) screens.Push(gameOverScreen);
                 break;
 
             case GameState.Shop:
-                if (shopScreen != null) shopScreen.Show();
+                screens.Clear();
+                if (shopScreen != null) screens.Push(shopScreen);
                 break;
         }
     }

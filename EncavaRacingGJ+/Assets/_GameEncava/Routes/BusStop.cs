@@ -1,25 +1,47 @@
 using Framework.Core;
 using UnityEngine;
 
+/// <summary>
+/// Representa una parada de autobús a lo largo de una ruta.
+/// Detecta la llegada del autobús, verifica que baje la velocidad y permanezca
+/// detenido el tiempo necesario antes de notificar el evento de llegada (<see cref="BusArrivedAtStop"/>).
+/// Controla también los indicadores visuales de recogida y bajada de pasajeros.
+/// </summary>
 [RequireComponent(typeof(Collider))]
 public class BusStop : MonoBehaviour
 {
     [Header("Configuración")]
+    [Tooltip("Índice de la parada en la secuencia de la ruta.")]
     [SerializeField] int stopIndex;
+
+    [Tooltip("Nombre descriptivo de la parada para UI o depuración.")]
     [SerializeField] string stopName = "Parada";
-    [SerializeField] float maxEnterSpeed = 8f;   // m/s
-    [SerializeField] float dwellTime = 0.5f;     // segundos detenido para subir/bajar
+
+    [Tooltip("Velocidad máxima hacia adelante (en m/s) a la que debe ir el bus para empezar a contar el tiempo de parada.")]
+    [SerializeField] float maxEnterSpeed = 8f;
+
+    [Tooltip("Tiempo mínimo en segundos que el bus debe permanecer por debajo de la velocidad máxima para completar la parada.")]
+    [SerializeField] float dwellTime = 0.5f;
 
     [Header("Indicadores Visuales")]
-    [SerializeField] GameObject indicatorPickup;   // Indicador de que aquí hay pasajeros esperando
-    [SerializeField] GameObject indicatorDropoff;  // Indicador de que esta parada es destino de llegada
+    [Tooltip("Objeto visual que se activa cuando hay pasajeros esperando ser recogidos en esta parada.")]
+    [SerializeField] GameObject indicatorPickup;
 
+    [Tooltip("Objeto visual que se activa cuando esta parada es el destino para dejar pasajeros.")]
+    [SerializeField] GameObject indicatorDropoff;
+
+    /// <summary>
+    /// Obtiene o establece el índice numérico de la parada dentro de la ruta.
+    /// </summary>
     public int Index
     {
         get => stopIndex;
         set => stopIndex = value;
     }
 
+    /// <summary>
+    /// Nombre descriptivo asignado a esta parada.
+    /// </summary>
     public string StopName => stopName;
 
     BusMotor bus;
@@ -31,6 +53,11 @@ public class BusStop : MonoBehaviour
         SetState(hasPickup: false, hasDropoff: false);
     }
 
+    /// <summary>
+    /// Actualiza la visibilidad de los indicadores de recogida y bajada de pasajeros.
+    /// </summary>
+    /// <param name="hasPickup">Indica si hay pasajeros esperando para subir.</param>
+    /// <param name="hasDropoff">Indica si hay pasajeros a bordo con destino a esta parada.</param>
     public void SetState(bool hasPickup, bool hasDropoff)
     {
         if (indicatorPickup != null) indicatorPickup.SetActive(hasPickup);
@@ -57,6 +84,10 @@ public class BusStop : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Verifica si el autobús dentro del área de la parada mantiene una velocidad suficientemente baja
+    /// durante el tiempo configurado (<see cref="dwellTime"/>) para publicar el evento de llegada.
+    /// </summary>
     void Update()
     {
         if (bus == null || servedInThisVisit) return;

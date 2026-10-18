@@ -16,29 +16,27 @@ public class ShopScreen : UIScreen
 
     [Header("Elementos de UI")]
     [SerializeField] TMP_Text moneyLabel;
-    [SerializeField] Button startRunButton;
 
     /// <summary>
     /// Inicializa las dependencias buscando los servicios necesarios en la escena si no están asignados.
+    /// Importante: Llama a base.Awake() para registrar el CanvasGroup y arrancar con alpha = 0.
     /// </summary>
     protected override void Awake()
     {
+        base.Awake();
+
         if (upgradeService == null) upgradeService = FindFirstObjectByType<UpgradeService>();
         if (wallet == null) wallet = FindFirstObjectByType<Wallet>();
         if (flow == null) flow = FindFirstObjectByType<GameFlow>();
-
-        if (startRunButton != null)
-        {
-            startRunButton.onClick.AddListener(OnStartRunClicked);
-        }
     }
 
     /// <summary>
     /// Muestra la pantalla de la tienda, refresca la UI y se suscribe a eventos relevantes.
+    /// Se invoca automáticamente cuando la pantalla pasa a ser visible (Show).
     /// </summary>
-    public new void Show()
+    protected override void OnShown()
     {
-        base.Show();
+        base.OnShown();
         RefreshUI();
         EventBus.Subscribe<MoneyChanged>(OnMoneyChanged);
         EventBus.Subscribe<UpgradeBought>(OnUpgradeBought);
@@ -46,10 +44,11 @@ public class ShopScreen : UIScreen
 
     /// <summary>
     /// Oculta la pantalla de la tienda y se desuscribe de los eventos.
+    /// Se invoca automáticamente cuando la pantalla se oculta (Hide).
     /// </summary>
-    public new void Hide()
+    protected override void OnHidden()
     {
-        base.Hide();
+        base.OnHidden();
         EventBus.Unsubscribe<MoneyChanged>(OnMoneyChanged);
         EventBus.Unsubscribe<UpgradeBought>(OnUpgradeBought);
     }
@@ -93,13 +92,5 @@ public class ShopScreen : UIScreen
         {
             upgradeService.TryBuy(upgrade);
         }
-    }
-
-    /// <summary>
-    /// Solicita el inicio de una nueva partida al sistema de flujo de juego.
-    /// </summary>
-    void OnStartRunClicked()
-    {
-        if (flow != null) flow.RequestStart();
     }
 }

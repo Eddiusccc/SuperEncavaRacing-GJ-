@@ -42,9 +42,13 @@ namespace Framework.UI
         void SetVisible(bool visible)
         {
             IsVisible = visible;
-            group.alpha = visible ? 1f : 0f;
-            group.interactable = visible;
-            group.blocksRaycasts = visible;
+            if (group == null) group = GetComponent<CanvasGroup>();
+            if (group != null)
+            {
+                group.alpha = visible ? 1f : 0f;
+                group.interactable = visible;
+                group.blocksRaycasts = visible;
+            }
         }
 
         protected virtual void OnShown() { }
