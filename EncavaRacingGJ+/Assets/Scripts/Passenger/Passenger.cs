@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Passenger : MonoBehaviour
 {
-    public SphereCollider sphereCollider;
+    public Collider sphereCollider;
 
     void Awake()
     {
-        if (sphereCollider == null) sphereCollider = GetComponent<SphereCollider>();
+        if (sphereCollider == null) sphereCollider = GetComponent<Collider>();
     }
 
     public void MoveTowardsBus(Vector3 busPosition, float speed = 4f, Action onArrived = null)
