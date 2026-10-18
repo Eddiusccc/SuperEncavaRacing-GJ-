@@ -1,77 +1,99 @@
 using System.Collections.Generic;
+using Framework.Core;
 using UnityEngine;
 
 public class PassengerHandler : MonoBehaviour
 {
     [SerializeField] private GameObject pass_prefab;
+    [SerializeField] private int initialPoolSize = 30;
+
     public PoolFactory passengerPool;
-    public List<Passenger> activePassengers = new List<Passenger>();
+    public List<Passenger> activePassengers = new();
 
-    float distanceCheck = 50f;
+    BusMotor bus;
 
-    public SphereCollider busCollider;
-    public Transform currentParada;
-
-
-    public float enterPassengers = 0f;
-    public float exitPassengers = 0f;
-    
-    private void Awake()
+    void Awake()
     {
-        passengerPool = new PoolFactory(pass_prefab, 50);
+        bus = FindFirstObjectByType<BusMotor>();
+        if (pass_prefab != null)
+        {
+            passengerPool = new PoolFactory(pass_prefab, initialPoolSize, transform);
+        }
     }
 
-
-    public void CheckDistance()
+    void OnEnable()
     {
-        //Si el autobus esta a cierta distancia de la parada, se spawnean los pasajeros en la parada
+        EventBus.Subscribe<BusArrivedAtStop>(OnBusArrived);
+    }
 
-        if (Vector3.Distance(busCollider.transform.position, currentParada.position) < distanceCheck)
+    void OnDisable()
+    {
+        EventBus.Unsubscribe<BusArrivedAtStop>(OnBusArrived);
+    }
+
+    /// <summary>
+    /// Genera peatones visuales en la posición de una parada.
+    /// </summary>
+    public void SpawnVisualPassengersAtStop(Vector3 stopPosition, int count)
+    {
+        if (passengerPool == null) return;
+
+        for (int i = 0; i < count; i++)
         {
-            int spawnQuantity = Random.Range(10, 30); //A cambiar
-            for (int i = 0; i < spawnQuantity; i++)
+            GameObject go = passengerPool.GetObject();
+            Vector3 offset = new Vector3(Random.Range(-1.5f, 1.5f), 0f, Random.Range(-1.5f, 1.5f));
+            go.transform.position = stopPosition + offset;
+            go.transform.rotation = Quaternion.identity;
+
+            if (go.TryGetComponent(out Passenger pas))
             {
-                GameObject go = passengerPool.GetObject();
-                Passenger pas = go.GetComponent<Passenger>();
                 activePassengers.Add(pas);
             }
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnBusArrived(BusArrivedAtStop e)
     {
-        if(other.tag == "ParadaZone")
-        {
-            //Los pasajeros de esa parada deben empezar a moverse al autobus
-            foreach (var item in activePassengers)
-            {
-                //item.MoverABus();
-            }
-        }
+        if (bus == null) bus = FindFirstObjectByType<BusMotor>();
+        Vector3 busPos = bus != null ? bus.transform.position : transform.position;
 
-        if(other.tag == "Passenger")
+        // Animar pasajeros cercanos para que suban al autobús
+        for (int i = activePassengers.Count - 1; i >= 0; i--)
         {
-            //Se presiona un trigger para aceptar la bienvenida a los pasajeros
-            if(enterPassengers > 0f)
+            Passenger pas = activePassengers[i];
+            if (pas == null) continue;
+
+            if (Vector3.Distance(pas.transform.position, busPos) < 25f)
             {
-                Passenger pas = other.gameObject.GetComponent<Passenger>();
-                passengerPool.ReturnObject(other.gameObject);
-                activePassengers.Remove(pas);
+                activePassengers.RemoveAt(i);
+                pas.MoveTowardsBus(busPos, 5f, () =>
+                {
+                    if (passengerPool != null && pas != null)
+                    {
+                        passengerPool.ReturnObject(pas.gameObject);
+                    }
+                });
             }
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    public void ClearAll()
     {
-        //Se resetea
+        if (passengerPool == null) return;
+        foreach (var pas in activePassengers)
+        {
+            if (pas != null) passengerPool.ReturnObject(pas.gameObject);
+        }
+        activePassengers.Clear();
     }
 }
+
 public class PoolFactory
 {
     public GameObject go;
     public int poolSize;
     public Transform parent;
-    public List<GameObject> pool = new List<GameObject>();
+    public List<GameObject> pool = new();
 
     public PoolFactory(GameObject prefab, int size, Transform parentTransform = null)
     {
@@ -83,36 +105,45 @@ public class PoolFactory
 
     public void CreatePool()
     {
+        if (go == null) return;
         for (int i = 0; i < poolSize; i++)
         {
             GameObject obj = Object.Instantiate(go);
-            obj.name = obj.name + " " + i;
+            obj.name = $"{go.name}_{i}";
             obj.transform.SetParent(parent, false);
             pool.Add(obj);
-            obj.gameObject.SetActive(false);
+            obj.SetActive(false);
         }
     }
+
     public GameObject GetObject()
     {
         foreach (GameObject obj in pool)
         {
-            if (!obj.activeInHierarchy)
+            if (obj != null && !obj.activeInHierarchy)
             {
                 obj.SetActive(true);
                 return obj;
             }
         }
-        // If no inactive object is found, create a new one
-        GameObject newObj = Object.Instantiate(go);
-        newObj.SetActive(true);
-        pool.Add(newObj);
-        return newObj;
+
+        // Si no hay objetos inactivos disponibles, expandir pool
+        if (go != null)
+        {
+            GameObject newObj = Object.Instantiate(go);
+            newObj.transform.SetParent(parent, false);
+            newObj.SetActive(true);
+            pool.Add(newObj);
+            return newObj;
+        }
+
+        return null;
     }
 
     public void ReturnObject(GameObject obj)
     {
+        if (obj == null) return;
         obj.SetActive(false);
-        obj.transform.SetParent(parent, false);
+        if (parent != null) obj.transform.SetParent(parent, false);
     }
 }
-
