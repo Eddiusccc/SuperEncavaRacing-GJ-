@@ -10,8 +10,10 @@
   <Project Path="Unity.2D.Psdimporter.Editor.csproj" />
   <Project Path="Unity.VisualScripting.Core.Editor.csproj" />
   <Project Path="Unity.PerformanceTesting.Editor.csproj" />
+  <Project Path="glTFast.Editor.csproj" />
   <Project Path="Unity.Splines.csproj" />
   <Project Path="Unity.Burst.csproj" />
+  <Project Path="glTFast.csproj" />
   <Project Path="Unity.VisualScripting.Flow.Editor.csproj" />
   <Project Path="Unity.2D.SpriteShape.Editor.csproj" />
   <Project Path="Unity.VisualStudio.Editor.csproj" />
@@ -27,6 +29,7 @@
   <Project Path="Unity.Splines.Editor.csproj" />
   <Project Path="Unity.PerformanceTesting.csproj" />
   <Project Path="Unity.2D.Tilemap.Extras.Editor.csproj" />
+  <Project Path="glTFast.Export.csproj" />
   <Project Path="PsdPlugin.csproj" />
   <Project Path="Unity.2D.IK.Editor.csproj" />
   <Project Path="Unity.InternalAPIEngineBridge.001.csproj" />
@@ -37,6 +40,8 @@
   <Project Path="Unity.2D.Tooling.Editor.csproj" />
   <Project Path="Unity.VisualScripting.State.csproj" />
   <Project Path="Unity.InternalAPIEditorBridge.001.csproj" />
+  <Project Path="glTFast.Newtonsoft.csproj" />
+  <Project Path="glTFast.Documentation.Examples.csproj" />
   <Project Path="Framework.Dialogue.csproj" />
   <Project Path="Framework.Save.csproj" />
   <Project Path="Framework.Input.csproj" />
@@ -56,7 +61,9 @@
   <Project Path="Unity.VisualScripting.Shared.Editor.csproj" />
   <Project Path="Unity.2D.Aseprite.Common.csproj" />
   <Project Path="Unity.CollabProxy.Editor.csproj" />
+  <Project Path="glTFast.Editor.Documentation.Examples.csproj" />
   <Project Path="Framework.UI.csproj" />
+  <Project Path="glTFast.dots.csproj" />
   <Project Path="Framework.CameraRig.csproj" />
   <Project Path="Unity.InputSystem.DocCodeSamples.csproj" />
   <Project Path="Unity.VisualScripting.DocCodeExamples.csproj" />
@@ -70,14 +77,18 @@
   <Project Path="Unity.Collections.Player.csproj" />
   <Project Path="Unity.Splines.Player.csproj" />
   <Project Path="Unity.Burst.Player.csproj" />
+  <Project Path="glTFast.Player.csproj" />
   <Project Path="Unity.InputSystem.Player.csproj" />
   <Project Path="Unity.2D.SpriteShape.Runtime.Player.csproj" />
   <Project Path="Unity.VisualScripting.Core.Player.csproj" />
   <Project Path="Unity.Cinemachine.Player.csproj" />
   <Project Path="Unity.VisualScripting.Flow.Player.csproj" />
   <Project Path="Unity.PerformanceTesting.Player.csproj" />
+  <Project Path="glTFast.Export.Player.csproj" />
   <Project Path="Unity.InternalAPIEngineBridge.001.Player.csproj" />
   <Project Path="Unity.VisualScripting.State.Player.csproj" />
+  <Project Path="glTFast.Newtonsoft.Player.csproj" />
+  <Project Path="glTFast.Documentation.Examples.Player.csproj" />
   <Project Path="Framework.Dialogue.Player.csproj" />
   <Project Path="Framework.Save.Player.csproj" />
   <Project Path="Framework.Input.Player.csproj" />
@@ -91,6 +102,7 @@
   <Project Path="Unity.InputSystem.TestFramework.Player.csproj" />
   <Project Path="Framework.Core.Player.csproj" />
   <Project Path="Framework.UI.Player.csproj" />
+  <Project Path="glTFast.dots.Player.csproj" />
   <Project Path="Framework.CameraRig.Player.csproj" />
   <Project Path="Unity.VisualScripting.DocCodeExamples.Player.csproj" />
   <Project Path="Framework.StateMachine.Player.csproj" />
