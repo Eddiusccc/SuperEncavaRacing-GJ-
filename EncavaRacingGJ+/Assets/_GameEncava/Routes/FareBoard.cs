@@ -12,6 +12,9 @@ public class FareBoard : MonoBehaviour
     readonly List<Fare> waiting = new();
     readonly List<Fare> onboard = new();
 
+    public IReadOnlyList<Fare> WaitingFares => waiting;
+    public IReadOnlyList<Fare> OnboardFares => onboard;
+
     public int Capacity => bus != null && bus.Stats != null
         ? Mathf.RoundToInt(bus.Stats.Get(StatType.Capacity, baseCapacity))
         : baseCapacity;
@@ -27,7 +30,10 @@ public class FareBoard : MonoBehaviour
     void OnEnable()  => EventBus.Subscribe<BusArrivedAtStop>(OnArrived);
     void OnDisable() => EventBus.Unsubscribe<BusArrivedAtStop>(OnArrived);
 
-    public void AddWaiting(Fare f) => waiting.Add(f);
+    public void AddWaiting(Fare f)
+    {
+        if (f != null) waiting.Add(f);
+    }
 
     public void ClearAll()
     {
@@ -38,12 +44,13 @@ public class FareBoard : MonoBehaviour
 
     void OnArrived(BusArrivedAtStop e)
     {
-        // 1) Bajar pasajeros de esta parada
+        // 1) BAJADA: Pasajeros que llegaron a su destino en esta parada
         for (int i = onboard.Count - 1; i >= 0; i--)
         {
             Fare f = onboard[i];
             if (f.Destination != e.StopIndex) continue;
 
+            // En este momento exacto se contabiliza el pago, la reputación y el tiempo
             float repMult = reputation != null ? reputation.GetReputationMultiplier(f.Origin) : 1f;
             float reward = FareCalculator.Reward(f, Time.time, bus != null ? bus.Stats : null, repMult);
             float timeBonusMod = bus != null && bus.Stats != null ? bus.Stats.Get(StatType.TimeBonus, 1f) : 1f;
@@ -54,7 +61,7 @@ public class FareBoard : MonoBehaviour
             EventBus.Publish(new FareDelivered(f.Origin, f.Destination, f.Passengers, reward, bonus, ratio));
         }
 
-        // 2) Subir los grupos de esta parada que quepan
+        // 2) SUBIDA: Pasajeros que están esperando en esta parada de entrada
         int free = Capacity - Count(onboard);
         for (int i = 0; i < waiting.Count; i++)
         {
@@ -67,8 +74,6 @@ public class FareBoard : MonoBehaviour
             free -= f.Passengers;
         }
 
-        // 3) Los que esperaban en paradas ya superadas se pierden
-        waiting.RemoveAll(w => w.Origin <= e.StopIndex);
         Publish();
     }
 

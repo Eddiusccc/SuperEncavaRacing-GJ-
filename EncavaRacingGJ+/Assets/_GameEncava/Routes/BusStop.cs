@@ -4,22 +4,37 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class BusStop : MonoBehaviour
 {
+    [Header("Configuración")]
+    [SerializeField] int stopIndex;
+    [SerializeField] string stopName = "Parada";
     [SerializeField] float maxEnterSpeed = 8f;   // m/s
-    [SerializeField] float dwellTime = 0.5f;     // segundos detenido
-    [SerializeField] GameObject indicatorActive;
+    [SerializeField] float dwellTime = 0.5f;     // segundos detenido para subir/bajar
 
-    public int Index { get; set; }
+    [Header("Indicadores Visuales")]
+    [SerializeField] GameObject indicatorPickup;   // Indicador de que aquí hay pasajeros esperando
+    [SerializeField] GameObject indicatorDropoff;  // Indicador de que esta parada es destino de llegada
+
+    public int Index
+    {
+        get => stopIndex;
+        set => stopIndex = value;
+    }
+
+    public string StopName => stopName;
 
     BusMotor bus;
     float timer;
-    bool served;
+    bool servedInThisVisit;
 
-    void OnEnable()
+    void Awake()
     {
-        served = false;
-        timer = 0f;
-        bus = null;
-        if (indicatorActive != null) indicatorActive.SetActive(true);
+        SetState(hasPickup: false, hasDropoff: false);
+    }
+
+    public void SetState(bool hasPickup, bool hasDropoff)
+    {
+        if (indicatorPickup != null) indicatorPickup.SetActive(hasPickup);
+        if (indicatorDropoff != null) indicatorDropoff.SetActive(hasDropoff);
     }
 
     void OnTriggerEnter(Collider other)
@@ -27,6 +42,8 @@ public class BusStop : MonoBehaviour
         if (other.TryGetComponent(out BusMotor m))
         {
             bus = m;
+            timer = 0f;
+            servedInThisVisit = false;
         }
     }
 
@@ -36,13 +53,15 @@ public class BusStop : MonoBehaviour
         {
             bus = null;
             timer = 0f;
+            servedInThisVisit = false;
         }
     }
 
     void Update()
     {
-        if (bus == null || served) return;
+        if (bus == null || servedInThisVisit) return;
 
+        // Requiere frenar dentro de la parada
         if (bus.ForwardSpeed > maxEnterSpeed)
         {
             timer = 0f;
@@ -52,9 +71,8 @@ public class BusStop : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= dwellTime)
         {
-            served = true;
-            if (indicatorActive != null) indicatorActive.SetActive(false);
-            EventBus.Publish(new BusArrivedAtStop(Index));
+            servedInThisVisit = true;
+            EventBus.Publish(new BusArrivedAtStop(stopIndex));
         }
     }
 }

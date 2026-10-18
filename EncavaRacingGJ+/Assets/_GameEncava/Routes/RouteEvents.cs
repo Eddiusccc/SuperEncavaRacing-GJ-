@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public readonly struct BusArrivedAtStop
 {
     public readonly int StopIndex;
@@ -46,5 +48,23 @@ public readonly struct StopReputationChanged
         StopIndex = stopIndex;
         Level = level;
         Reputation = reputation;
+    }
+}
+
+public readonly struct TargetDestinationChanged
+{
+    public readonly int StopIndex;
+    public readonly string StopName;
+    public readonly Vector3 Position;
+    public readonly bool HasTarget;
+    public readonly bool IsDropOff; // true = destino de bajada, false = parada de recogida
+
+    public TargetDestinationChanged(int stopIndex, string stopName, Vector3 position, bool hasTarget, bool isDropOff)
+    {
+        StopIndex = stopIndex;
+        StopName = stopName;
+        Position = position;
+        HasTarget = hasTarget;
+        IsDropOff = isDropOff;
     }
 }

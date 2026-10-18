@@ -5,6 +5,7 @@ public class RunResetter : MonoBehaviour
 {
     [SerializeField] BusMotor bus;
     [SerializeField] FareBoard fareBoard;
+    [SerializeField] CityRouteManager cityRouteManager;
     [SerializeField] RoadStreamer roadStreamer;
     [SerializeField] PerkService perkService;
     [SerializeField] Vector3 startPosition = Vector3.zero;
@@ -13,6 +14,7 @@ public class RunResetter : MonoBehaviour
     {
         if (bus == null) bus = FindFirstObjectByType<BusMotor>();
         if (fareBoard == null) fareBoard = FindFirstObjectByType<FareBoard>();
+        if (cityRouteManager == null) cityRouteManager = FindFirstObjectByType<CityRouteManager>();
         if (roadStreamer == null) roadStreamer = FindFirstObjectByType<RoadStreamer>();
         if (perkService == null) perkService = FindFirstObjectByType<PerkService>();
     }
@@ -48,6 +50,7 @@ public class RunResetter : MonoBehaviour
         }
 
         if (fareBoard != null) fareBoard.ClearAll();
+        if (cityRouteManager != null) cityRouteManager.InitCityRoutes();
         if (roadStreamer != null) roadStreamer.InitRoad();
         if (perkService != null) perkService.ResetRunPerks();
     }
