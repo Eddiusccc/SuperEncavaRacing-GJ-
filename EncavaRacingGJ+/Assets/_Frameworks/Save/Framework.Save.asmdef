@@ -1,0 +1,16 @@
+{
+    "name": "Framework.Save",
+    "rootNamespace": "",
+    "references": [
+        "GUID:cc109624b953ebb4b9332ac198f19412"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

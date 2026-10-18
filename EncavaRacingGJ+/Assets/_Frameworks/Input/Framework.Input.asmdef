@@ -1,0 +1,17 @@
+{
+    "name": "Framework.Input",
+    "rootNamespace": "Framework.Input",
+    "references": [
+        "GUID:cc109624b953ebb4b9332ac198f19412",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

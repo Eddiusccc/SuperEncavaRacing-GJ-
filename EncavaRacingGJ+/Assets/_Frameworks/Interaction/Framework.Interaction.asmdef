@@ -1,0 +1,17 @@
+{
+    "name": "Framework.Interaction",
+    "rootNamespace": "",
+    "references": [
+        "GUID:cc109624b953ebb4b9332ac198f19412",
+        "GUID:df0ee5410e682204787bc11ff5ddb22e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
