@@ -59,7 +59,8 @@ public class BusMotor : MonoBehaviour
     {
         if (IsBoosting || boostCooldown > 0f) return;
         boostTimer = config.boostDuration;
-        boostCooldown = config.boostCooldown;
+        float cdMod = Stats.Get(StatType.BoostCooldown, 1f);
+        boostCooldown = config.boostCooldown / Mathf.Max(cdMod, 0.1f);
     }
 
     void FixedUpdate()
@@ -89,13 +90,14 @@ public class BusMotor : MonoBehaviour
                           * config.accelerationBySpeed.Evaluate(ratio);
 
             float throttle = input.Move.y;
+            float brakeDecel = config.brakeDeceleration * Stats.Get(StatType.BrakeForce, 1f);
             if (speed > max)
                 speed = Mathf.MoveTowards(speed, max, config.coastDeceleration * 2f * dt);
             else if (throttle > 0.1f)
-                speed = Mathf.MoveTowards(speed, max, (speed < 0f ? config.brakeDeceleration : accel) * dt);
+                speed = Mathf.MoveTowards(speed, max, (speed < 0f ? brakeDecel : accel) * dt);
             else if (throttle < -0.1f)
                 speed = speed > 0.5f
-                    ? Mathf.MoveTowards(speed, 0f, config.brakeDeceleration * dt)
+                    ? Mathf.MoveTowards(speed, 0f, brakeDecel * dt)
                     : Mathf.MoveTowards(speed, -config.reverseSpeed, config.reverseAcceleration * dt);
             else
                 speed = Mathf.MoveTowards(speed, 0f, config.coastDeceleration * dt);
@@ -155,7 +157,8 @@ public class BusMotor : MonoBehaviour
         if (c.contactCount > 0 && c.GetContact(0).normal.y > 0.7f) return;   // es el suelo, no un choque
 
         float impact = c.relativeVelocity.magnitude;
-        if (impact < config.crashImpactThreshold) return;
+        float threshold = config.crashImpactThreshold * Stats.Get(StatType.Armor, 1f);
+        if (impact < threshold) return;
 
         invulnTimer = config.invulnerability;
         EventBus.Publish(new BusCrashed(impact));

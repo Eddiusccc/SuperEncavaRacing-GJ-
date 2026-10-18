@@ -1,6 +1,18 @@
 using System.Collections.Generic;
 
-public enum StatType { MaxSpeed, Acceleration, Handling, BoostSpeed, Capacity, FareMultiplier, TimeBonus }
+public enum StatType
+{
+    MaxSpeed,
+    Acceleration,
+    BrakeForce,
+    Handling,
+    BoostSpeed,
+    BoostCooldown,
+    Capacity,
+    FareMultiplier,
+    TimeBonus,
+    Armor
+}
 
 public class BusStats
 {
