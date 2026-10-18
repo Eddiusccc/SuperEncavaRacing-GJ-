@@ -2,15 +2,34 @@ using System.Collections.Generic;
 using Framework.Core;
 using UnityEngine;
 
+/// <summary>
+/// Gestiona la red de rutas urbanas: llamadas de recogida en paradas,
+/// asignación de paradas de entrega, visuales y publicación de métricas para la UI.
+/// </summary>
 public class CityRouteManager : MonoBehaviour
 {
     [Header("Configuración de Ciudad")]
     [SerializeField] List<BusStop> cityStops = new();
     [SerializeField] FareBoard fareBoard;
-    [SerializeField] int activePickupCalls = 2; // Cantidad de paradas llamando a la vez en la ciudad
+    [SerializeField] int initialActiveCalls = 2; // Cantidad inicial de paradas llamando
+    [SerializeField] int maxActiveCalls = 6;     // Límite máximo incremental de llamadas simultáneas
     [SerializeField] float parSpeed = 16f;     // m/s velocidad media esperada en ciudad
 
+    [Header("Pasajeros por Viaje")]
+    [SerializeField] int minPassengers = 1;
+    [SerializeField] int maxPassengers = 4;
+
+    [Header("RNG e Incremental")]
+    [Tooltip("Tiempo mínimo y máximo (en segundos) de espera aleatoria antes de generar una nueva llamada.")]
+    [SerializeField] Vector2 spawnIntervalRange = new Vector2(3f, 8f);
+    [Tooltip("Cada cuántos segundos de juego aumenta la dificultad/frecuencia de llamadas.")]
+    [SerializeField] float difficultyInterval = 60f;
+
     readonly Dictionary<int, BusStop> stopsByIndex = new();
+    float spawnTimer;
+    float nextSpawnTime;
+    float totalPlayTime;
+    int currentMaxCalls;
 
     void Awake()
     {
@@ -22,12 +41,27 @@ public class CityRouteManager : MonoBehaviour
             cityStops.AddRange(FindObjectsByType<BusStop>(FindObjectsSortMode.None));
         }
 
-        // Asignar y registrar índices únicos
+        // Limpiar nulos y referencias duplicadas
+        var uniqueStops = new HashSet<BusStop>();
+        for (int i = cityStops.Count - 1; i >= 0; i--)
+        {
+            if (cityStops[i] == null || !uniqueStops.Add(cityStops[i]))
+            {
+                cityStops.RemoveAt(i);
+            }
+        }
+
+        // Asignar y registrar índices únicos garantizados
+        stopsByIndex.Clear();
         for (int i = 0; i < cityStops.Count; i++)
         {
-            if (cityStops[i] == null) continue;
             cityStops[i].Index = i + 1;
             stopsByIndex[cityStops[i].Index] = cityStops[i];
+        }
+
+        if (cityStops.Count < 2)
+        {
+            Debug.LogWarning("CityRouteManager: Se necesitan al menos 2 paradas en la ciudad para que el origen y destino sean distintos.");
         }
     }
 
@@ -62,45 +96,106 @@ public class CityRouteManager : MonoBehaviour
     {
         if (cityStops.Count < 2) return;
 
+        totalPlayTime = 0f;
+        currentMaxCalls = initialActiveCalls;
+        ScheduleNextSpawn();
+
         // Resetear visuales de todas las paradas
         foreach (var stop in cityStops)
         {
-            if (stop != null) stop.SetState(false, false);
+            if (stop != null) stop.SetState(hasPickup: false, hasDropoff: false);
         }
 
-        if (fareBoard != null) fareBoard.ClearAll();
+        if (fareBoard != null) 
+        {
+            fareBoard.ClearAll();
+        }
 
         // Generar llamadas iniciales en la ciudad
-        for (int i = 0; i < activePickupCalls; i++)
+        for (int i = 0; i < initialActiveCalls; i++)
         {
             GenerateNewCall();
         }
 
+        RefreshStopVisuals();
         UpdateWaypointObjective();
+        PublishCounts();
     }
 
+    void Update()
+    {
+        totalPlayTime += Time.deltaTime;
+
+        // Incrementar dificultad progresivamente cada X segundos
+        int targetCalls = initialActiveCalls + Mathf.FloorToInt(totalPlayTime / difficultyInterval);
+        currentMaxCalls = Mathf.Min(targetCalls, maxActiveCalls);
+
+        // Control de generación aleatoria por tiempo
+        if (fareBoard != null && fareBoard.WaitingFares.Count < currentMaxCalls)
+        {
+            spawnTimer += Time.deltaTime;
+            if (spawnTimer >= nextSpawnTime)
+            {
+                GenerateNewCall();
+                ScheduleNextSpawn();
+            }
+        }
+    }
+
+    void ScheduleNextSpawn()
+    {
+        spawnTimer = 0f;
+        nextSpawnTime = Random.Range(spawnIntervalRange.x, spawnIntervalRange.y);
+    }
+
+    /// <summary>
+    /// Genera una solicitud de viaje garantizando que la parada de destino sea distinta a la de recogida.
+    /// </summary>
     public void GenerateNewCall()
     {
         if (cityStops.Count < 2 || fareBoard == null) return;
 
-        // Elegir parada origen al azar
+        // 1) Elegir parada origen al azar
         int originIdx = Random.Range(0, cityStops.Count);
         BusStop originStop = cityStops[originIdx];
 
-        // Elegir parada destino diferente
+        // 2) Elegir parada destino ESTRICTAMENTE DIFERENTE
         int destIdx = Random.Range(0, cityStops.Count);
-        while (destIdx == originIdx)
+        int attempts = 0;
+        while ((destIdx == originIdx || cityStops[destIdx].Index == originStop.Index || cityStops[destIdx] == originStop) && attempts < 50)
         {
             destIdx = Random.Range(0, cityStops.Count);
+            attempts++;
         }
+
+        // Búsqueda lineal de seguridad si el azar coincidió
+        if (cityStops[destIdx].Index == originStop.Index)
+        {
+            for (int i = 0; i < cityStops.Count; i++)
+            {
+                if (cityStops[i].Index != originStop.Index)
+                {
+                    destIdx = i;
+                    break;
+                }
+            }
+        }
+
         BusStop destStop = cityStops[destIdx];
 
+        // Validación definitiva: jamás pueden ser iguales
+        if (destStop == null || destStop.Index == originStop.Index)
+        {
+            Debug.LogError("CityRouteManager: No se pudo encontrar una parada de destino diferente a la de origen.");
+            return;
+        }
+
         float dist = Vector3.Distance(originStop.transform.position, destStop.transform.position);
-        // Factor de curvas urbanas (la distancia por carretera suele ser 1.3x la línea recta)
+        // Factor de trazado vial urbano (las curvas y manzanas suelen ser ~1.3x la distancia en línea recta)
         dist *= 1.3f;
         float parTime = dist / Mathf.Max(parSpeed, 1f);
 
-        int passengers = Random.Range(1, 4);
+        int passengers = Random.Range(minPassengers, maxPassengers + 1);
 
         fareBoard.AddWaiting(new Fare
         {
@@ -111,31 +206,32 @@ public class CityRouteManager : MonoBehaviour
             ParTime = parTime
         });
 
-        // Activar indicador visual de recogida en la parada origen
-        originStop.SetState(hasPickup: true, hasDropoff: false);
+        RefreshStopVisuals();
+        PublishCounts();
     }
 
     void OnBusArrived(BusArrivedAtStop e)
     {
-        if (stopsByIndex.TryGetValue(e.StopIndex, out var currentStop))
-        {
-            // Ya no tiene llamada de recogida si los pasajeros subieron
-            currentStop.SetState(hasPickup: false, hasDropoff: false);
-        }
-
-        // Si tenemos pasajeros a bordo, encender el indicador de llegada en sus paradas destino
+        // Al llegar el autobús: se procesa la bajada y subida en FareBoard.
+        // Actualizamos los estados visuales y las métricas de la ciudad.
         RefreshStopVisuals();
         UpdateWaypointObjective();
+        PublishCounts();
     }
 
     void OnFareDelivered(FareDelivered e)
     {
-        // Al bajarse los pasajeros, generar una nueva llamada en otra parte de la ciudad
-        GenerateNewCall();
+        // Al bajarse los pasajeros y completarse la entrega:
         RefreshStopVisuals();
         UpdateWaypointObjective();
+        PublishCounts();
     }
 
+    /// <summary>
+    /// Actualiza el estado visual (luces/indicadores) de cada parada de la ciudad:
+    /// - hasPickup = true si hay pasajeros esperando en esa parada para subir.
+    /// - hasDropoff = true si en el autobús van pasajeros que tienen como destino esa parada.
+    /// </summary>
     void RefreshStopVisuals()
     {
         if (fareBoard == null) return;
@@ -154,15 +250,49 @@ public class CityRouteManager : MonoBehaviour
 
             bool isPickup = waitingOrigins.Contains(idx);
             bool isDropoff = onboardDests.Contains(idx);
-            stop.SetState(isPickup, isDropoff);
+            stop.SetState(hasPickup: isPickup, hasDropoff: isDropoff);
         }
     }
 
+    /// <summary>
+    /// Publica los eventos con los conteos exactos de paradas esperando recogida y paradas esperando entrega.
+    /// </summary>
+    void PublishCounts()
+    {
+        if (fareBoard == null) return;
+
+        var waitingOriginStops = new HashSet<int>();
+        int totalWaitingPassengers = 0;
+        foreach (var f in fareBoard.WaitingFares)
+        {
+            waitingOriginStops.Add(f.Origin);
+            totalWaitingPassengers += f.Passengers;
+        }
+
+        var pendingDestStops = new HashSet<int>();
+        int totalOnboardPassengers = 0;
+        foreach (var f in fareBoard.OnboardFares)
+        {
+            pendingDestStops.Add(f.Destination);
+            totalOnboardPassengers += f.Passengers;
+        }
+
+        // Publicar eventos específicos
+        EventBus.Publish(new PickupStopsCountChanged(waitingOriginStops.Count, totalWaitingPassengers));
+        EventBus.Publish(new DropoffStopsCountChanged(pendingDestStops.Count, totalOnboardPassengers));
+        EventBus.Publish(new CityCallsUpdated(waitingOriginStops.Count));
+    }
+
+    /// <summary>
+    /// Actualiza el destino de navegación de la flecha brújula (WaypointArrow):
+    /// 1. Prioridad: Si hay pasajeros a bordo, apunta a la parada de bajada (Drop-off).
+    /// 2. Si el bus está vacío: apunta a la parada de recogida activa (Pickup).
+    /// </summary>
     public void UpdateWaypointObjective()
     {
         if (fareBoard == null) return;
 
-        // 1) Prioridad: Si llevamos pasajeros a bordo, el objetivo es su parada de bajada (Drop-off)
+        // 1) Si llevamos pasajeros a bordo, el objetivo es su parada de bajada (Drop-off)
         if (fareBoard.OnboardFares.Count > 0)
         {
             var firstOnboard = fareBoard.OnboardFares[0];
@@ -179,7 +309,7 @@ public class CityRouteManager : MonoBehaviour
             }
         }
 
-        // 2) Si el bus está vacío: el objetivo es la parada de recogida activa más cercana o prioritaria
+        // 2) Si el bus está vacío: el objetivo es la parada de recogida activa
         if (fareBoard.WaitingFares.Count > 0)
         {
             var firstWait = fareBoard.WaitingFares[0];
