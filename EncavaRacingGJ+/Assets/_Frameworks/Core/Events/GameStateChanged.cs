@@ -5,7 +5,8 @@ namespace Framework.Core
         Menu,
         Playing,
         Paused,
-        GameOver
+        GameOver,
+        Shop
     }
 
     /// <summary>
