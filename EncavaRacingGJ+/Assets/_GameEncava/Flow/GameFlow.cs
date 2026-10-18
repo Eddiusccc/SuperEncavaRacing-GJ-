@@ -3,14 +3,22 @@ using Framework.Input;
 using Framework.States;
 using UnityEngine;
 
+/// <summary>
+/// Gestiona el flujo principal del juego utilizando una máquina de estados (FSM).
+/// Se encarga de coordinar las transiciones entre estados como el menú, la partida,
+/// la pausa, el Game Over y la tienda, controlando el tiempo y el acceso a los inputs.
+/// </summary>
 public class GameFlow : MonoBehaviour
 {
+    [Tooltip("Referencia al lector de input para habilitar/deshabilitar controles según el estado.")]
     [SerializeField] InputReader input;
+    [Tooltip("Estado inicial en el que arrancará el juego.")]
     [SerializeField] GameState startingState = GameState.Menu;
 
     StateMachine fsm;
     GameState currentState;
 
+    // Flags utilizados para disparar las transiciones de la máquina de estados
     bool startRequested;
     bool pauseRequested;
     bool resumeRequested;
@@ -18,6 +26,9 @@ public class GameFlow : MonoBehaviour
     bool shopRequested;
     bool menuRequested;
 
+    /// <summary>
+    /// Obtiene el estado actual del juego.
+    /// </summary>
     public GameState CurrentState => currentState;
 
     void Awake()
@@ -71,11 +82,21 @@ public class GameFlow : MonoBehaviour
         if (input != null) input.PausePressed -= OnPauseInput;
     }
 
+    /// <summary>
+    /// Actualiza la máquina de estados cada frame, ignorando el timeScale del juego.
+    /// </summary>
     void Update()
     {
         fsm.Tick(Time.unscaledDeltaTime);
     }
 
+    /// <summary>
+    /// Método centralizado para procesar la entrada a un nuevo estado.
+    /// Ajusta el timeScale, habilita/deshabilita el input y notifica el cambio mediante el EventBus.
+    /// </summary>
+    /// <param name="state">El nuevo estado al que se accede.</param>
+    /// <param name="timeScale">Escala de tiempo deseada (ej. 0 para pausa, 1 para juego normal).</param>
+    /// <param name="enableInput">Si se deben habilitar los controles de gameplay.</param>
     void Enter(GameState state, float timeScale, bool enableInput)
     {
         GameState prev = currentState;
@@ -92,6 +113,9 @@ public class GameFlow : MonoBehaviour
         EventBus.Publish(new GameStateChanged(prev, state));
     }
 
+    /// <summary>
+    /// Reinicia todas las solicitudes de transición para evitar saltos de estado no deseados tras entrar en uno nuevo.
+    /// </summary>
     void ResetFlags()
     {
         startRequested = false;
@@ -108,10 +132,16 @@ public class GameFlow : MonoBehaviour
         else if (currentState == GameState.Paused) RequestResume();
     }
 
+    /// <summary>Solicita iniciar o reiniciar la partida.</summary>
     public void RequestStart()    => startRequested = true;
+    /// <summary>Solicita pausar el juego.</summary>
     public void RequestPause()    => pauseRequested = true;
+    /// <summary>Solicita reanudar el juego tras una pausa.</summary>
     public void RequestResume()   => resumeRequested = true;
+    /// <summary>Solicita transicionar al estado de fin de juego (GameOver).</summary>
     public void RequestGameOver() => gameOverRequested = true;
+    /// <summary>Solicita abrir el estado de la tienda.</summary>
     public void RequestShop()     => shopRequested = true;
+    /// <summary>Solicita volver al menú principal.</summary>
     public void RequestMenu()     => menuRequested = true;
 }

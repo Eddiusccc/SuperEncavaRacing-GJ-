@@ -1,26 +1,52 @@
 using UnityEngine;
 
+/// <summary>
+/// Sistema de detección de contacto con el suelo mediante raycasts en las ruedas del autobús.
+/// Calcula el estado de contacto, la normal promedio de la superficie, el ángulo de pendiente
+/// y el cabeceo del terreno entre ejes delantero y trasero.
+/// </summary>
 public class BusGroundCheck : MonoBehaviour
 {
     [Header("Ruedas (puntos de contacto con el suelo)")]
-    [SerializeField] Transform[] probes;           // delanteras y traseras; al menos 2
+    [Tooltip("Puntos de origen en cada rueda (delanteras y traseras; mínimo 2 requeridas).")]
+    [SerializeField] Transform[] probes;
 
     [Header("Detección")]
+    [Tooltip("Máscara de capas considerada como superficie transitable.")]
     [SerializeField] LayerMask groundMask = ~0;
-    [SerializeField] float startHeight = 0.5f;     // el rayo parte este tanto por encima de la rueda
-    [SerializeField] float reach = 0.25f;          // cuánto por debajo de la rueda aún cuenta como suelo
+
+    [Tooltip("Distancia por encima de la rueda desde donde se dispara el raycast hacia abajo.")]
+    [SerializeField] float startHeight = 0.5f;
+
+    [Tooltip("Distancia por debajo de la rueda que aún se considera contacto con el suelo.")]
+    [SerializeField] float reach = 0.25f;
+
+    [Tooltip("Ángulo de pendiente máximo admisible para considerar el suelo como transitable.")]
     [SerializeField] float maxSlopeAngle = 45f;
+
+    [Tooltip("Número mínimo de ruedas que deben estar en contacto para considerarse en suelo.")]
     [SerializeField, Range(1, 4)] int minWheelsGrounded = 2;
-    [SerializeField] float groundedGrace = 0.1f;   // segundos de tolerancia en baches
+
+    [Tooltip("Tiempo de gracia en segundos tras perder contacto para tolerar baches sin despegar de inmediato.")]
+    [SerializeField] float groundedGrace = 0.1f;
 
     bool[] wheelHit;
     float graceTimer;
 
+    /// <summary>Indica si el vehículo se considera actualmente apoyado sobre el suelo.</summary>
     public bool IsGrounded { get; private set; }
+
+    /// <summary>Normal promedio de las superficies donde hacen contacto las ruedas.</summary>
     public Vector3 Normal { get; private set; } = Vector3.up;
+
+    /// <summary>Ángulo de inclinación del terreno en grados con respecto a la vertical.</summary>
     public float SlopeAngle { get; private set; }
+
+    /// <summary>Cantidad de ruedas actualmente en contacto físico con el suelo.</summary>
     public int GroundedWheels { get; private set; }
-    public float GroundPitch { get; private set; }   // grados del terreno: + = morro hacia arriba
+
+    /// <summary>Ángulo de cabeceo del terreno en grados formado entre los ejes delantero y trasero (+ = morro arriba).</summary>
+    public float GroundPitch { get; private set; }
 
     void Awake()
     {
@@ -32,7 +58,10 @@ public class BusGroundCheck : MonoBehaviour
         wheelHit = new bool[probes.Length];
     }
 
-    // Lo llama el motor una vez por FixedUpdate
+    /// <summary>
+    /// Realiza los raycasts de cada rueda y recalcula normales, pendientes y estado de contacto.
+    /// Diseñado para invocarse periódicamente desde el motor en FixedUpdate.
+    /// </summary>
     public void Refresh()
     {
         Vector3 normalSum = Vector3.zero, frontSum = Vector3.zero, rearSum = Vector3.zero;
@@ -49,7 +78,7 @@ public class BusGroundCheck : MonoBehaviour
             normalSum += hit.normal;
             hits++;
 
-            // ¿La rueda está delante o detrás del centro del bus?
+            // Determina si la rueda se encuentra por delante o detrás del origen local del vehículo
             if (transform.InverseTransformPoint(probes[i].position).z > 0f) { frontSum += hit.point; frontHits++; }
             else { rearSum += hit.point; rearHits++; }
         }

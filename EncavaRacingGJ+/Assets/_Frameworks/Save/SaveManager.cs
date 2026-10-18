@@ -5,17 +5,35 @@ using UnityEngine;
 
 namespace Framework.Save
 {
+    /// <summary>
+    /// Contenedor serializable que almacena los pares de identificadores y datos serializados (payloads) de guardado.
+    /// </summary>
     [Serializable]
     public class SaveContainer
     {
+        /// <summary>
+        /// Lista de identificadores únicos correspondientes a los objetos guardados.
+        /// </summary>
         public List<string> keys = new();
+
+        /// <summary>
+        /// Lista de datos serializados (payloads) en formato JSON u otro string asociados a cada clave.
+        /// </summary>
         public List<string> payloads = new();
     }
 
+    /// <summary>
+    /// Administrador del sistema de guardado y carga persistente del juego mediante PlayerPrefs.
+    /// Funciona como un singleton persistente entre escenas.
+    /// </summary>
     public class SaveManager : MonoBehaviour
     {
+        /// <summary>
+        /// Instancia única del <see cref="SaveManager"/>.
+        /// </summary>
         public static SaveManager Instance { get; private set; }
 
+        [Tooltip("Prefijo utilizado para generar la clave de guardado en PlayerPrefs.")]
         [SerializeField] string saveKeyPrefix = "SuperBusRacing_SaveSlot_";
 
         void Awake()
@@ -31,6 +49,10 @@ namespace Framework.Save
             }
         }
 
+        /// <summary>
+        /// Captura el estado actual de todos los objetos registrados en <see cref="SaveRegistry"/> y los guarda en el slot especificado.
+        /// </summary>
+        /// <param name="slot">Número de ranura de guardado (por defecto 0).</param>
         public void Save(int slot = 0)
         {
             var container = new SaveContainer();
@@ -48,6 +70,11 @@ namespace Framework.Save
             EventBus.Publish(new GameSaved(slot));
         }
 
+        /// <summary>
+        /// Carga los datos del slot especificado y restaura el estado de todos los objetos registrados en <see cref="SaveRegistry"/>.
+        /// </summary>
+        /// <param name="slot">Número de ranura de guardado a cargar (por defecto 0).</param>
+        /// <returns><c>true</c> si la carga fue exitosa; en caso contrario, <c>false</c>.</returns>
         public bool Load(int slot = 0)
         {
             string key = saveKeyPrefix + slot;
@@ -78,6 +105,10 @@ namespace Framework.Save
             return true;
         }
 
+        /// <summary>
+        /// Elimina los datos de guardado asociados al slot especificado en PlayerPrefs.
+        /// </summary>
+        /// <param name="slot">Número de ranura de guardado a eliminar (por defecto 0).</param>
         public void ClearSave(int slot = 0)
         {
             PlayerPrefs.DeleteKey(saveKeyPrefix + slot);

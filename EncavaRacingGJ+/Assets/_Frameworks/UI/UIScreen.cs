@@ -10,7 +10,7 @@ namespace Framework.UI
     /// la pantalla sigue "viva" (activa), solo invisible y sin interaccion.
     /// </summary>
     [RequireComponent(typeof(CanvasGroup))]
-    public abstract class UIScreen : MonoBehaviour
+    public class UIScreen : MonoBehaviour
     {
         // boton que se selecciona al mostrar (mando/teclado)
         [Tooltip("Objeto o botón que se seleccionará automáticamente al abrir esta pantalla (ideal para teclado/mando).")]

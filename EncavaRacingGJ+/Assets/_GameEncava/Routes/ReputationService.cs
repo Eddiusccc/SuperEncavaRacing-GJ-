@@ -4,8 +4,15 @@ using Framework.Core;
 using Framework.Save;
 using UnityEngine;
 
+/// <summary>
+/// Servicio que gestiona la reputación en las diferentes paradas de autobús.
+/// La reputación aumenta con entregas a tiempo y disminuye con retrasos, afectando los multiplicadores de ganancia.
+/// </summary>
 public class ReputationService : MonoBehaviour, ISaveable
 {
+    /// <summary>
+    /// Estructura de datos para persistir el progreso de reputación en cada parada.
+    /// </summary>
     [Serializable]
     class SaveData
     {
@@ -14,13 +21,18 @@ public class ReputationService : MonoBehaviour, ISaveable
         public float[] points;
     }
 
+    [Header("Configuración")]
+    [Tooltip("Puntos requeridos para subir al siguiente nivel de parada.")]
     [SerializeField] float pointsPerLevel = 100f;
+    [Tooltip("Puntos base ganados al entregar pasajeros a tiempo.")]
     [SerializeField] float onTimeReputationGain = 25f;
+    [Tooltip("Puntos base perdidos al entregar pasajeros con retraso.")]
     [SerializeField] float lateReputationLoss = 15f;
 
     readonly Dictionary<int, float> reputationPoints = new();
     readonly Dictionary<int, int> stopLevels = new();
 
+    /// <summary>Identificador para el sistema de guardado.</summary>
     public string SaveId => "game.reputation";
 
     void OnEnable()
@@ -35,11 +47,21 @@ public class ReputationService : MonoBehaviour, ISaveable
         EventBus.Unsubscribe<FareDelivered>(OnDelivered);
     }
 
+    /// <summary>
+    /// Obtiene el nivel actual de reputación de una parada específica.
+    /// </summary>
+    /// <param name="stopIndex">Índice o ID de la parada.</param>
+    /// <returns>Nivel de la parada (mínimo 1).</returns>
     public int GetStopLevel(int stopIndex)
     {
         return stopLevels.TryGetValue(stopIndex, out int lvl) ? lvl : 1;
     }
 
+    /// <summary>
+    /// Calcula el multiplicador de dinero basado en el nivel de reputación de la parada.
+    /// </summary>
+    /// <param name="stopIndex">Índice de la parada.</param>
+    /// <returns>Multiplicador (ej: Nivel 2 = 1.15x).</returns>
     public float GetReputationMultiplier(int stopIndex)
     {
         int lvl = GetStopLevel(stopIndex);
@@ -47,6 +69,10 @@ public class ReputationService : MonoBehaviour, ISaveable
         return 1f + (lvl - 1) * 0.15f;
     }
 
+    /// <summary>
+    /// Actualiza la reputación basándose en el desempeño de la entrega actual.
+    /// </summary>
+    /// <param name="e">Datos del evento de entrega.</param>
     void OnDelivered(FareDelivered e)
     {
         int stop = e.OriginStop;
@@ -83,11 +109,17 @@ public class ReputationService : MonoBehaviour, ISaveable
         EventBus.Publish(new StopReputationChanged(stop, lvl, current));
     }
 
+    /// <summary>
+    /// Reinicia los datos de reputación si fuera necesario para una nueva partida.
+    /// </summary>
     public void ResetForNewRun()
     {
         // En una jam podemos optar por mantener los niveles o reiniciar según el diseño
     }
 
+    /// <summary>
+    /// Captura el estado de reputación de todas las paradas para su guardado.
+    /// </summary>
     public string Capture()
     {
         var data = new SaveData
@@ -108,6 +140,9 @@ public class ReputationService : MonoBehaviour, ISaveable
         return JsonUtility.ToJson(data);
     }
 
+    /// <summary>
+    /// Restaura los datos de reputación desde un JSON.
+    /// </summary>
     public void Restore(string json)
     {
         if (string.IsNullOrEmpty(json)) return;
