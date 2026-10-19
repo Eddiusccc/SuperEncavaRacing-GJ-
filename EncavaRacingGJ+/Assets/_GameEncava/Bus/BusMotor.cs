@@ -92,7 +92,7 @@ public class BusMotor : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         // Solo congelamos X y Z: el bus puede girar en Y (rumbo) y la física resuelve los choques
-        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        rb.constraints = RigidbodyConstraints.FreezeRotationZ;
         rb.interpolation = RigidbodyInterpolation.Interpolate;
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
     }
