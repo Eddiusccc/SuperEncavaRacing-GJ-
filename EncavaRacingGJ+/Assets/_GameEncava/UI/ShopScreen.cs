@@ -17,6 +17,22 @@ public class ShopScreen : UIScreen
     [Header("Elementos de UI")]
     [SerializeField] TMP_Text moneyLabel;
 
+    #region 
+    [SerializeField] UpgradeContainer[] containers;
+
+    public void RefreshContainers()
+    {
+        UpgradeData[] datas = upgradeService.ReturnRandomUpgradeDataArray();
+        foreach (UpgradeContainer item in containers)
+        {
+            //QUE CADA CONTAINER SE SETEE CORRECTAMENTE PARA DEFINIR
+        }
+
+        //QUE COMPRE EN LA WALLET CIERTO VALOR CON LOS PUNTOS
+    }
+
+
+    #endregion
     /// <summary>
     /// Inicializa las dependencias buscando los servicios necesarios en la escena si no están asignados.
     /// Importante: Llama a base.Awake() para registrar el CanvasGroup y arrancar con alpha = 0.
