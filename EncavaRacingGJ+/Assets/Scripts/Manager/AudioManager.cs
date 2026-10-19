@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     public Sound[] sounds;
+    public Sound[] playlist;
 
     private void Awake()
     {
@@ -15,6 +16,15 @@ public class AudioManager : MonoBehaviour
     void SetupAudios()
     {
         foreach (var sound in sounds)
+        {
+            sound.source = gameObject.AddComponent<AudioSource>();
+            sound.source.clip = sound.clip;
+            sound.source.volume = sound.volume;
+            sound.source.pitch = sound.pitch;
+            sound.source.loop = sound.isLoop;
+            sound.source.playOnAwake = sound.isPlayAwake;
+        }
+        foreach (var sound in playlist)
         {
             sound.source = gameObject.AddComponent<AudioSource>();
             sound.source.clip = sound.clip;
