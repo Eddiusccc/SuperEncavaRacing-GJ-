@@ -7,6 +7,9 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
     public Sound[] sounds;
     public Sound[] playlist;
+    public float fadeTransition = 1.5f;
+    public int currentIndexPlaylist = 0;
+
 
     private void Awake()
     {
@@ -34,6 +37,31 @@ public class AudioManager : MonoBehaviour
             sound.source.playOnAwake = sound.isPlayAwake;
         }
     }
+
+    #region PLAYLIST METHODS
+    public void FadePlaylist(int prevIndex, int nextIndex)
+    {
+        Sound prevSound = playlist[prevIndex];
+        Sound nextSound = playlist[nextIndex];
+
+
+    }
+
+
+    public void NextSongButton()
+    {
+        int prev = currentIndexPlaylist;
+        int next = currentIndexPlaylist + 1;
+        currentIndexPlaylist = next;
+        if(currentIndexPlaylist > playlist.Lenght)
+        {
+            currentIndexPlaylist = 0;
+        }
+
+    }
+
+    #endregion
+
     public void PlaySFX(string name)
     {
         //Debug.Log("Trying to play sound: " + name);
@@ -139,4 +167,8 @@ public class Sound
     [Range(0.01f, 3f)] public float pitch;
     public bool isLoop = false;
     public bool isPlayAwake = false;
+
+    [Space(10f)]
+    public string author;
+    public string songName;
 }
