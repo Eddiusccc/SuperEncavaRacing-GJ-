@@ -12,6 +12,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Super Bus Racing Scene.unity
     guid: b1df88375f2f9de4b9ce45840bb9dbe2
   m_configObjects:
-    com.unity.input.settings: {fileID: 11400000, guid: 0bc32a3188469324cb1c1a76ab8c31ff, type: 2}
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: dd5f05f3aaab78542a35ca98de06d607, type: 3}
   m_UseUCBPForAssetBundles: 0

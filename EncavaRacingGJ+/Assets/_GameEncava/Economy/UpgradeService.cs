@@ -1,7 +1,7 @@
-using System;
-using System.Collections.Generic;
 using Framework.Core;
 using Framework.Save;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -30,6 +30,48 @@ public class UpgradeService : MonoBehaviour, ISaveable
 
     readonly Dictionary<string, int> levels = new();
 
+    #region
+
+    public UpgradeData[] ReturnRandomUpgradeDataArray(int quant = 3)
+    {
+        UpgradeData[] upgrades = new UpgradeData[quant];
+        for (int i = 0; i < upgrades.Length; i++)
+        {
+            int trys = 10;
+            upgrades[i] = ReturnRandomUpgradeData();
+            while (trys > 0 && CheckDataCopy(upgrades, upgrades[i]))
+            {
+                upgrades[i] = ReturnRandomUpgradeData();
+                trys--;
+            }
+        }
+        return upgrades;
+    }
+    bool CheckDataCopy(UpgradeData[] arr, UpgradeData da)
+    {
+        int contador = 0;
+
+        foreach (UpgradeData item in arr)
+        {
+            if (item.Equals(da))
+            {
+                contador++;
+
+                if (contador > 1)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    UpgradeData ReturnRandomUpgradeData()
+    {
+        int rng = UnityEngine.Random.Range(0, catalog.Count);
+        return catalog[rng];
+    }
+    #endregion
+
     /// <summary>Obtiene el catálogo de todas las mejoras definidas.</summary>
     public IReadOnlyList<UpgradeData> Catalog => catalog;
 
@@ -42,9 +84,9 @@ public class UpgradeService : MonoBehaviour, ISaveable
         if (wallet == null) wallet = FindFirstObjectByType<Wallet>();
     }
 
-    void OnEnable()  => SaveRegistry.Register(this);
+    void OnEnable() => SaveRegistry.Register(this);
     void OnDisable() => SaveRegistry.Unregister(this);
-    void Start()     => ApplyAll();
+    void Start() => ApplyAll();
 
     /// <summary>
     /// Obtiene el nivel actual de una mejora específica.
@@ -78,6 +120,7 @@ public class UpgradeService : MonoBehaviour, ISaveable
         EventBus.Publish(new UpgradeBought(u, nextLevel));
         return true;
     }
+
 
     /// <summary>
     /// Aplica los multiplicadores de todas las mejoras compradas a las estadísticas del autobús.
