@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class UpgradeContainer : MonoBehaviour
@@ -13,6 +14,27 @@ public class UpgradeContainer : MonoBehaviour
     public TMP_Text newLevel;
     public TMP_Text baseBonus;
     public TMP_Text newBonus;
+    public Selectable selec;
+    UpgradeData data;
+    ShopScreen shopScreen => FindAnyObjectByType<ShopScreen>();
+
+    private void Awake()
+    {
+        selec = GetComponent<Selectable>();
+    }
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        TryBuy();
+    }
+
+    void TryBuy()
+    {
+        bool b = shopScreen.BuyUpgrade(data);
+        if(b == true)
+        {
+            selec.interactable = false;
+        }
+    }
 
     public void SetContainer(UpgradeData data, int baseLevel)
     {
@@ -23,8 +45,10 @@ public class UpgradeContainer : MonoBehaviour
         this.newLevel.text = (baseLevel + 1).ToString();
         baseBonus.text = data.MultiplierFor(baseLevel).ToString();
         newBonus.text = data.MultiplierFor(baseLevel + 1).ToString();
-
+        this.data = data;
         int rng = Random.Range(0, colors.Length);
         bg.color = colors[rng];
+        selec.interactable = true;
+
     }
 }

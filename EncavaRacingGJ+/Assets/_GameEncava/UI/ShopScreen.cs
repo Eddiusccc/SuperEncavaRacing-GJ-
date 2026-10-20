@@ -19,20 +19,27 @@ public class ShopScreen : UIScreen
 
     #region 
     [SerializeField] UpgradeContainer[] containers;
-
-    public void RefreshContainers()
+    [SerializeField] Button refreshButton;
+    [SerializeField] int refreshCost = 3;
+    public void RefreshContainers(int cost = 1)
     {
-        UpgradeData[] datas = upgradeService.ReturnRandomUpgradeDataArray();
-        foreach (UpgradeContainer item in containers)
+        if (!wallet.TrySpend(refreshCost * cost))
         {
-            //QUE CADA CONTAINER SE SETEE CORRECTAMENTE PARA DEFINIR
+            return;
         }
 
-        //QUE COMPRE EN LA WALLET CIERTO VALOR CON LOS PUNTOS
+        UpgradeData[] datas = upgradeService.ReturnRandomUpgradeDataArray();
+        for (int i = 0; i < datas.Length; i++)
+        {
+            containers[i].SetContainer(datas[i], upgradeService.Level(datas[i]));
+        }
     }
-
-
+    void ChangeContainers()
+    {
+        RefreshContainers(0);
+    }
     #endregion
+
     /// <summary>
     /// Inicializa las dependencias buscando los servicios necesarios en la escena si no están asignados.
     /// Importante: Llama a base.Awake() para registrar el CanvasGroup y arrancar con alpha = 0.
@@ -44,6 +51,8 @@ public class ShopScreen : UIScreen
         if (upgradeService == null) upgradeService = FindFirstObjectByType<UpgradeService>();
         if (wallet == null) wallet = FindFirstObjectByType<Wallet>();
         if (flow == null) flow = FindFirstObjectByType<GameFlow>();
+
+        refreshButton.onClick.AddListener(ChangeContainers);
     }
 
     /// <summary>
@@ -102,11 +111,13 @@ public class ShopScreen : UIScreen
     /// Intenta comprar una mejora específica a través del servicio de mejoras.
     /// </summary>
     /// <param name="upgrade">Datos de la mejora a comprar.</param>
-    public void BuyUpgrade(UpgradeData upgrade)
+    public bool BuyUpgrade(UpgradeData upgrade)
     {
+        bool b = false;
         if (upgradeService != null && upgrade != null)
         {
-            upgradeService.TryBuy(upgrade);
+            b = upgradeService.TryBuy(upgrade);
         }
+        return b;
     }
 }
