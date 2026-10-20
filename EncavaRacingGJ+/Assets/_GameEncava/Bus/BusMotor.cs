@@ -95,6 +95,8 @@ public class BusMotor : MonoBehaviour
         rb.constraints = RigidbodyConstraints.FreezeRotationZ;
         rb.interpolation = RigidbodyInterpolation.Interpolate;
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+        // Baja el centro de masas para subir rampas más suave y con menos tendencia a engancharse
+        rb.centerOfMass = new Vector3(0f, -0.4f, 0f);
     }
 
     /// <summary>
@@ -208,6 +210,18 @@ public class BusMotor : MonoBehaviour
         {
             Vector3 n = ground.Normal;
             v.y = (-n.x * v.x - n.z * v.z) / n.y;                   // sigue rampas
+
+            // Alinear el cuerpo físico con la pendiente sin forzar el giro en Y
+            Vector3 up = n;
+            Vector3 rightProj = Vector3.ProjectOnPlane(rb.rotation * Vector3.right, up).normalized;
+            Vector3 fwdProj = Vector3.ProjectOnPlane(rb.rotation * Vector3.forward, up).normalized;
+            if (rightProj.sqrMagnitude < 0.001f) rightProj = Vector3.ProjectOnPlane(Vector3.right, up).normalized;
+            if (fwdProj.sqrMagnitude < 0.001f) fwdProj = Vector3.Cross(up, rightProj).normalized;
+            Quaternion slopeRot = Quaternion.LookRotation(fwdProj, up);
+            // Preservar yaw actual para no pelear con el giro por dirección
+            float yaw = rb.rotation.eulerAngles.y;
+            Quaternion targetSlope = Quaternion.Euler(slopeRot.eulerAngles.x, yaw, slopeRot.eulerAngles.z);
+            rb.rotation = Quaternion.Slerp(rb.rotation, targetSlope, (config.terrainAlignSpeed > 0f ? config.terrainAlignSpeed : 10f) * dt);
         }
         rb.linearVelocity = v;
 

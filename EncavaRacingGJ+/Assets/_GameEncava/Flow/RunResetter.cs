@@ -40,7 +40,7 @@ public class RunResetter : MonoBehaviour
                 rb.linearVelocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
                 rb.position = startPosition;
-                rb.rotation = Quaternion.identity;
+                //rb.rotation = Quaternion.identity;
             }
             else
             {

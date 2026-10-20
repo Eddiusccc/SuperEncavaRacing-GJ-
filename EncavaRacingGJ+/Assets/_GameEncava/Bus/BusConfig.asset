@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b7de1784b33204abe2bb2b26da0b5d, type: 3}
   m_Name: BusConfig
   m_EditorClassIdentifier: GameEncava::BusConfig
-  maxSpeed: 100
-  boostSpeed: 38
+  maxSpeed: 50
+  boostSpeed: 20
   acceleration: 10
   brakeDeceleration: 30
   coastDeceleration: 3
@@ -61,6 +61,7 @@ MonoBehaviour:
   steerReturnRate: 90
   gripAcceleration: 40
   yawResponse: 6
+  terrainAlignSpeed: 10
   crashImpactThreshold: 6
   invulnerability: 1.2
   rollPerAccel: 0.6
