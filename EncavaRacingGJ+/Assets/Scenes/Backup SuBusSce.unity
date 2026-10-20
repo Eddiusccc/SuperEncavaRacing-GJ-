@@ -39398,7 +39398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6354198229033899550, guid: 4c11ee3aa66425642a7a778f194b48c0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 9.863
+      value: 9.617411
       objectReference: {fileID: 0}
     - target: {fileID: 6354198229033899550, guid: 4c11ee3aa66425642a7a778f194b48c0, type: 3}
       propertyPath: m_LocalScale.z
@@ -39410,7 +39410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6354198229033899550, guid: 4c11ee3aa66425642a7a778f194b48c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 6354198229033899550, guid: 4c11ee3aa66425642a7a778f194b48c0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -39455,6 +39455,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2728218027373708602, guid: 4c11ee3aa66425642a7a778f194b48c0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 749985337}
+    - targetCorrespondingSourceObject: {fileID: 2728218027373708602, guid: 4c11ee3aa66425642a7a778f194b48c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 749985338}
   m_SourcePrefab: {fileID: -7650275566352638233, guid: 4c11ee3aa66425642a7a778f194b48c0, type: 3}
 --- !u!1 &749985332 stripped
 GameObject:
@@ -39482,6 +39485,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0000005, y: 0.06919761, z: 1.0000005}
   m_Center: {x: 0.00000019073487, y: 0.48539877, z: -0.00000009536743}
+--- !u!65 &749985338
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749985332}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0000005, y: 0.016117247, z: 1.0000005}
+  m_Center: {x: 0, y: 0.007876039, z: 0}
 --- !u!1 &759452794 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1082798191813559994, guid: 8b18b46e03e834c44bd06f95f697083f, type: 3}
