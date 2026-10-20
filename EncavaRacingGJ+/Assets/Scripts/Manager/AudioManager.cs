@@ -43,23 +43,56 @@ public class AudioManager : MonoBehaviour
     {
         Sound prevSound = playlist[prevIndex];
         Sound nextSound = playlist[nextIndex];
+        nextSound.source.volume = 0;
+        nextSound.source.Play();
 
+        prevSound.source.DOFade(0, fadeTransition).OnComplete(() =>
+        {
+            prevSound.source.Stop();
+        });
 
+        nextSound.source.DOFade(1, fadeTransition);
     }
 
-
+    public void StartPlaylist(int index = 0)
+    {
+        currentIndexPlaylist = index;
+        StartCurrentPlaylist();
+    }
+    public void StartCurrentPlaylist()
+    {
+        playlist[currentIndexPlaylist].source.Play();
+        playlist[currentIndexPlaylist].source.DOFade(1, fadeTransition / 2f);
+    }
+    public void StopCurrentPlaylist()
+    {
+        playlist[currentIndexPlaylist].source.DOFade(0, fadeTransition / 2f).OnComplete(() =>
+        {
+            playlist[currentIndexPlaylist].source.Stop();
+        });
+    }
     public void NextSongButton()
     {
         int prev = currentIndexPlaylist;
         int next = currentIndexPlaylist + 1;
-        currentIndexPlaylist = next;
-        if(currentIndexPlaylist > playlist.Lenght)
+        if (next >= playlist.Length)
         {
-            currentIndexPlaylist = 0;
+            next = 0;
         }
-
+        currentIndexPlaylist = next;
+        FadePlaylist(prev, next);
     }
-
+    public void PrevSongButton()
+    {
+        int prev = currentIndexPlaylist;
+        int next = currentIndexPlaylist - 1;
+        if (next < 0)
+        {
+            next = playlist.Length - 1;
+        }
+        currentIndexPlaylist = next;
+        FadePlaylist(prev, next);
+    }
     #endregion
 
     public void PlaySFX(string name)
