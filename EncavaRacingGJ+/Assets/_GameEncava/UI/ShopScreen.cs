@@ -29,14 +29,20 @@ public class ShopScreen : UIScreen
         }
 
         UpgradeData[] datas = upgradeService.ReturnRandomUpgradeDataArray();
+        Debug.Log(datas.Length);
+
         for (int i = 0; i < datas.Length; i++)
         {
             containers[i].SetContainer(datas[i], upgradeService.Level(datas[i]));
         }
     }
-    void ChangeContainers()
+    public void ChangeContainersFirstTime()
     {
         RefreshContainers(0);
+    }
+    void ChangeContainers()
+    {
+        RefreshContainers();
     }
     #endregion
 

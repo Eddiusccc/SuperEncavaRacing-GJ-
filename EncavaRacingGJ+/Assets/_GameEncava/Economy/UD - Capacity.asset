@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: UD - Capacity
   m_EditorClassIdentifier: GameEncava::UpgradeData
   id: capacity_plus
-  displayName: Mejora de Audio
-  description: Compra nuevos asientos para tus pasajeros. Cada nivel suma 10 nuevos
+  displayName: Mejora de Asientos
+  description: Compra nuevos asientos para tus pasajeros. Cada nivel suma 5 nuevos
     asientos de la peor calidad
   stat: 6
-  bonusPerLevel: 10
+  bonusPerLevel: 5
   maxLevel: 6
   baseCost: 100
   costGrowth: 2

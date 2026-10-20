@@ -1883,7 +1883,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 80
+  field of view: 81.73442
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -1909,8 +1909,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.48, y: 3.53, z: 5.88}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -122.16, y: 3.79, z: -144.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2345,6 +2345,9 @@ MonoBehaviour:
   wallet: {fileID: 1129584750}
   flow: {fileID: 1581702772}
   moneyLabel: {fileID: 313203387}
+  containers: []
+  refreshButton: {fileID: 0}
+  refreshCost: 3
 --- !u!1 &395355108
 GameObject:
   m_ObjectHideFlags: 0
@@ -8673,7 +8676,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 80
+    FieldOfView: 81.73442
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000

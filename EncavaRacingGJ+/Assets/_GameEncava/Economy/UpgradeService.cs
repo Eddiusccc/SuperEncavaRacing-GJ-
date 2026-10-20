@@ -53,10 +53,9 @@ public class UpgradeService : MonoBehaviour, ISaveable
 
         foreach (UpgradeData item in arr)
         {
-            if (item.Equals(da))
+            if (item != null && item.Equals(da))
             {
                 contador++;
-
                 if (contador > 1)
                 {
                     return true;

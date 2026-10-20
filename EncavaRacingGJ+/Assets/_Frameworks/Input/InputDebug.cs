@@ -23,6 +23,9 @@ public class InputDebug : MonoBehaviour
     void Update()
     {
         // Debug de Move
-        if (input.Move != Vector2.zero) Debug.Log($"Move: {input.Move}");
+        if (input.Move != Vector2.zero)
+        {
+            //Debug.Log($"Move: {input.Move}");
+        }
     }
 }

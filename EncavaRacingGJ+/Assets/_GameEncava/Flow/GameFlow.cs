@@ -70,6 +70,7 @@ public class GameFlow : MonoBehaviour
         };
 
         fsm.SetState(initial);
+        AudioManager.instance.StartPlaylist();
     }
 
     void OnEnable()
@@ -141,7 +142,11 @@ public class GameFlow : MonoBehaviour
     /// <summary>Solicita transicionar al estado de fin de juego (GameOver).</summary>
     public void RequestGameOver() => gameOverRequested = true;
     /// <summary>Solicita abrir el estado de la tienda.</summary>
-    public void RequestShop()     => shopRequested = true;
+    public void RequestShop()
+    {
+        shopRequested = true;
+        FindAnyObjectByType<ShopScreen>().ChangeContainersFirstTime();
+    }  
     /// <summary>Solicita volver al menú principal.</summary>
     public void RequestMenu()     => menuRequested = true;
 }

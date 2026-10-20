@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: UD - Accel
   m_EditorClassIdentifier: GameEncava::UpgradeData
   id: acceleration_plus
-  displayName: Mejora de Audio
+  displayName: Mejora de Aceleracion
   description: "Compras un sistema de audio traido desde gringolandia que te nubla
     el jucio por la seguridad vial. Cada nivel a\xF1ade una nueva bocina. Mejora
     la aceleraci\xF3n"

@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
@@ -57,9 +58,9 @@ public class AudioManager : MonoBehaviour
     public void StartPlaylist(int index = 0)
     {
         currentIndexPlaylist = index;
-        StartCurrentPlaylist();
+        PlayCurrentPlaylist();
     }
-    public void StartCurrentPlaylist()
+    public void PlayCurrentPlaylist()
     {
         playlist[currentIndexPlaylist].source.Play();
         playlist[currentIndexPlaylist].source.DOFade(1, fadeTransition / 2f);
@@ -71,6 +72,37 @@ public class AudioManager : MonoBehaviour
             playlist[currentIndexPlaylist].source.Stop();
         });
     }
+    public void PauseCurrentPlaylist()
+    {
+        playlist[currentIndexPlaylist].source.DOFade(0, fadeTransition / 2f).OnComplete(() =>
+        {
+            playlist[currentIndexPlaylist].source.Pause();
+        });
+    }
+
+    public void PlayPauseButton()
+    {
+        bool needPause = false;
+        if (playlist[currentIndexPlaylist].source.isPlaying)
+        {
+            needPause = true;
+        }
+
+        switch (needPause)
+        {
+            case true:
+                {
+                    PauseCurrentPlaylist();
+                    break;
+                }
+            case false:
+                {
+                    PlayCurrentPlaylist();
+                    break;
+                }
+        }
+    }
+
     public void NextSongButton()
     {
         int prev = currentIndexPlaylist;
