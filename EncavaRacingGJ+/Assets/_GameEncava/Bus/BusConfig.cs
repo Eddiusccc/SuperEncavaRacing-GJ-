@@ -65,6 +65,10 @@ public class BusConfig : ScriptableObject
     [Tooltip("Tasa angular de respuesta en rad/s² para alcanzar el giro deseado.")]
     public float yawResponse = 6f;
 
+    [Header("Terreno")]
+    [Tooltip("Velocidad de suavizado con la que el cuerpo físico se alinea con la pendiente del terreno. A mayor valor, más rápida la respuesta.")]
+    public float terrainAlignSpeed = 10f;
+
     [Header("Choque")]
     [Tooltip("Velocidad de impacto mínima en m/s para registrar una colisión como choque crítico.")]
     public float crashImpactThreshold = 6f;

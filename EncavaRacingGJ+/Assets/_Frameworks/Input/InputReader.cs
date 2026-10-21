@@ -19,6 +19,7 @@ namespace Framework.Input
         public Vector2 Look {get; private set; }
         public bool LookFromGamepad {get; private set; }
         public bool JumpHeld {get; private set; }
+        public bool CrouchHeld {get; private set; }
 
         // Eventos de "acabo de pasar" (pusar/saltar)
         public event Action JumpPressed;
@@ -72,7 +73,7 @@ namespace Framework.Input
             EventBus.Publish(new GameplayInputChanged(false));
         }
 
-        // ----- Callbacks de GameInput.IGameplayActions -----
+// ----- Callbacks de GameInput.IGameplayActions -----
         /// <summary>
         /// Procesa movimiento
         /// </summary>
@@ -108,12 +109,22 @@ namespace Framework.Input
         }
 
         /// <summary>
-        /// Procesa Dash
+        /// Procesa Dash (Boost)
         /// </summary>
         /// <param name="ctx"></param>
         public void OnDash(InputAction.CallbackContext ctx)
         {
             if (ctx.started) DashPressed?.Invoke();
+        }
+
+        /// <summary>
+        /// Procesa Agachado (Freno de mano)
+        /// </summary>
+        /// <param name="ctx"></param>
+        public void OnCrouch(InputAction.CallbackContext ctx)
+        {
+            if (ctx.started) { CrouchHeld = true; CrouchPresed?.Invoke(); }
+            else if (ctx.canceled) { CrouchHeld = false; }
         }
 
         /// <summary>
@@ -131,19 +142,14 @@ namespace Framework.Input
         /// <param name="ctx"></param>
         public void OnAttack(InputAction.CallbackContext ctx)
         {
-            // Funcion de Ataque
             if (ctx.started) AttackPressed?.Invoke();
         }
-        public void OnCrouch(InputAction.CallbackContext ctx){
-            // Funcion de Agachado
-            if (ctx.started) CrouchPresed?.Invoke();
-        }
-        public void OnPrevious(InputAction.CallbackContext ctx){
-            // Funcion de Previo (ni idea que)
+        public void OnPrevious(InputAction.CallbackContext ctx)
+        {
             if (ctx.started) PreviousPressed?.Invoke();
         }
-        public void OnNext(InputAction.CallbackContext ctx){
-            // Funcion de Siguiente (ni idea que)
+        public void OnNext(InputAction.CallbackContext ctx)
+        {
             if (ctx.started) NextPressed?.Invoke();
         }
 

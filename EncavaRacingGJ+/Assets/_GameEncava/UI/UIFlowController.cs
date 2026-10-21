@@ -21,6 +21,7 @@ public class UIFlowController : MonoBehaviour
     void Awake()
     {
         if (screens == null) screens = GetComponent<ScreenManager>();
+
     }
 
     void OnEnable()  => EventBus.Subscribe<GameStateChanged>(OnGameStateChanged);
