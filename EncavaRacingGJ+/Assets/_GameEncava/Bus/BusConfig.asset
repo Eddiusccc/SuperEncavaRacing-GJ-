@@ -61,7 +61,7 @@ MonoBehaviour:
   steerReturnRate: 90
   gripAcceleration: 40
   yawResponse: 6
-  terrainAlignSpeed: 14
+  terrainAlignSpeed: 20
   crashImpactThreshold: 6
   invulnerability: 1.2
   rollPerAccel: 0.6
