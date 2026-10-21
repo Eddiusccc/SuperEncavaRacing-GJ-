@@ -72049,7 +72049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: GameEncava::RunTimer
   flow: {fileID: 1581702772}
-  startTime: 60
+  startTime: 5
   crashPenalty: 2
 --- !u!114 &1581702772
 MonoBehaviour:

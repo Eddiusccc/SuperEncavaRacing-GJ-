@@ -14,15 +14,15 @@ public class UpgradeContainer : MonoBehaviour
     public TMP_Text newLevel;
     public TMP_Text baseBonus;
     public TMP_Text newBonus;
-    public Selectable selec;
+    public Button selec;
     UpgradeData data;
     ShopScreen shopScreen => FindAnyObjectByType<ShopScreen>();
 
     private void Awake()
     {
-        selec = GetComponent<Selectable>();
+        selec.onClick.AddListener(OnButton);
     }
-    public void OnPointerDown(PointerEventData eventData)
+    public void OnButton()
     {
         TryBuy();
     }
@@ -40,7 +40,7 @@ public class UpgradeContainer : MonoBehaviour
     {
         title.text = data.displayName;
         description.text = data.description;
-        cost.text = data.CostFor(baseLevel + 1).ToString() + " $";
+        cost.text = data.CostFor(baseLevel).ToString() + " $";
         this.baseLevel.text = baseLevel.ToString();
         this.newLevel.text = (baseLevel + 1).ToString();
         baseBonus.text = data.MultiplierFor(baseLevel).ToString();
