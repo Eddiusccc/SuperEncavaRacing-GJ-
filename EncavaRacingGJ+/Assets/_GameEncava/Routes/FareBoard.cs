@@ -51,7 +51,7 @@ public class FareBoard : MonoBehaviour
             if (f.Destination != e.StopIndex) continue;
 
             // En este momento exacto se contabiliza el pago, la reputación y el tiempo
-            float repMult = reputation != null ? reputation.GetReputationMultiplier(f.Origin) : 1f;
+            float repMult = reputation != null ? reputation.GetReputationMultiplier(f.Destination) : 1f;
             float reward = FareCalculator.Reward(f, Time.time, bus != null ? bus.Stats : null, repMult);
             float timeBonusMod = bus != null && bus.Stats != null ? bus.Stats.Get(StatType.TimeBonus, 1f) : 1f;
             float bonus = baseBonusTime * timeBonusMod;
