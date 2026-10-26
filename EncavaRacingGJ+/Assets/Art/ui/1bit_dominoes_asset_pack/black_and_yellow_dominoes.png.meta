@@ -1,0 +1,1365 @@
+fileFormatVersion: 2
+guid: 83adb66d8946fc649a5ceaeaa7fd4f2d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6864812352954148736
+    second: black_and_yellow_dominoes_0
+  - first:
+      213: 6566526758109394667
+    second: black_and_yellow_dominoes_1
+  - first:
+      213: -6741722059875884071
+    second: black_and_yellow_dominoes_2
+  - first:
+      213: 4122910222267941231
+    second: black_and_yellow_dominoes_3
+  - first:
+      213: -2530379747511628336
+    second: black_and_yellow_dominoes_4
+  - first:
+      213: -2003583399308124540
+    second: black_and_yellow_dominoes_5
+  - first:
+      213: 6192269893288764108
+    second: black_and_yellow_dominoes_6
+  - first:
+      213: -2757798660970787317
+    second: black_and_yellow_dominoes_7
+  - first:
+      213: 8501847139462310578
+    second: black_and_yellow_dominoes_8
+  - first:
+      213: -2142392590684210025
+    second: black_and_yellow_dominoes_9
+  - first:
+      213: -138895082896765043
+    second: black_and_yellow_dominoes_10
+  - first:
+      213: -6452086677239588803
+    second: black_and_yellow_dominoes_11
+  - first:
+      213: -5599715790606001715
+    second: black_and_yellow_dominoes_12
+  - first:
+      213: -7449708612347147301
+    second: black_and_yellow_dominoes_13
+  - first:
+      213: -2538255035502199125
+    second: black_and_yellow_dominoes_14
+  - first:
+      213: 4982344533846447062
+    second: black_and_yellow_dominoes_15
+  - first:
+      213: -7675790801874718604
+    second: black_and_yellow_dominoes_16
+  - first:
+      213: -379706480327216929
+    second: black_and_yellow_dominoes_17
+  - first:
+      213: 4905517287159957365
+    second: black_and_yellow_dominoes_18
+  - first:
+      213: -1249407301461574112
+    second: black_and_yellow_dominoes_19
+  - first:
+      213: -7643828823572243511
+    second: black_and_yellow_dominoes_20
+  - first:
+      213: -8315387432582337111
+    second: black_and_yellow_dominoes_21
+  - first:
+      213: 5561496194876875539
+    second: black_and_yellow_dominoes_22
+  - first:
+      213: 5928328793127676238
+    second: black_and_yellow_dominoes_23
+  - first:
+      213: -6655919638667695957
+    second: black_and_yellow_dominoes_24
+  - first:
+      213: 3539563638506342653
+    second: black_and_yellow_dominoes_25
+  - first:
+      213: 8833438675391886849
+    second: black_and_yellow_dominoes_26
+  - first:
+      213: 9219301942792544436
+    second: black_and_yellow_dominoes_27
+  - first:
+      213: 6203752644496607612
+    second: black_and_yellow_dominoes_28
+  - first:
+      213: -6229081447599103007
+    second: black_and_yellow_dominoes_29
+  - first:
+      213: 15447402481266343
+    second: black_and_yellow_dominoes_30
+  - first:
+      213: 5675313094396574347
+    second: black_and_yellow_dominoes_31
+  - first:
+      213: 2643100841939776631
+    second: black_and_yellow_dominoes_32
+  - first:
+      213: 4112386304303023384
+    second: black_and_yellow_dominoes_33
+  - first:
+      213: -3522430834269840256
+    second: black_and_yellow_dominoes_34
+  - first:
+      213: 8759753468936735343
+    second: black_and_yellow_dominoes_35
+  - first:
+      213: -2337506633449576351
+    second: black_and_yellow_dominoes_36
+  - first:
+      213: 362016278635249804
+    second: black_and_yellow_dominoes_37
+  - first:
+      213: 6460646573662277254
+    second: black_and_yellow_dominoes_38
+  - first:
+      213: 5579214151121477932
+    second: black_and_yellow_dominoes_39
+  - first:
+      213: 250622755111726696
+    second: black_and_yellow_dominoes_40
+  - first:
+      213: 8555278689565850660
+    second: black_and_yellow_dominoes_41
+  - first:
+      213: -3873740663628794158
+    second: black_and_yellow_dominoes_42
+  - first:
+      213: -4872608984371636500
+    second: black_and_yellow_dominoes_43
+  - first:
+      213: -1673579627130927366
+    second: black_and_yellow_dominoes_44
+  - first:
+      213: 8724240652175695284
+    second: black_and_yellow_dominoes_45
+  - first:
+      213: -2691010040209234903
+    second: black_and_yellow_dominoes_46
+  - first:
+      213: -4673715601977307589
+    second: black_and_yellow_dominoes_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087ab83b676b44f50800000000000000
+      internalID: 6864812352954148736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be63539ab4df02b50800000000000000
+      internalID: 6566526758109394667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d3eea671879072a0800000000000000
+      internalID: -6741722059875884071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f618b17c005873930800000000000000
+      internalID: 4122910222267941231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd0ab2b60942ecd0800000000000000
+      internalID: -2530379747511628336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e9e568387d134e0800000000000000
+      internalID: -2003583399308124540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc2a2dee8ac5fe550800000000000000
+      internalID: 6192269893288764108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ec9c2bab45ab9d0800000000000000
+      internalID: -2757798660970787317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ba625abde0acf570800000000000000
+      internalID: 8501847139462310578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79cb6d62a41b442e0800000000000000
+      internalID: -2142392590684210025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8fc3e278ab821ef0800000000000000
+      internalID: -138895082896765043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d389a170a559576a0800000000000000
+      internalID: -6452086677239588803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc998c13820d942b0800000000000000
+      internalID: -5599715790606001715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb41e0cc715d9890800000000000000
+      internalID: -7449708612347147301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bae7b835e7e46ccd0800000000000000
+      internalID: -2538255035502199125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3d688b4f7d42540800000000000000
+      internalID: 4982344533846447062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 470fb0c0fec1a7590800000000000000
+      internalID: -7675790801874718604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd0be29c7f20bbaf0800000000000000
+      internalID: -379706480327216929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57705bc6bf5e31440800000000000000
+      internalID: 4905517287159957365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e7a90dda639aee0800000000000000
+      internalID: -1249407301461574112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cb95170f2aabe590800000000000000
+      internalID: -7643828823572243511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9adae27df2fc99c80800000000000000
+      internalID: -8315387432582337111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 313a25bb2576e2d40800000000000000
+      internalID: 5561496194876875539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e496812b0a7a54250800000000000000
+      internalID: 5928328793127676238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba86aab6a5c61a3a0800000000000000
+      internalID: -6655919638667695957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df84f05306e0f1130800000000000000
+      internalID: 3539563638506342653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1063ee77cada69a70800000000000000
+      internalID: 8833438675391886849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b0e731654a81ff70800000000000000
+      internalID: 9219301942792544436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c794c994928281650800000000000000
+      internalID: 6203752644496607612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e321ee2d6bdd89a0800000000000000
+      internalID: -6229081447599103007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ae2999a451e63000800000000000000
+      internalID: 15447402481266343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_31
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a71a4b033c2ce40800000000000000
+      internalID: 5675313094396574347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7743b55463e2ea420800000000000000
+      internalID: 2643100841939776631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 815c92f2e81221930800000000000000
+      internalID: 4112386304303023384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08c9671a1dfcd1fc0800000000000000
+      internalID: -3522430834269840256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a48fb6e55e09970800000000000000
+      internalID: 8759753468936735343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1686e1df9128f8fd0800000000000000
+      internalID: -2337506633449576351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8086fa23e3260500800000000000000
+      internalID: 362016278635249804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e0c7a24d3d8a950800000000000000
+      internalID: 6460646573662277254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_39
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c21ad63e5b95d6d40800000000000000
+      internalID: 5579214151121477932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86e601361146a7300800000000000000
+      internalID: 250622755111726696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42cba0ee3a47ab670800000000000000
+      internalID: 8555278689565850660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_42
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d67b60f365bd3ac0800000000000000
+      internalID: -3873740663628794158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce6d625e1f3016cb0800000000000000
+      internalID: -4872608984371636500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af6c785323046c8e0800000000000000
+      internalID: -1673579627130927366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_45
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd54ff66aab21970800000000000000
+      internalID: 8724240652175695284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 924a15240ac97aad0800000000000000
+      internalID: -2691010040209234903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_and_yellow_dominoes_47
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3e01f22c60a32fb0800000000000000
+      internalID: -4673715601977307589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      black_and_yellow_dominoes_0: 6864812352954148736
+      black_and_yellow_dominoes_1: 6566526758109394667
+      black_and_yellow_dominoes_10: -138895082896765043
+      black_and_yellow_dominoes_11: -6452086677239588803
+      black_and_yellow_dominoes_12: -5599715790606001715
+      black_and_yellow_dominoes_13: -7449708612347147301
+      black_and_yellow_dominoes_14: -2538255035502199125
+      black_and_yellow_dominoes_15: 4982344533846447062
+      black_and_yellow_dominoes_16: -7675790801874718604
+      black_and_yellow_dominoes_17: -379706480327216929
+      black_and_yellow_dominoes_18: 4905517287159957365
+      black_and_yellow_dominoes_19: -1249407301461574112
+      black_and_yellow_dominoes_2: -6741722059875884071
+      black_and_yellow_dominoes_20: -7643828823572243511
+      black_and_yellow_dominoes_21: -8315387432582337111
+      black_and_yellow_dominoes_22: 5561496194876875539
+      black_and_yellow_dominoes_23: 5928328793127676238
+      black_and_yellow_dominoes_24: -6655919638667695957
+      black_and_yellow_dominoes_25: 3539563638506342653
+      black_and_yellow_dominoes_26: 8833438675391886849
+      black_and_yellow_dominoes_27: 9219301942792544436
+      black_and_yellow_dominoes_28: 6203752644496607612
+      black_and_yellow_dominoes_29: -6229081447599103007
+      black_and_yellow_dominoes_3: 4122910222267941231
+      black_and_yellow_dominoes_30: 15447402481266343
+      black_and_yellow_dominoes_31: 5675313094396574347
+      black_and_yellow_dominoes_32: 2643100841939776631
+      black_and_yellow_dominoes_33: 4112386304303023384
+      black_and_yellow_dominoes_34: -3522430834269840256
+      black_and_yellow_dominoes_35: 8759753468936735343
+      black_and_yellow_dominoes_36: -2337506633449576351
+      black_and_yellow_dominoes_37: 362016278635249804
+      black_and_yellow_dominoes_38: 6460646573662277254
+      black_and_yellow_dominoes_39: 5579214151121477932
+      black_and_yellow_dominoes_4: -2530379747511628336
+      black_and_yellow_dominoes_40: 250622755111726696
+      black_and_yellow_dominoes_41: 8555278689565850660
+      black_and_yellow_dominoes_42: -3873740663628794158
+      black_and_yellow_dominoes_43: -4872608984371636500
+      black_and_yellow_dominoes_44: -1673579627130927366
+      black_and_yellow_dominoes_45: 8724240652175695284
+      black_and_yellow_dominoes_46: -2691010040209234903
+      black_and_yellow_dominoes_47: -4673715601977307589
+      black_and_yellow_dominoes_5: -2003583399308124540
+      black_and_yellow_dominoes_6: 6192269893288764108
+      black_and_yellow_dominoes_7: -2757798660970787317
+      black_and_yellow_dominoes_8: 8501847139462310578
+      black_and_yellow_dominoes_9: -2142392590684210025
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

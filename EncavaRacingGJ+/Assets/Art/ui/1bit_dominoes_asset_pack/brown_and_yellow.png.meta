@@ -1,0 +1,1365 @@
+fileFormatVersion: 2
+guid: 3137505d274a9604c9cbca8cfa4bb911
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6330004382002937240
+    second: brown_and_yellow_0
+  - first:
+      213: 3293991201895258656
+    second: brown_and_yellow_1
+  - first:
+      213: -1203685064005115544
+    second: brown_and_yellow_2
+  - first:
+      213: -6523164462146237947
+    second: brown_and_yellow_3
+  - first:
+      213: -1285388470891032894
+    second: brown_and_yellow_4
+  - first:
+      213: -8181944408879636617
+    second: brown_and_yellow_5
+  - first:
+      213: 3546378634962268116
+    second: brown_and_yellow_6
+  - first:
+      213: 6630561318713577129
+    second: brown_and_yellow_7
+  - first:
+      213: 6528192532681555964
+    second: brown_and_yellow_8
+  - first:
+      213: -4763546342202540690
+    second: brown_and_yellow_9
+  - first:
+      213: 657320664908475899
+    second: brown_and_yellow_10
+  - first:
+      213: -2058738727342340524
+    second: brown_and_yellow_11
+  - first:
+      213: 8480415874406733415
+    second: brown_and_yellow_12
+  - first:
+      213: 935768009445339011
+    second: brown_and_yellow_13
+  - first:
+      213: -7370653014315601821
+    second: brown_and_yellow_14
+  - first:
+      213: -7784603369301885998
+    second: brown_and_yellow_15
+  - first:
+      213: 641535199019398314
+    second: brown_and_yellow_16
+  - first:
+      213: -8659498721556546981
+    second: brown_and_yellow_17
+  - first:
+      213: 7805162638509294612
+    second: brown_and_yellow_18
+  - first:
+      213: -5371050035849124755
+    second: brown_and_yellow_19
+  - first:
+      213: -6527990345327315904
+    second: brown_and_yellow_20
+  - first:
+      213: -5670374803675443721
+    second: brown_and_yellow_21
+  - first:
+      213: -1216921299083487917
+    second: brown_and_yellow_22
+  - first:
+      213: -7167608714258759536
+    second: brown_and_yellow_23
+  - first:
+      213: -7509805076045647273
+    second: brown_and_yellow_24
+  - first:
+      213: -4455691579362642945
+    second: brown_and_yellow_25
+  - first:
+      213: 5900827524378337355
+    second: brown_and_yellow_26
+  - first:
+      213: -1920285893528103959
+    second: brown_and_yellow_27
+  - first:
+      213: 910907196152504490
+    second: brown_and_yellow_28
+  - first:
+      213: -5549007176360453463
+    second: brown_and_yellow_29
+  - first:
+      213: -5835308133354041097
+    second: brown_and_yellow_30
+  - first:
+      213: 7382474727780820566
+    second: brown_and_yellow_31
+  - first:
+      213: -4174171669078796166
+    second: brown_and_yellow_32
+  - first:
+      213: -5148840963427921708
+    second: brown_and_yellow_33
+  - first:
+      213: 4309642940757637950
+    second: brown_and_yellow_34
+  - first:
+      213: -77208353050882763
+    second: brown_and_yellow_35
+  - first:
+      213: 887484387871985316
+    second: brown_and_yellow_36
+  - first:
+      213: -4059547034229807755
+    second: brown_and_yellow_37
+  - first:
+      213: 1544155458268771792
+    second: brown_and_yellow_38
+  - first:
+      213: 7929719825874222191
+    second: brown_and_yellow_39
+  - first:
+      213: 8906865916378209578
+    second: brown_and_yellow_40
+  - first:
+      213: -4980934460516766547
+    second: brown_and_yellow_41
+  - first:
+      213: 5452090355759146569
+    second: brown_and_yellow_42
+  - first:
+      213: -6973313141932268311
+    second: brown_and_yellow_43
+  - first:
+      213: 1708353651848381994
+    second: brown_and_yellow_44
+  - first:
+      213: 252715219648222059
+    second: brown_and_yellow_45
+  - first:
+      213: -8813721931171614237
+    second: brown_and_yellow_46
+  - first:
+      213: -5011275054625120896
+    second: brown_and_yellow_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: brown_and_yellow_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 81
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d73f79271b8d750800000000000000
+      internalID: 6330004382002937240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02a9a3abb8b96bd20800000000000000
+      internalID: 3293991201895258656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 861288acfc6ab4fe0800000000000000
+      internalID: -1203685064005115544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a425e9b701975a0800000000000000
+      internalID: -6523164462146237947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce482afef1692ee0800000000000000
+      internalID: -1285388470891032894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77f5cb0f8e4e37e80800000000000000
+      internalID: -8181944408879636617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dfe5f73494473130800000000000000
+      internalID: 3546378634962268116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae4e5f936c740c50800000000000000
+      internalID: 6630561318713577129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 65
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cff77d7458cc89a50800000000000000
+      internalID: 6528192532681555964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6df7e117db74edb0800000000000000
+      internalID: -4763546342202540690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfda46f79a54f1900800000000000000
+      internalID: 657320664908475899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4568b6ff804ed63e0800000000000000
+      internalID: -2058738727342340524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 766d89d7e4d70b570800000000000000
+      internalID: 8480415874406733415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38fe923fb048cfc00800000000000000
+      internalID: 935768009445339011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3607e07822e26b990800000000000000
+      internalID: -7370653014315601821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dbb37fea7887f390800000000000000
+      internalID: -7784603369301885998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 49
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa4f5705dd037e800800000000000000
+      internalID: 641535199019398314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a3ca0fac743d780800000000000000
+      internalID: -8659498721556546981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4144f72f012815c60800000000000000
+      internalID: 7805162638509294612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d642d5e03723675b0800000000000000
+      internalID: -5371050035849124755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 044f5912e5be765a0800000000000000
+      internalID: -6527990345327315904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fd8993b828ce41b0800000000000000
+      internalID: -5670374803675443721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3559588a680ac1fe0800000000000000
+      internalID: -1216921299083487917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 090cc9999d9878c90800000000000000
+      internalID: -7167608714258759536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 33
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752bfdd6210d7c790800000000000000
+      internalID: -7509805076045647273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff3f367ad143a22c0800000000000000
+      internalID: -4455691579362642945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b402b679e53f3e150800000000000000
+      internalID: 5900827524378337355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e350196726c955e0800000000000000
+      internalID: -1920285893528103959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa0640ac44134ac00800000000000000
+      internalID: 910907196152504490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa11fc7f57fdf2b0800000000000000
+      internalID: -5549007176360453463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f01c746b22d40fa0800000000000000
+      internalID: -5835308133354041097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_31
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 656aca0a6a1d37660800000000000000
+      internalID: 7382474727780820566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 17
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a781f019bfc5216c0800000000000000
+      internalID: -4174171669078796166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d016e96c64ab88b0800000000000000
+      internalID: -5148840963427921708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3bf0a0db6deecb30800000000000000
+      internalID: 4309642940757637950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53d85b67963bdeef0800000000000000
+      internalID: -77208353050882763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ae80d2495af05c00800000000000000
+      internalID: 887484387871985316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 575edb31b7799a7c0800000000000000
+      internalID: -4059547034229807755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d537104531fd6510800000000000000
+      internalID: 1544155458268771792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_39
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6cfa9d0b260c0e60800000000000000
+      internalID: 7929719825874222191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2dd1cf3c5b8b9b70800000000000000
+      internalID: 8906865916378209578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dac656f8f7a20eab0800000000000000
+      internalID: -4980934460516766547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_42
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9466b5aca47b9ab40800000000000000
+      internalID: 5452090355759146569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e46093c4a0d93f90800000000000000
+      internalID: -6973313141932268311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a260a29589a45b710800000000000000
+      internalID: 1708353651848381994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_45
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6397704723d18300800000000000000
+      internalID: 252715219648222059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e13277c99e5fa580800000000000000
+      internalID: -8813721931171614237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_and_yellow_47
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08d1b4183ef547ab0800000000000000
+      internalID: -5011275054625120896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      brown_and_yellow_0: 6330004382002937240
+      brown_and_yellow_1: 3293991201895258656
+      brown_and_yellow_10: 657320664908475899
+      brown_and_yellow_11: -2058738727342340524
+      brown_and_yellow_12: 8480415874406733415
+      brown_and_yellow_13: 935768009445339011
+      brown_and_yellow_14: -7370653014315601821
+      brown_and_yellow_15: -7784603369301885998
+      brown_and_yellow_16: 641535199019398314
+      brown_and_yellow_17: -8659498721556546981
+      brown_and_yellow_18: 7805162638509294612
+      brown_and_yellow_19: -5371050035849124755
+      brown_and_yellow_2: -1203685064005115544
+      brown_and_yellow_20: -6527990345327315904
+      brown_and_yellow_21: -5670374803675443721
+      brown_and_yellow_22: -1216921299083487917
+      brown_and_yellow_23: -7167608714258759536
+      brown_and_yellow_24: -7509805076045647273
+      brown_and_yellow_25: -4455691579362642945
+      brown_and_yellow_26: 5900827524378337355
+      brown_and_yellow_27: -1920285893528103959
+      brown_and_yellow_28: 910907196152504490
+      brown_and_yellow_29: -5549007176360453463
+      brown_and_yellow_3: -6523164462146237947
+      brown_and_yellow_30: -5835308133354041097
+      brown_and_yellow_31: 7382474727780820566
+      brown_and_yellow_32: -4174171669078796166
+      brown_and_yellow_33: -5148840963427921708
+      brown_and_yellow_34: 4309642940757637950
+      brown_and_yellow_35: -77208353050882763
+      brown_and_yellow_36: 887484387871985316
+      brown_and_yellow_37: -4059547034229807755
+      brown_and_yellow_38: 1544155458268771792
+      brown_and_yellow_39: 7929719825874222191
+      brown_and_yellow_4: -1285388470891032894
+      brown_and_yellow_40: 8906865916378209578
+      brown_and_yellow_41: -4980934460516766547
+      brown_and_yellow_42: 5452090355759146569
+      brown_and_yellow_43: -6973313141932268311
+      brown_and_yellow_44: 1708353651848381994
+      brown_and_yellow_45: 252715219648222059
+      brown_and_yellow_46: -8813721931171614237
+      brown_and_yellow_47: -5011275054625120896
+      brown_and_yellow_5: -8181944408879636617
+      brown_and_yellow_6: 3546378634962268116
+      brown_and_yellow_7: 6630561318713577129
+      brown_and_yellow_8: 6528192532681555964
+      brown_and_yellow_9: -4763546342202540690
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
