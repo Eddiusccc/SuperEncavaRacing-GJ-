@@ -6,7 +6,8 @@ namespace Framework.Core
         Playing,
         Paused,
         GameOver,
-        Shop
+        Shop,
+        PerkSelection
     }
 
     /// <summary>

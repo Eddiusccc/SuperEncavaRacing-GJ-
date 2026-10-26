@@ -17,6 +17,7 @@ public class UIFlowController : MonoBehaviour
     [SerializeField] UIScreen pauseScreen;
     [SerializeField] UIScreen gameOverScreen;
     [SerializeField] UIScreen shopScreen;
+    [SerializeField] UIScreen perkSelectionScreen;
 
     void Awake()
     {
@@ -81,6 +82,11 @@ public class UIFlowController : MonoBehaviour
             case GameState.Shop:
                 screens.Clear();
                 if (shopScreen != null) screens.Push(shopScreen);
+                break;
+            case GameState.PerkSelection:
+                if (perkSelectionScreen != null) 
+                    screens.Push(perkSelectionScreen, hidePrevious: false); // Sobre HUD
+
                 break;
         }
     }

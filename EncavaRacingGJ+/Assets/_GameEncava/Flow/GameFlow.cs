@@ -1,3 +1,4 @@
+using System;
 using Framework.Core;
 using Framework.Input;
 using Framework.States;
@@ -25,6 +26,7 @@ public class GameFlow : MonoBehaviour
     bool gameOverRequested;
     bool shopRequested;
     bool menuRequested;
+    bool perkSelectionRequested;
 
     /// <summary>
     /// Obtiene el estado actual del juego.
@@ -40,6 +42,7 @@ public class GameFlow : MonoBehaviour
         var pausedState   = new DelegateState(enter: () => Enter(GameState.Paused, 0f, false));
         var gameOverState = new DelegateState(enter: () => Enter(GameState.GameOver, 0f, false));
         var shopState     = new DelegateState(enter: () => Enter(GameState.Shop, 0f, false));
+        var perkSeleccionState = new DelegateState(enter: () => Enter(GameState.PerkSelection, 0f, false));
 
         // Transiciones desde Menú
         fsm.AddTransition(menuState, playingState, () => startRequested);
@@ -47,6 +50,9 @@ public class GameFlow : MonoBehaviour
         // Transiciones desde Playing
         fsm.AddTransition(playingState, pausedState,   () => pauseRequested);
         fsm.AddTransition(playingState, gameOverState, () => gameOverRequested);
+        fsm.AddTransition(playingState, perkSeleccionState, () => perkSelectionRequested);
+
+        fsm.AddTransition(perkSeleccionState, playingState, () => resumeRequested);
 
         // Transiciones desde Paused
         fsm.AddTransition(pausedState, playingState, () => resumeRequested);
@@ -149,4 +155,5 @@ public class GameFlow : MonoBehaviour
     }  
     /// <summary>Solicita volver al menú principal.</summary>
     public void RequestMenu()     => menuRequested = true;
+    public void RequestPerkSelection() => perkSelectionRequested = true;
 }
