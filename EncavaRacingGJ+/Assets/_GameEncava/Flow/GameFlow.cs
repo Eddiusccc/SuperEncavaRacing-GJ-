@@ -76,7 +76,9 @@ public class GameFlow : MonoBehaviour
         };
 
         fsm.SetState(initial);
-        AudioManager.instance.StartPlaylist();
+        if (AudioManager.instance != null)
+            AudioManager.instance.StartPlaylist();
+
     }
 
     void OnEnable()
