@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Mejora de Velocidad Tope
   description: Mejora la maxima velocidad en la que puedes manejar
   stat: 0
-  bonusPerLevel: 10
+  bonusPerLevel: 0.2
   maxLevel: 6
   baseCost: 100
   costGrowth: 2
