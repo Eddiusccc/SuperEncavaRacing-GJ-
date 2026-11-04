@@ -42,8 +42,15 @@ public class AudioManager : MonoBehaviour
     #region PLAYLIST METHODS
     public void FadePlaylist(int prevIndex, int nextIndex)
     {
+        if (playlist == null || playlist.Length == 0) return;
+
         Sound prevSound = playlist[prevIndex];
         Sound nextSound = playlist[nextIndex];
+
+        // Evitar tweens pendientes que puedan pisar el volumen
+        if (prevSound?.source != null) DOTween.Kill(prevSound.source);
+        if (nextSound?.source != null) DOTween.Kill(nextSound.source);
+
         nextSound.source.volume = 0;
         nextSound.source.Play();
 
@@ -57,13 +64,64 @@ public class AudioManager : MonoBehaviour
 
     public void StartPlaylist(int index = 0)
     {
-        currentIndexPlaylist = index;
+        if (playlist == null || playlist.Length == 0) return;
+        currentIndexPlaylist = Mathf.Clamp(index, 0, playlist.Length - 1);
         PlayCurrentPlaylist();
     }
+
+    /// <summary>
+    /// Elige una canción aleatoria distinta a la actual y la reproduce con crossfade.
+    /// Pensado para iniciar cada partida con música diferente.
+    /// </summary>
+    public void StartPlaylistRandom()
+    {
+        if (playlist == null || playlist.Length == 0) return;
+
+        int index = currentIndexPlaylist;
+        if (playlist.Length > 1)
+        {
+            do { index = UnityEngine.Random.Range(0, playlist.Length); }
+            while (index == currentIndexPlaylist);
+        }
+        else index = 0;
+
+        int prev = currentIndexPlaylist;
+        currentIndexPlaylist = index;
+
+        // Si ya hay una canción sonando, hacemos crossfade para no superponer.
+        if (prev != index && IsPlayingIndex(prev))
+            FadePlaylist(prev, index);
+        else
+            PlayCurrentPlaylist();
+    }
+
     public void PlayCurrentPlaylist()
     {
-        playlist[currentIndexPlaylist].source.Play();
-        playlist[currentIndexPlaylist].source.DOFade(1, fadeTransition / 2f);
+        if (playlist == null || playlist.Length == 0) return;
+        Sound s = playlist[currentIndexPlaylist];
+        if (s?.source == null) return;
+
+        DOTween.Kill(s.source);
+        s.source.volume = 0f;
+        s.source.Play();
+        s.source.DOFade(1, fadeTransition / 2f);
+    }
+
+    /// <summary>Indica si alguna canción de la playlist está sonando.</summary>
+    public bool IsPlaylistPlaying()
+    {
+        if (playlist == null) return false;
+        foreach (var s in playlist)
+            if (s?.source != null && s.source.isPlaying) return true;
+        return false;
+    }
+
+    bool IsPlayingIndex(int index)
+    {
+        return playlist != null
+            && index >= 0 && index < playlist.Length
+            && playlist[index]?.source != null
+            && playlist[index].source.isPlaying;
     }
     public void StopCurrentPlaylist()
     {
@@ -105,23 +163,17 @@ public class AudioManager : MonoBehaviour
 
     public void NextSongButton()
     {
+        if (playlist == null || playlist.Length < 2) return;
         int prev = currentIndexPlaylist;
-        int next = currentIndexPlaylist + 1;
-        if (next >= playlist.Length)
-        {
-            next = 0;
-        }
+        int next = (currentIndexPlaylist + 1) % playlist.Length;
         currentIndexPlaylist = next;
         FadePlaylist(prev, next);
     }
     public void PrevSongButton()
     {
+        if (playlist == null || playlist.Length < 2) return;
         int prev = currentIndexPlaylist;
-        int next = currentIndexPlaylist - 1;
-        if (next < 0)
-        {
-            next = playlist.Length - 1;
-        }
+        int next = (currentIndexPlaylist - 1 + playlist.Length) % playlist.Length;
         currentIndexPlaylist = next;
         FadePlaylist(prev, next);
     }

@@ -76,9 +76,13 @@ public class GameFlow : MonoBehaviour
         };
 
         fsm.SetState(initial);
-        if (AudioManager.instance != null)
-            AudioManager.instance.StartPlaylist();
+    }
 
+    void Start()
+    {
+        // Música inicial: AudioManager ya está listo tras todos los Awake.
+        if (AudioManager.instance != null && !AudioManager.instance.IsPlaylistPlaying())
+            AudioManager.instance.StartPlaylistRandom();
     }
 
     void OnEnable()
@@ -120,6 +124,13 @@ public class GameFlow : MonoBehaviour
 
         ResetFlags();
         EventBus.Publish(new GameStateChanged(prev, state));
+
+        // Cada nueva partida (no reanudar pausa ni cerrar perks) cambia la música.
+        if (state == GameState.Playing && prev != GameState.Paused && prev != GameState.PerkSelection)
+        {
+            if (AudioManager.instance != null)
+                AudioManager.instance.StartPlaylistRandom();
+        }
     }
 
     /// <summary>
