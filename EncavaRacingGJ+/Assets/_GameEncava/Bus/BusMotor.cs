@@ -260,4 +260,22 @@ public class BusMotor : MonoBehaviour
         invulnTimer = config.invulnerability;
         EventBus.Publish(new BusCrashed(impact));
     }
+
+    /// <summary>
+    /// Resetea todo el estado de runtime del bus (boost, cooldown, steer, velocidad, timers).
+    /// Llamar desde RunResetter al iniciar nueva partida.
+    /// </summary>
+    public void ResetRuntimeState()
+    {
+        boostTimer = 0f;
+        boostCooldown = 0f;
+        invulnTimer = 0f;
+        steerAngle = 0f;
+        speed = 0f;
+        lateral = 0f;
+        lastSpeed = 0f;
+        lastPublished = 0f;
+        BodyRoll = 0f;
+        BodyPitch = 0f;
+    }
 }

@@ -24,10 +24,13 @@ public class RunResetter : MonoBehaviour
 
     void OnStateChanged(GameStateChanged e)
     {
-        if (e.Current == GameState.Playing && e.Previous != GameState.Paused)
-        {
-            ResetRun();
-        }
+        if (e.Current != GameState.Playing) return;
+
+        // Solo reiniciar la run cuando se inicia de verdad (desde Menu/Shop/GameOver).
+        // Reanudar desde Pausa o desde la selección de perks NO debe resetear nada.
+        if (e.Previous == GameState.Paused || e.Previous == GameState.PerkSelection) return;
+
+        ResetRun();
     }
 
     public void ResetRun()
@@ -47,6 +50,8 @@ public class RunResetter : MonoBehaviour
                 bus.transform.position = startPosition;
                 bus.transform.rotation = Quaternion.identity;
             }
+            // Limpiar estado interno del bus
+            bus.ResetRuntimeState();
         }
 
         if (fareBoard != null) fareBoard.ClearAll();
@@ -54,4 +59,6 @@ public class RunResetter : MonoBehaviour
         if (roadStreamer != null) roadStreamer.InitRoad();
         if (perkService != null) perkService.ResetRunPerks();
     }
+    
 }
+

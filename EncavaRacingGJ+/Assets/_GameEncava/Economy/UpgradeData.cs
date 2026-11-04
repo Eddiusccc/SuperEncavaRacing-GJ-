@@ -1,4 +1,3 @@
-using UnityEditor.EditorTools;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewUpgrade", menuName = "GameEncava/Upgrade")]

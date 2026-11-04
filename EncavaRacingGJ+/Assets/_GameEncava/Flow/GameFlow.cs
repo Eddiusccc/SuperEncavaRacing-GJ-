@@ -133,6 +133,7 @@ public class GameFlow : MonoBehaviour
         gameOverRequested = false;
         shopRequested = false;
         menuRequested = false;
+        perkSelectionRequested = false;
     }
 
     void OnPauseInput()
