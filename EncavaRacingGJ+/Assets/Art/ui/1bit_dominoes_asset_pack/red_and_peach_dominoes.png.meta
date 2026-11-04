@@ -1,0 +1,1365 @@
+fileFormatVersion: 2
+guid: 5c43ef6a6658338478e63c14d6f5da3d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 770322609021802917
+    second: red_and_peach_dominoes_0
+  - first:
+      213: -235646363903184991
+    second: red_and_peach_dominoes_1
+  - first:
+      213: -2358666142732950368
+    second: red_and_peach_dominoes_2
+  - first:
+      213: 8221531433077302707
+    second: red_and_peach_dominoes_3
+  - first:
+      213: -8346175282461279428
+    second: red_and_peach_dominoes_4
+  - first:
+      213: -7418320079229104040
+    second: red_and_peach_dominoes_5
+  - first:
+      213: 3535890394159336029
+    second: red_and_peach_dominoes_6
+  - first:
+      213: 7821421086606180479
+    second: red_and_peach_dominoes_7
+  - first:
+      213: 1045240581568237771
+    second: red_and_peach_dominoes_8
+  - first:
+      213: -3644526757004803147
+    second: red_and_peach_dominoes_9
+  - first:
+      213: -869147194332232991
+    second: red_and_peach_dominoes_10
+  - first:
+      213: -2182810839158515016
+    second: red_and_peach_dominoes_11
+  - first:
+      213: -3778034667931945941
+    second: red_and_peach_dominoes_12
+  - first:
+      213: -5510801694652663996
+    second: red_and_peach_dominoes_13
+  - first:
+      213: 637272027905805324
+    second: red_and_peach_dominoes_14
+  - first:
+      213: -5296411908707741702
+    second: red_and_peach_dominoes_15
+  - first:
+      213: -7439945999396560039
+    second: red_and_peach_dominoes_16
+  - first:
+      213: 8507955362102774569
+    second: red_and_peach_dominoes_17
+  - first:
+      213: 6482849871104876398
+    second: red_and_peach_dominoes_18
+  - first:
+      213: 2304835803016363458
+    second: red_and_peach_dominoes_19
+  - first:
+      213: 5975206751467725027
+    second: red_and_peach_dominoes_20
+  - first:
+      213: -6960656008190337330
+    second: red_and_peach_dominoes_21
+  - first:
+      213: 3189482071897930564
+    second: red_and_peach_dominoes_22
+  - first:
+      213: -1152930515665715832
+    second: red_and_peach_dominoes_23
+  - first:
+      213: -4764556006098335905
+    second: red_and_peach_dominoes_24
+  - first:
+      213: -5729576864120443909
+    second: red_and_peach_dominoes_25
+  - first:
+      213: -2929594095031466089
+    second: red_and_peach_dominoes_26
+  - first:
+      213: 8947416442213052222
+    second: red_and_peach_dominoes_27
+  - first:
+      213: 6236240793417956314
+    second: red_and_peach_dominoes_28
+  - first:
+      213: -7284656460588829225
+    second: red_and_peach_dominoes_29
+  - first:
+      213: 4033027504113329469
+    second: red_and_peach_dominoes_30
+  - first:
+      213: 8307096784199542363
+    second: red_and_peach_dominoes_31
+  - first:
+      213: 5059318581159050459
+    second: red_and_peach_dominoes_32
+  - first:
+      213: 4548182586394375260
+    second: red_and_peach_dominoes_33
+  - first:
+      213: -8300864874548325528
+    second: red_and_peach_dominoes_34
+  - first:
+      213: -6116117504382321680
+    second: red_and_peach_dominoes_35
+  - first:
+      213: -8762875607648922
+    second: red_and_peach_dominoes_36
+  - first:
+      213: -5415291121543741793
+    second: red_and_peach_dominoes_37
+  - first:
+      213: 8730781104702567330
+    second: red_and_peach_dominoes_38
+  - first:
+      213: 8212064545140239110
+    second: red_and_peach_dominoes_39
+  - first:
+      213: -3729758488417093419
+    second: red_and_peach_dominoes_40
+  - first:
+      213: -1391079701952477058
+    second: red_and_peach_dominoes_41
+  - first:
+      213: -6647813601896593091
+    second: red_and_peach_dominoes_42
+  - first:
+      213: -3261196842837516256
+    second: red_and_peach_dominoes_43
+  - first:
+      213: 8853095938081474259
+    second: red_and_peach_dominoes_44
+  - first:
+      213: -6590221378760352088
+    second: red_and_peach_dominoes_45
+  - first:
+      213: 7001133711199776727
+    second: red_and_peach_dominoes_46
+  - first:
+      213: 7203964933991162592
+    second: red_and_peach_dominoes_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a95231e45cb0ba00800000000000000
+      internalID: 770322609021802917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1af20fa61e0dabcf0800000000000000
+      internalID: -235646363903184991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a469a2d3a5544fd0800000000000000
+      internalID: -2358666142732950368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b5e742674fb81270800000000000000
+      internalID: 8221531433077302707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3bffbfeccd6c2c80800000000000000
+      internalID: -8346175282461279428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 850d66f1135dc0990800000000000000
+      internalID: -7418320079229104040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a459c5491021130800000000000000
+      internalID: 3535890394159336029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7049e1e9054b8c60800000000000000
+      internalID: 7821421086606180479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc0923165c0718e00800000000000000
+      internalID: 1045240581568237771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3825a593a0c6dc0800000000000000
+      internalID: -3644526757004803147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e2cc405b3b20f3f0800000000000000
+      internalID: -869147194332232991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ba95185b1915b1e0800000000000000
+      internalID: -2182810839158515016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b243ec48c79b19bc0800000000000000
+      internalID: -3778034667931945941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4477b926e03b583b0800000000000000
+      internalID: -5510801694652663996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0c4e90788b08d800800000000000000
+      internalID: 637272027905805324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff835d3e6d5f76b0800000000000000
+      internalID: -5296411908707741702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95321e5388000c890800000000000000
+      internalID: -7439945999396560039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92b04032354521670800000000000000
+      internalID: 8507955362102774569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f94633c95b7f950800000000000000
+      internalID: 6482849871104876398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cd746883fb6cff10800000000000000
+      internalID: 2304835803016363458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e0efb8e1e23ce250800000000000000
+      internalID: 5975206751467725027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece502c5d38c66f90800000000000000
+      internalID: -6960656008190337330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44bf3f8bb01534c20800000000000000
+      internalID: 3189482071897930564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88d7903fdc7ffffe0800000000000000
+      internalID: -1152930515665715832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f570e006e85e0edb0800000000000000
+      internalID: -4764556006098335905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfbedccd2347c70b0800000000000000
+      internalID: -5729576864120443909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 797419531bdf757d0800000000000000
+      internalID: -2929594095031466089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f299749db9b2c70800000000000000
+      internalID: 8947416442213052222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb3a79e5f39b8650800000000000000
+      internalID: 6236240793417956314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d539db7b83b7ea90800000000000000
+      internalID: -7284656460588829225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d352e08a52138f730800000000000000
+      internalID: 4033027504113329469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_31
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b56e009238cb84370800000000000000
+      internalID: 8307096784199542363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdcb483b17f463640800000000000000
+      internalID: 5059318581159050459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5477ab07f36e1f30800000000000000
+      internalID: 4548182586394375260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863970060676dcc80800000000000000
+      internalID: -8300864874548325528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb3ebac88f2f1ba0800000000000000
+      internalID: -6116117504382321680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 665f138063ed0eff0800000000000000
+      internalID: -8762875607648922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9efe099a6509d4b0800000000000000
+      internalID: -5415291121543741793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a33d753827f92970800000000000000
+      internalID: 8730781104702567330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_39
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60be9a5c13d17f170800000000000000
+      internalID: 8212064545140239110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d8b6e77a6c3d3cc0800000000000000
+      internalID: -3729758488417093419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e78cdde9164e1bce0800000000000000
+      internalID: -1391079701952477058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_42
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3981fd20c83eb3a0800000000000000
+      internalID: -6647813601896593091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0206b0000c6edb2d0800000000000000
+      internalID: -3261196842837516256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d6ccc799d38cda70800000000000000
+      internalID: 8853095938081474259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_45
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aeddcf8294da84a0800000000000000
+      internalID: -6590221378760352088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7df23194406092160800000000000000
+      internalID: 7001133711199776727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_and_peach_dominoes_47
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2e9e070ff99f360800000000000000
+      internalID: 7203964933991162592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      red_and_peach_dominoes_0: 770322609021802917
+      red_and_peach_dominoes_1: -235646363903184991
+      red_and_peach_dominoes_10: -869147194332232991
+      red_and_peach_dominoes_11: -2182810839158515016
+      red_and_peach_dominoes_12: -3778034667931945941
+      red_and_peach_dominoes_13: -5510801694652663996
+      red_and_peach_dominoes_14: 637272027905805324
+      red_and_peach_dominoes_15: -5296411908707741702
+      red_and_peach_dominoes_16: -7439945999396560039
+      red_and_peach_dominoes_17: 8507955362102774569
+      red_and_peach_dominoes_18: 6482849871104876398
+      red_and_peach_dominoes_19: 2304835803016363458
+      red_and_peach_dominoes_2: -2358666142732950368
+      red_and_peach_dominoes_20: 5975206751467725027
+      red_and_peach_dominoes_21: -6960656008190337330
+      red_and_peach_dominoes_22: 3189482071897930564
+      red_and_peach_dominoes_23: -1152930515665715832
+      red_and_peach_dominoes_24: -4764556006098335905
+      red_and_peach_dominoes_25: -5729576864120443909
+      red_and_peach_dominoes_26: -2929594095031466089
+      red_and_peach_dominoes_27: 8947416442213052222
+      red_and_peach_dominoes_28: 6236240793417956314
+      red_and_peach_dominoes_29: -7284656460588829225
+      red_and_peach_dominoes_3: 8221531433077302707
+      red_and_peach_dominoes_30: 4033027504113329469
+      red_and_peach_dominoes_31: 8307096784199542363
+      red_and_peach_dominoes_32: 5059318581159050459
+      red_and_peach_dominoes_33: 4548182586394375260
+      red_and_peach_dominoes_34: -8300864874548325528
+      red_and_peach_dominoes_35: -6116117504382321680
+      red_and_peach_dominoes_36: -8762875607648922
+      red_and_peach_dominoes_37: -5415291121543741793
+      red_and_peach_dominoes_38: 8730781104702567330
+      red_and_peach_dominoes_39: 8212064545140239110
+      red_and_peach_dominoes_4: -8346175282461279428
+      red_and_peach_dominoes_40: -3729758488417093419
+      red_and_peach_dominoes_41: -1391079701952477058
+      red_and_peach_dominoes_42: -6647813601896593091
+      red_and_peach_dominoes_43: -3261196842837516256
+      red_and_peach_dominoes_44: 8853095938081474259
+      red_and_peach_dominoes_45: -6590221378760352088
+      red_and_peach_dominoes_46: 7001133711199776727
+      red_and_peach_dominoes_47: 7203964933991162592
+      red_and_peach_dominoes_5: -7418320079229104040
+      red_and_peach_dominoes_6: 3535890394159336029
+      red_and_peach_dominoes_7: 7821421086606180479
+      red_and_peach_dominoes_8: 1045240581568237771
+      red_and_peach_dominoes_9: -3644526757004803147
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

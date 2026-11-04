@@ -17,7 +17,7 @@ MonoBehaviour:
   description: Compra nuevos asientos para tus pasajeros. Cada nivel suma 5 nuevos
     asientos de la peor calidad
   stat: 6
-  bonusPerLevel: 5
+  bonusPerLevel: 0.25
   maxLevel: 6
   baseCost: 100
   costGrowth: 2

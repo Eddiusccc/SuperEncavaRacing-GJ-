@@ -18,7 +18,7 @@ MonoBehaviour:
     el jucio por la seguridad vial. Cada nivel a\xF1ade una nueva bocina. Mejora
     la aceleraci\xF3n"
   stat: 1
-  bonusPerLevel: 1
+  bonusPerLevel: 0.1
   maxLevel: 6
   baseCost: 100
   costGrowth: 3

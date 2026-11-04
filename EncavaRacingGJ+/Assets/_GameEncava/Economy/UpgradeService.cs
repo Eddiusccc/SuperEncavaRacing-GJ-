@@ -34,18 +34,33 @@ public class UpgradeService : MonoBehaviour, ISaveable
 
     public UpgradeData[] ReturnRandomUpgradeDataArray(int quant = 3)
     {
-        UpgradeData[] upgrades = new UpgradeData[quant];
-        for (int i = 0; i < upgrades.Length; i++)
+        // 1. Construir lista de candidatos válidos
+        var candidates = new List<UpgradeData>();
+        foreach (var u in catalog)
         {
-            int trys = 10;
-            upgrades[i] = ReturnRandomUpgradeData();
-            while (trys > 0 && CheckDataCopy(upgrades, upgrades[i]))
-            {
-                upgrades[i] = ReturnRandomUpgradeData();
-                trys--;
-            }
+            if (u == null) continue;
+            if (string.IsNullOrEmpty(u.id)) continue;
+            if (Level(u) >= u.maxLevel) continue;
+
+            candidates.Add(u);
         }
-        return upgrades;
+
+        // 2. Sin candidatos devuelve un arreglo vacio
+        if (candidates.Count == 0)
+        {
+            return Array.Empty<UpgradeData>();
+        }
+
+        // 3. Barajar una sola vez (Fisher-Yater)
+        for (int i = 0; i < candidates.Count; i++)
+        {
+            int r = UnityEngine.Random.Range(i, candidates.Count);
+            (candidates[i], candidates[r]) = (candidates[r], candidates[i]);
+        }
+
+        // 4. Timar los primeros N
+        int count = Mathf.Min(quant, candidates.Count);
+        return candidates.GetRange(0, count).ToArray();
     }
     bool CheckDataCopy(UpgradeData[] arr, UpgradeData da)
     {

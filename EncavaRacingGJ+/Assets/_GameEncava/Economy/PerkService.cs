@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Framework.Core;
 using UnityEngine;
 
@@ -33,6 +34,7 @@ public class PerkService : MonoBehaviour
 
     readonly List<PerkData> activePerks = new();
     int deliveriesSinceLastPerk;
+    private int maxPerksAlready = 3;
 
     /// <summary>Lista de perks que el jugador ha seleccionado durante la partida actual.</summary>
     public IReadOnlyList<PerkData> ActivePerks => activePerks;
@@ -64,9 +66,13 @@ public class PerkService : MonoBehaviour
     void OfferPerks()
     {
         if (perkPool.Count == 0) return;
+        
+        // Filtrar perks ya activos (no duplicados)
+        var available = perkPool.Where(p => !activePerks.Contains(p)).ToList();
+        if (available.Count == 0) return;
 
         // Seleccionar hasta 3 perks al azar
-        int count = Mathf.Min(3, perkPool.Count);
+        int count = Mathf.Min(maxPerksAlready, perkPool.Count);
         var shuffled = new List<PerkData>(perkPool);
         for (int i = 0; i < shuffled.Count; i++)
         {

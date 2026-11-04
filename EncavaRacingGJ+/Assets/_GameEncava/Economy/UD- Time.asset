@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Mejora de Tiempo Extra
   description: Mejora de tiempo extra! Mas tiempo por ronda
   stat: 8
-  bonusPerLevel: 3
+  bonusPerLevel: 0.1
   maxLevel: 6
   baseCost: 100
   costGrowth: 2

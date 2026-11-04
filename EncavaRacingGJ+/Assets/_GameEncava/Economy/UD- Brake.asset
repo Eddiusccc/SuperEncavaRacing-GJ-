@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Mejora de Freno
   description: Mejores frenos para tu bus!
   stat: 2
-  bonusPerLevel: 1.1
+  bonusPerLevel: 0.12
   maxLevel: 6
   baseCost: 100
   costGrowth: 2

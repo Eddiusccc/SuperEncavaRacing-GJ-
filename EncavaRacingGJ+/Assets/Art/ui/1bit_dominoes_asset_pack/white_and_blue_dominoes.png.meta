@@ -1,0 +1,1365 @@
+fileFormatVersion: 2
+guid: 0588e38e41ff11b49bd0ee104f55989f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 673945292748572503
+    second: white_and_blue_dominoes_0
+  - first:
+      213: -4511082991458211560
+    second: white_and_blue_dominoes_1
+  - first:
+      213: 4410248565556190818
+    second: white_and_blue_dominoes_2
+  - first:
+      213: 8297810550700942890
+    second: white_and_blue_dominoes_3
+  - first:
+      213: 3285547333474116424
+    second: white_and_blue_dominoes_4
+  - first:
+      213: -460237878305889655
+    second: white_and_blue_dominoes_5
+  - first:
+      213: -3074602994227465199
+    second: white_and_blue_dominoes_6
+  - first:
+      213: 8725988146649005140
+    second: white_and_blue_dominoes_7
+  - first:
+      213: 2480811196161713310
+    second: white_and_blue_dominoes_8
+  - first:
+      213: 7893213134549147335
+    second: white_and_blue_dominoes_9
+  - first:
+      213: -2628015124430075699
+    second: white_and_blue_dominoes_10
+  - first:
+      213: 1189597265634593881
+    second: white_and_blue_dominoes_11
+  - first:
+      213: 8166400172852540053
+    second: white_and_blue_dominoes_12
+  - first:
+      213: -2056908463987178754
+    second: white_and_blue_dominoes_13
+  - first:
+      213: -4063068315753805866
+    second: white_and_blue_dominoes_14
+  - first:
+      213: -3946625420010694946
+    second: white_and_blue_dominoes_15
+  - first:
+      213: -2454206227341429192
+    second: white_and_blue_dominoes_16
+  - first:
+      213: -5233858961875777151
+    second: white_and_blue_dominoes_17
+  - first:
+      213: -2138210922639293989
+    second: white_and_blue_dominoes_18
+  - first:
+      213: 8657004240238349970
+    second: white_and_blue_dominoes_19
+  - first:
+      213: 9050833585604795717
+    second: white_and_blue_dominoes_20
+  - first:
+      213: 1973717438681801626
+    second: white_and_blue_dominoes_21
+  - first:
+      213: -1257954544168938361
+    second: white_and_blue_dominoes_22
+  - first:
+      213: 8238440058003890179
+    second: white_and_blue_dominoes_23
+  - first:
+      213: 1121522788170650325
+    second: white_and_blue_dominoes_24
+  - first:
+      213: -1121559882152150914
+    second: white_and_blue_dominoes_25
+  - first:
+      213: 6037380954886246174
+    second: white_and_blue_dominoes_26
+  - first:
+      213: -1182303221683107739
+    second: white_and_blue_dominoes_27
+  - first:
+      213: -2460665490658754367
+    second: white_and_blue_dominoes_28
+  - first:
+      213: 1264159431485101793
+    second: white_and_blue_dominoes_29
+  - first:
+      213: -8115631914100344419
+    second: white_and_blue_dominoes_30
+  - first:
+      213: -8018521333215151489
+    second: white_and_blue_dominoes_31
+  - first:
+      213: -531279805764955070
+    second: white_and_blue_dominoes_32
+  - first:
+      213: 5211016927784187548
+    second: white_and_blue_dominoes_33
+  - first:
+      213: 8380955741747627905
+    second: white_and_blue_dominoes_34
+  - first:
+      213: 7368567460465894059
+    second: white_and_blue_dominoes_35
+  - first:
+      213: -2551357847476047488
+    second: white_and_blue_dominoes_36
+  - first:
+      213: 4316263779874436658
+    second: white_and_blue_dominoes_37
+  - first:
+      213: 3727244847357418162
+    second: white_and_blue_dominoes_38
+  - first:
+      213: 193737858078313468
+    second: white_and_blue_dominoes_39
+  - first:
+      213: 7357249253296023222
+    second: white_and_blue_dominoes_40
+  - first:
+      213: -8963657545746192589
+    second: white_and_blue_dominoes_41
+  - first:
+      213: 9005414920226510216
+    second: white_and_blue_dominoes_42
+  - first:
+      213: 4224541119281038073
+    second: white_and_blue_dominoes_43
+  - first:
+      213: -4841482688921246093
+    second: white_and_blue_dominoes_44
+  - first:
+      213: 5423244639637418207
+    second: white_and_blue_dominoes_45
+  - first:
+      213: 7565334946997782991
+    second: white_and_blue_dominoes_46
+  - first:
+      213: -1993526348958062647
+    second: white_and_blue_dominoes_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 757435c4ca55a5900800000000000000
+      internalID: 673945292748572503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819a3d58be96561c0800000000000000
+      internalID: -4511082991458211560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26e172134b9543d30800000000000000
+      internalID: 4410248565556190818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a26a4007bbeb72370800000000000000
+      internalID: 8297810550700942890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 843e47864eb989d20800000000000000
+      internalID: 3285547333474116424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 982e56f8618ec99f0800000000000000
+      internalID: -460237878305889655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11438bfddd0d455d0800000000000000
+      internalID: -3074602994227465199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45c7843bcffe81970800000000000000
+      internalID: 8725988146649005140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e94e70693ac9d6220800000000000000
+      internalID: 2480811196161713310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cedf3d96835a8d60800000000000000
+      internalID: 7893213134549147335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc8cdfb0b2a678bd0800000000000000
+      internalID: -2628015124430075699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c0deb096c428010800000000000000
+      internalID: 1189597265634593881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 592709490b1e45170800000000000000
+      internalID: 8166400172852540053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef2cc8466a46473e0800000000000000
+      internalID: -2056908463987178754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d78955d4e41d97c0800000000000000
+      internalID: -4063068315753805866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed65cb23715ca39c0800000000000000
+      internalID: -3946625420010694946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83633cd6078e0fdd0800000000000000
+      internalID: -2454206227341429192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18946ec11099d57b0800000000000000
+      internalID: -5233858961875777151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd1893d9e7c8352e0800000000000000
+      internalID: -2138210922639293989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29e057e5d7bd32870800000000000000
+      internalID: 8657004240238349970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54d162751350b9d70800000000000000
+      internalID: 9050833585604795717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a936f93ad8d046b10800000000000000
+      internalID: 1973717438681801626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784d83bc109da8ee0800000000000000
+      internalID: -1257954544168938361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 300aba86591d45270800000000000000
+      internalID: 8238440058003890179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d2da64a803709f00800000000000000
+      internalID: 1121522788170650325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e78fdfdba3b6f60f0800000000000000
+      internalID: -1121559882152150914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f04b5bdf519c350800000000000000
+      internalID: 6037380954886246174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56847c6eb7d979fe0800000000000000
+      internalID: -1182303221683107739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0093ef5c5f9ddd0800000000000000
+      internalID: -2460665490658754367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e6112d1e423b8110800000000000000
+      internalID: 1264159431485101793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99b938c5cb7f5f80800000000000000
+      internalID: -8115631914100344419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_31
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ab1d5d45d78b090800000000000000
+      internalID: -8018521333215151489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2449a0dd4d380a8f0800000000000000
+      internalID: -531279805764955070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c96bf136940415840800000000000000
+      internalID: 5211016927784187548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1874329c7d22f4470800000000000000
+      internalID: 8380955741747627905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba26290a019624660800000000000000
+      internalID: 7368567460465894059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 081f84e2e81c79cd0800000000000000
+      internalID: -2551357847476047488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 236fc4c0a0376eb30800000000000000
+      internalID: 4316263779874436658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bad4add075d9b330800000000000000
+      internalID: 3727244847357418162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_39
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb8d423e8b40b200800000000000000
+      internalID: 193737858078313468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b6a7ba27333a1660800000000000000
+      internalID: 7357249253296023222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3376c8124f0ba9380800000000000000
+      internalID: -8963657545746192589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_42
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8859a1f3829a9fc70800000000000000
+      internalID: 9005414920226510216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f207c1f3c590aa30800000000000000
+      internalID: 4224541119281038073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37665ac45299fccb0800000000000000
+      internalID: -4841482688921246093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_45
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd031a3244c334b40800000000000000
+      internalID: 5423244639637418207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9c6aa2d087df860800000000000000
+      internalID: 7565334946997782991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white_and_blue_dominoes_47
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c729f709529554e0800000000000000
+      internalID: -1993526348958062647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      white_and_blue_dominoes_0: 673945292748572503
+      white_and_blue_dominoes_1: -4511082991458211560
+      white_and_blue_dominoes_10: -2628015124430075699
+      white_and_blue_dominoes_11: 1189597265634593881
+      white_and_blue_dominoes_12: 8166400172852540053
+      white_and_blue_dominoes_13: -2056908463987178754
+      white_and_blue_dominoes_14: -4063068315753805866
+      white_and_blue_dominoes_15: -3946625420010694946
+      white_and_blue_dominoes_16: -2454206227341429192
+      white_and_blue_dominoes_17: -5233858961875777151
+      white_and_blue_dominoes_18: -2138210922639293989
+      white_and_blue_dominoes_19: 8657004240238349970
+      white_and_blue_dominoes_2: 4410248565556190818
+      white_and_blue_dominoes_20: 9050833585604795717
+      white_and_blue_dominoes_21: 1973717438681801626
+      white_and_blue_dominoes_22: -1257954544168938361
+      white_and_blue_dominoes_23: 8238440058003890179
+      white_and_blue_dominoes_24: 1121522788170650325
+      white_and_blue_dominoes_25: -1121559882152150914
+      white_and_blue_dominoes_26: 6037380954886246174
+      white_and_blue_dominoes_27: -1182303221683107739
+      white_and_blue_dominoes_28: -2460665490658754367
+      white_and_blue_dominoes_29: 1264159431485101793
+      white_and_blue_dominoes_3: 8297810550700942890
+      white_and_blue_dominoes_30: -8115631914100344419
+      white_and_blue_dominoes_31: -8018521333215151489
+      white_and_blue_dominoes_32: -531279805764955070
+      white_and_blue_dominoes_33: 5211016927784187548
+      white_and_blue_dominoes_34: 8380955741747627905
+      white_and_blue_dominoes_35: 7368567460465894059
+      white_and_blue_dominoes_36: -2551357847476047488
+      white_and_blue_dominoes_37: 4316263779874436658
+      white_and_blue_dominoes_38: 3727244847357418162
+      white_and_blue_dominoes_39: 193737858078313468
+      white_and_blue_dominoes_4: 3285547333474116424
+      white_and_blue_dominoes_40: 7357249253296023222
+      white_and_blue_dominoes_41: -8963657545746192589
+      white_and_blue_dominoes_42: 9005414920226510216
+      white_and_blue_dominoes_43: 4224541119281038073
+      white_and_blue_dominoes_44: -4841482688921246093
+      white_and_blue_dominoes_45: 5423244639637418207
+      white_and_blue_dominoes_46: 7565334946997782991
+      white_and_blue_dominoes_47: -1993526348958062647
+      white_and_blue_dominoes_5: -460237878305889655
+      white_and_blue_dominoes_6: -3074602994227465199
+      white_and_blue_dominoes_7: 8725988146649005140
+      white_and_blue_dominoes_8: 2480811196161713310
+      white_and_blue_dominoes_9: 7893213134549147335
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

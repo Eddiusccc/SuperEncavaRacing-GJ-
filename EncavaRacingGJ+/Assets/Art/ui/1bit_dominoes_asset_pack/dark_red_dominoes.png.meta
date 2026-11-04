@@ -1,0 +1,1365 @@
+fileFormatVersion: 2
+guid: c311ce754d630bb4384df2c7029d795a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5416005399482912837
+    second: dark_red_dominoes_0
+  - first:
+      213: 8675799673495551795
+    second: dark_red_dominoes_1
+  - first:
+      213: 1847823653511912085
+    second: dark_red_dominoes_2
+  - first:
+      213: -4060881942366896860
+    second: dark_red_dominoes_3
+  - first:
+      213: 8050684541968053222
+    second: dark_red_dominoes_4
+  - first:
+      213: -978234484216558967
+    second: dark_red_dominoes_5
+  - first:
+      213: 5068094174954311403
+    second: dark_red_dominoes_6
+  - first:
+      213: 1155454281812166577
+    second: dark_red_dominoes_7
+  - first:
+      213: 1507390439629855122
+    second: dark_red_dominoes_8
+  - first:
+      213: 8699734574495591802
+    second: dark_red_dominoes_9
+  - first:
+      213: -6758178268462750403
+    second: dark_red_dominoes_10
+  - first:
+      213: -7070053732949205869
+    second: dark_red_dominoes_11
+  - first:
+      213: 7809175753893291404
+    second: dark_red_dominoes_12
+  - first:
+      213: -136949059561718945
+    second: dark_red_dominoes_13
+  - first:
+      213: 8135435444874460927
+    second: dark_red_dominoes_14
+  - first:
+      213: 6431533663446930234
+    second: dark_red_dominoes_15
+  - first:
+      213: 3328459280318426014
+    second: dark_red_dominoes_16
+  - first:
+      213: 7672644583486663598
+    second: dark_red_dominoes_17
+  - first:
+      213: -2432367477107511953
+    second: dark_red_dominoes_18
+  - first:
+      213: -6322150906790399070
+    second: dark_red_dominoes_19
+  - first:
+      213: -6424024354126902615
+    second: dark_red_dominoes_20
+  - first:
+      213: 7148473625031714574
+    second: dark_red_dominoes_21
+  - first:
+      213: 1418013929577667001
+    second: dark_red_dominoes_22
+  - first:
+      213: 5303499562751591197
+    second: dark_red_dominoes_23
+  - first:
+      213: -5440680493096785603
+    second: dark_red_dominoes_24
+  - first:
+      213: -9201490685009678386
+    second: dark_red_dominoes_25
+  - first:
+      213: -6016579342582927853
+    second: dark_red_dominoes_26
+  - first:
+      213: 3357618648806508137
+    second: dark_red_dominoes_27
+  - first:
+      213: 3365947703675076559
+    second: dark_red_dominoes_28
+  - first:
+      213: -6805663474551945399
+    second: dark_red_dominoes_29
+  - first:
+      213: 4029876316270329955
+    second: dark_red_dominoes_30
+  - first:
+      213: 5758136255807499026
+    second: dark_red_dominoes_31
+  - first:
+      213: -1938896327197189639
+    second: dark_red_dominoes_32
+  - first:
+      213: 3361746855646718528
+    second: dark_red_dominoes_33
+  - first:
+      213: -336639380129133409
+    second: dark_red_dominoes_34
+  - first:
+      213: -8993968471066101850
+    second: dark_red_dominoes_35
+  - first:
+      213: -23126538841072488
+    second: dark_red_dominoes_36
+  - first:
+      213: -6662181557110957270
+    second: dark_red_dominoes_37
+  - first:
+      213: -833815617368518481
+    second: dark_red_dominoes_38
+  - first:
+      213: 5681451035115816049
+    second: dark_red_dominoes_39
+  - first:
+      213: -2472123844395409208
+    second: dark_red_dominoes_40
+  - first:
+      213: -8179784616434607940
+    second: dark_red_dominoes_41
+  - first:
+      213: 6704235454950876948
+    second: dark_red_dominoes_42
+  - first:
+      213: 165403226944809786
+    second: dark_red_dominoes_43
+  - first:
+      213: -3192627289187808604
+    second: dark_red_dominoes_44
+  - first:
+      213: 1276625262035667430
+    second: dark_red_dominoes_45
+  - first:
+      213: 1928238189751884222
+    second: dark_red_dominoes_46
+  - first:
+      213: 3887012310102985714
+    second: dark_red_dominoes_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dark_red_dominoes_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 540d6c13734892b40800000000000000
+      internalID: 5416005399482912837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33ff62136d1a66870800000000000000
+      internalID: 8675799673495551795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59a542b92d9c4a910800000000000000
+      internalID: 1847823653511912085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d3c6e8369d4a7c0800000000000000
+      internalID: -4060881942366896860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e3fbb2cfe6c9bf60800000000000000
+      internalID: 8050684541968053222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98a0c356bec9c62f0800000000000000
+      internalID: -978234484216558967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beec06adccc755640800000000000000
+      internalID: 5068094174954311403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 81
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b74e952c8ff80010800000000000000
+      internalID: 1155454281812166577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29915fb4e935be410800000000000000
+      internalID: 1507390439629855122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7d6ef8908aabb870800000000000000
+      internalID: 8699734574495591802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d356383dba02632a0800000000000000
+      internalID: -6758178268462750403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39c53a0b69f12ed90800000000000000
+      internalID: -7070053732949205869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c85276f29f3cf5c60800000000000000
+      internalID: 7809175753893291404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5bff705e85791ef0800000000000000
+      internalID: -136949059561718945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffe3dd80f6fd6e070800000000000000
+      internalID: 8135435444874460927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 65
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3398ba8ac5614950800000000000000
+      internalID: 6431533663446930234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9b6bbc9410113e20800000000000000
+      internalID: 3328459280318426014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eab2c86e895ba7a60800000000000000
+      internalID: 7672644583486663598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d2bc3baae7e3ed0800000000000000
+      internalID: -2432367477107511953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a338581f353348a0800000000000000
+      internalID: -6322150906790399070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aacec7c2e749d6a0800000000000000
+      internalID: -6424024354126902615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07a34243ea743360800000000000000
+      internalID: 7148473625031714574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9580fe72ccda310800000000000000
+      internalID: 1418013929577667001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 49
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d138f30d0c0d99940800000000000000
+      internalID: 5303499562751591197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d39a190eae1de74b0800000000000000
+      internalID: -5440680493096785603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecfaeeb39fcbd4080800000000000000
+      internalID: -9201490685009678386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e246217f0d08ca0800000000000000
+      internalID: -6016579342582927853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 966c6552f58a89e20800000000000000
+      internalID: 3357618648806508137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcf381a5a9f36be20800000000000000
+      internalID: 3365947703675076559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9470b7ab02d6d81a0800000000000000
+      internalID: -6805663474551945399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3608d00982ffce730800000000000000
+      internalID: 4029876316270329955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_31
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 33
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21b24bfaa6209ef40800000000000000
+      internalID: 5758136255807499026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f91a192018a715e0800000000000000
+      internalID: -1938896327197189639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04aeb9334f257ae20800000000000000
+      internalID: 3361746855646718528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ccef17444045bf0800000000000000
+      internalID: -336639380129133409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a7ba01e3510f2380800000000000000
+      internalID: -8993968471066101850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89c5e731986ddaff0800000000000000
+      internalID: -23126538841072488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b1e3beb2d2b83a0800000000000000
+      internalID: -6662181557110957270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0939e1d11bd64f0800000000000000
+      internalID: -833815617368518481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_39
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 17
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1748ad46d9198de40800000000000000
+      internalID: 5681451035115816049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c0e90e167041bdd0800000000000000
+      internalID: -2472123844395409208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb8d53eca319b7e80800000000000000
+      internalID: -8179784616434607940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_42
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4172dee20aa3a0d50800000000000000
+      internalID: 6704235454950876948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3bafbacb51ab4200800000000000000
+      internalID: 165403226944809786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aa0ebf456281b3d0800000000000000
+      internalID: -3192627289187808604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_45
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e90de679eb77b110800000000000000
+      internalID: 1276625262035667430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb9d086da6a72ca10800000000000000
+      internalID: 1928238189751884222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_red_dominoes_47
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb424d0a1171f530800000000000000
+      internalID: 3887012310102985714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      dark_red_dominoes_0: 5416005399482912837
+      dark_red_dominoes_1: 8675799673495551795
+      dark_red_dominoes_10: -6758178268462750403
+      dark_red_dominoes_11: -7070053732949205869
+      dark_red_dominoes_12: 7809175753893291404
+      dark_red_dominoes_13: -136949059561718945
+      dark_red_dominoes_14: 8135435444874460927
+      dark_red_dominoes_15: 6431533663446930234
+      dark_red_dominoes_16: 3328459280318426014
+      dark_red_dominoes_17: 7672644583486663598
+      dark_red_dominoes_18: -2432367477107511953
+      dark_red_dominoes_19: -6322150906790399070
+      dark_red_dominoes_2: 1847823653511912085
+      dark_red_dominoes_20: -6424024354126902615
+      dark_red_dominoes_21: 7148473625031714574
+      dark_red_dominoes_22: 1418013929577667001
+      dark_red_dominoes_23: 5303499562751591197
+      dark_red_dominoes_24: -5440680493096785603
+      dark_red_dominoes_25: -9201490685009678386
+      dark_red_dominoes_26: -6016579342582927853
+      dark_red_dominoes_27: 3357618648806508137
+      dark_red_dominoes_28: 3365947703675076559
+      dark_red_dominoes_29: -6805663474551945399
+      dark_red_dominoes_3: -4060881942366896860
+      dark_red_dominoes_30: 4029876316270329955
+      dark_red_dominoes_31: 5758136255807499026
+      dark_red_dominoes_32: -1938896327197189639
+      dark_red_dominoes_33: 3361746855646718528
+      dark_red_dominoes_34: -336639380129133409
+      dark_red_dominoes_35: -8993968471066101850
+      dark_red_dominoes_36: -23126538841072488
+      dark_red_dominoes_37: -6662181557110957270
+      dark_red_dominoes_38: -833815617368518481
+      dark_red_dominoes_39: 5681451035115816049
+      dark_red_dominoes_4: 8050684541968053222
+      dark_red_dominoes_40: -2472123844395409208
+      dark_red_dominoes_41: -8179784616434607940
+      dark_red_dominoes_42: 6704235454950876948
+      dark_red_dominoes_43: 165403226944809786
+      dark_red_dominoes_44: -3192627289187808604
+      dark_red_dominoes_45: 1276625262035667430
+      dark_red_dominoes_46: 1928238189751884222
+      dark_red_dominoes_47: 3887012310102985714
+      dark_red_dominoes_5: -978234484216558967
+      dark_red_dominoes_6: 5068094174954311403
+      dark_red_dominoes_7: 1155454281812166577
+      dark_red_dominoes_8: 1507390439629855122
+      dark_red_dominoes_9: 8699734574495591802
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
