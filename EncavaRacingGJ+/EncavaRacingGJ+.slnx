@@ -8,6 +8,7 @@
   <Project Path="Unity.Cinemachine.Editor.csproj" />
   <Project Path="Unity.2D.IK.Runtime.csproj" />
   <Project Path="Unity.Collections.csproj" />
+  <Project Path="Unity.TerrainTools.Editor.csproj" />
   <Project Path="Unity.2D.Psdimporter.Editor.csproj" />
   <Project Path="Unity.ProBuilder.Poly2Tri.csproj" />
   <Project Path="Unity.VisualScripting.Core.Editor.csproj" />
@@ -67,6 +68,7 @@
   <Project Path="Unity.VisualScripting.Shared.Editor.csproj" />
   <Project Path="Unity.2D.Aseprite.Common.csproj" />
   <Project Path="Unity.CollabProxy.Editor.csproj" />
+  <Project Path="Unity.TerrainTools.csproj" />
   <Project Path="glTFast.Editor.Documentation.Examples.csproj" />
   <Project Path="Framework.UI.csproj" />
   <Project Path="glTFast.dots.csproj" />
@@ -111,6 +113,7 @@
   <Project Path="Unity.2D.Common.Runtime.Player.csproj" />
   <Project Path="Unity.InputSystem.TestFramework.Player.csproj" />
   <Project Path="Framework.Core.Player.csproj" />
+  <Project Path="Unity.TerrainTools.Player.csproj" />
   <Project Path="Framework.UI.Player.csproj" />
   <Project Path="glTFast.dots.Player.csproj" />
   <Project Path="Framework.CameraRig.Player.csproj" />
