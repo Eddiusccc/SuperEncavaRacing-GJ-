@@ -57,6 +57,7 @@
   <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.Collections.CodeGen.csproj" />
   <Project Path="Unity.2D.Tilemap.Extras.csproj" />
+  <Project Path="SplineRoadBuilder.csproj" />
   <Project Path="Unity.2D.Animation.Runtime.csproj" />
   <Project Path="Unity.Mathematics.Editor.csproj" />
   <Project Path="Unity.VisualScripting.SettingsProvider.Editor.csproj" />
@@ -109,6 +110,7 @@
   <Project Path="Unity.InputSystem.ForUI.Player.csproj" />
   <Project Path="Assembly-CSharp.Player.csproj" />
   <Project Path="Unity.2D.Tilemap.Extras.Player.csproj" />
+  <Project Path="SplineRoadBuilder.Player.csproj" />
   <Project Path="Unity.2D.Animation.Runtime.Player.csproj" />
   <Project Path="Unity.2D.Common.Runtime.Player.csproj" />
   <Project Path="Unity.InputSystem.TestFramework.Player.csproj" />

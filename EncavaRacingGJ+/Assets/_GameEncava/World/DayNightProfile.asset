@@ -95,12 +95,12 @@ MonoBehaviour:
     serializedVersion: 2
     key0: {r: 0.25, g: 0.32, b: 0.55, a: 1}
     key1: {r: 1, g: 0.55, b: 0.22, a: 1}
-    key2: {r: 1, g: 0.86, b: 0.48, a: 1}
-    key3: {r: 1, g: 0.97, b: 0.92, a: 1}
-    key4: {r: 1, g: 0.82, b: 0.6, a: 1}
-    key5: {r: 1, g: 0.42, b: 0.18, a: 1}
-    key6: {r: 0.5, g: 0.2, b: 0.18, a: 1}
-    key7: {r: 0.22, g: 0.28, b: 0.5, a: 1}
+    key2: {r: 1, g: 0.86, b: 0.48, a: 0}
+    key3: {r: 1, g: 0.97, b: 0.92, a: 0}
+    key4: {r: 1, g: 0.82, b: 0.6, a: 0}
+    key5: {r: 1, g: 0.42, b: 0.18, a: 0}
+    key6: {r: 0.5, g: 0.2, b: 0.18, a: 0}
+    key7: {r: 0.22, g: 0.28, b: 0.5, a: 0}
     ctime0: 0
     ctime1: 4520
     ctime2: 9040
@@ -203,12 +203,12 @@ MonoBehaviour:
     serializedVersion: 2
     key0: {r: 0.16, g: 0.19, b: 0.3, a: 1}
     key1: {r: 0.34, g: 0.38, b: 0.52, a: 1}
-    key2: {r: 0.52, g: 0.56, b: 0.66, a: 1}
-    key3: {r: 0.55, g: 0.6, b: 0.7, a: 1}
-    key4: {r: 0.52, g: 0.48, b: 0.5, a: 1}
-    key5: {r: 0.4, g: 0.3, b: 0.3, a: 1}
-    key6: {r: 0.16, g: 0.14, b: 0.22, a: 1}
-    key7: {r: 0.06, g: 0.08, b: 0.16, a: 1}
+    key2: {r: 0.52, g: 0.56, b: 0.66, a: 0}
+    key3: {r: 0.55, g: 0.6, b: 0.7, a: 0}
+    key4: {r: 0.52, g: 0.48, b: 0.5, a: 0}
+    key5: {r: 0.4, g: 0.3, b: 0.3, a: 0}
+    key6: {r: 0.16, g: 0.14, b: 0.22, a: 0}
+    key7: {r: 0.06, g: 0.08, b: 0.16, a: 0}
     ctime0: 0
     ctime1: 4520
     ctime2: 9040
@@ -302,12 +302,12 @@ MonoBehaviour:
     serializedVersion: 2
     key0: {r: 0.08, g: 0.11, b: 0.22, a: 1}
     key1: {r: 0.8, g: 0.55, b: 0.45, a: 1}
-    key2: {r: 0.6, g: 0.68, b: 0.85, a: 1}
-    key3: {r: 0.52, g: 0.58, b: 0.72, a: 1}
-    key4: {r: 0.7, g: 0.62, b: 0.55, a: 1}
-    key5: {r: 0.95, g: 0.5, b: 0.3, a: 1}
-    key6: {r: 0.35, g: 0.25, b: 0.35, a: 1}
-    key7: {r: 0.04, g: 0.06, b: 0.13, a: 1}
+    key2: {r: 0.6, g: 0.68, b: 0.85, a: 0}
+    key3: {r: 0.52, g: 0.58, b: 0.72, a: 0}
+    key4: {r: 0.7, g: 0.62, b: 0.55, a: 0}
+    key5: {r: 0.95, g: 0.5, b: 0.3, a: 0}
+    key6: {r: 0.35, g: 0.25, b: 0.35, a: 0}
+    key7: {r: 0.04, g: 0.06, b: 0.13, a: 0}
     ctime0: 0
     ctime1: 4520
     ctime2: 9040
@@ -408,8 +408,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   daySkybox: {fileID: 0}
   nightSkybox: {fileID: 0}
-  daySkyboxMaterial: {fileID: 0}
-  nightSkyboxMaterial: {fileID: 0}
+  daySkyboxMaterial: {fileID: 2100000, guid: cdbb40e11399e4a17882ada20a1b896a, type: 2}
+  nightSkyboxMaterial: {fileID: 2100000, guid: 51b74d7bad397457d883c5940f7664d8, type: 2}
   skyboxBlend:
     serializedVersion: 2
     m_Curve:
