@@ -6,9 +6,9 @@
   <Project Path="Unity.Mathematics.csproj" />
   <Project Path="Unity.Timeline.Editor.csproj" />
   <Project Path="Unity.Cinemachine.Editor.csproj" />
-  <Project Path="Unity.2D.IK.Runtime.csproj" />
-  <Project Path="Unity.Collections.csproj" />
   <Project Path="Unity.TerrainTools.Editor.csproj" />
+  <Project Path="Unity.Collections.csproj" />
+  <Project Path="Unity.2D.IK.Runtime.csproj" />
   <Project Path="Unity.2D.Psdimporter.Editor.csproj" />
   <Project Path="Unity.ProBuilder.Poly2Tri.csproj" />
   <Project Path="Unity.VisualScripting.Core.Editor.csproj" />
@@ -57,7 +57,7 @@
   <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.Collections.CodeGen.csproj" />
   <Project Path="Unity.2D.Tilemap.Extras.csproj" />
-  <Project Path="SplineRoadBuilder.csproj" />
+  <Project Path="SplineRoadBuilder.Editor.csproj" />
   <Project Path="Unity.2D.Animation.Runtime.csproj" />
   <Project Path="Unity.Mathematics.Editor.csproj" />
   <Project Path="Unity.VisualScripting.SettingsProvider.Editor.csproj" />
@@ -71,6 +71,7 @@
   <Project Path="Unity.CollabProxy.Editor.csproj" />
   <Project Path="Unity.TerrainTools.csproj" />
   <Project Path="glTFast.Editor.Documentation.Examples.csproj" />
+  <Project Path="SplineRoadBuilder.csproj" />
   <Project Path="Framework.UI.csproj" />
   <Project Path="glTFast.dots.csproj" />
   <Project Path="Framework.CameraRig.csproj" />
@@ -84,8 +85,8 @@
   <Project Path="Unity.Timeline.Player.csproj" />
   <Project Path="Unity.ProBuilder.Player.csproj" />
   <Project Path="Unity.Mathematics.Player.csproj" />
-  <Project Path="Unity.2D.IK.Runtime.Player.csproj" />
   <Project Path="Unity.Collections.Player.csproj" />
+  <Project Path="Unity.2D.IK.Runtime.Player.csproj" />
   <Project Path="Unity.ProBuilder.Poly2Tri.Player.csproj" />
   <Project Path="Unity.Splines.Player.csproj" />
   <Project Path="Unity.Burst.Player.csproj" />
@@ -110,12 +111,12 @@
   <Project Path="Unity.InputSystem.ForUI.Player.csproj" />
   <Project Path="Assembly-CSharp.Player.csproj" />
   <Project Path="Unity.2D.Tilemap.Extras.Player.csproj" />
-  <Project Path="SplineRoadBuilder.Player.csproj" />
   <Project Path="Unity.2D.Animation.Runtime.Player.csproj" />
   <Project Path="Unity.2D.Common.Runtime.Player.csproj" />
   <Project Path="Unity.InputSystem.TestFramework.Player.csproj" />
   <Project Path="Framework.Core.Player.csproj" />
   <Project Path="Unity.TerrainTools.Player.csproj" />
+  <Project Path="SplineRoadBuilder.Player.csproj" />
   <Project Path="Framework.UI.Player.csproj" />
   <Project Path="glTFast.dots.Player.csproj" />
   <Project Path="Framework.CameraRig.Player.csproj" />
