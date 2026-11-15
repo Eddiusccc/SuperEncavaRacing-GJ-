@@ -106,13 +106,22 @@ namespace Framework.Save
         }
 
         /// <summary>
-        /// Elimina los datos de guardado asociados al slot especificado en PlayerPrefs.
+        /// Elimina los datos de guardado asociados al slot especificado en PlayerPrefs y resetea el estado en memoria
+        /// de todos los objetos registrados en <see cref="SaveRegistry"/> para que no queden valores viejos.
         /// </summary>
         /// <param name="slot">Número de ranura de guardado a eliminar (por defecto 0).</param>
         public void ClearSave(int slot = 0)
         {
             PlayerPrefs.DeleteKey(saveKeyPrefix + slot);
             PlayerPrefs.Save();
+
+            // Resetear estado en memoria de todos los saveables para que no persistan valores previos
+            foreach (var saveable in SaveRegistry.All)
+            {
+                saveable?.Reset();
+            }
+
+            EventBus.Publish(new GameSaved(slot));
         }
     }
 }

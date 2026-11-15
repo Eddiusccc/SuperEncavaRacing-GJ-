@@ -72,4 +72,10 @@ public class Wallet : MonoBehaviour, ISaveable
             Publish();
         }
     }
+
+    public void Reset()
+    {
+        Money = startingMoney;
+        Publish();
+    }
 }

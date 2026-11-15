@@ -71,9 +71,9 @@ public class PerkService : MonoBehaviour
         var available = perkPool.Where(p => !activePerks.Contains(p)).ToList();
         if (available.Count == 0) return;
 
-        // Seleccionar hasta 3 perks al azar
-        int count = Mathf.Min(maxPerksAlready, perkPool.Count);
-        var shuffled = new List<PerkData>(perkPool);
+        // Seleccionar hasta 3 perks al azar de los disponibles (sin repetir activos)
+        int count = Mathf.Min(maxPerksAlready, available.Count);
+        var shuffled = new List<PerkData>(available);
         for (int i = 0; i < shuffled.Count; i++)
         {
             int r = UnityEngine.Random.Range(i, shuffled.Count);

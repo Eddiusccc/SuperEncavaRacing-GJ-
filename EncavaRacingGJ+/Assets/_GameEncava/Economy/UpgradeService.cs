@@ -189,4 +189,10 @@ public class UpgradeService : MonoBehaviour, ISaveable
         }
         ApplyAll();
     }
+
+    public void Reset()
+    {
+        levels.Clear();
+        if (bus != null) ApplyAll();
+    }
 }
