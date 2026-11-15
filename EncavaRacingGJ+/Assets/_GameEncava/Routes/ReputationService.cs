@@ -75,7 +75,7 @@ public class ReputationService : MonoBehaviour, ISaveable
     /// <param name="e">Datos del evento de entrega.</param>
     void OnDelivered(FareDelivered e)
     {
-        int stop = e.OriginStop;
+        int stop = e.DestinationStop;
         float current = reputationPoints.TryGetValue(stop, out float pts) ? pts : 0f;
         int lvl = GetStopLevel(stop);
 

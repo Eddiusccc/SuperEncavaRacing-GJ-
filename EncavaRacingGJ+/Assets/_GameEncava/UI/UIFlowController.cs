@@ -17,6 +17,7 @@ public class UIFlowController : MonoBehaviour
     [SerializeField] UIScreen pauseScreen;
     [SerializeField] UIScreen gameOverScreen;
     [SerializeField] UIScreen shopScreen;
+    [SerializeField] UIScreen perkSelectionScreen;
 
     void Awake()
     {
@@ -53,8 +54,10 @@ public class UIFlowController : MonoBehaviour
                 break;
 
             case GameState.Playing:
-                // Si venimos de Pausa, basta con hacer Pop() de la pantalla de pausa
-                if (previous == GameState.Paused && screens.ActiveScreensCount > 1)
+                // Si venimos de Pausa o de la selección de perks, basta con hacer Pop()
+                // de esa pantalla para restaurar el HUD que quedó debajo.
+                if ((previous == GameState.Paused || previous == GameState.PerkSelection)
+                    && screens.ActiveScreensCount > 1)
                 {
                     screens.Pop();
                 }
@@ -81,6 +84,11 @@ public class UIFlowController : MonoBehaviour
             case GameState.Shop:
                 screens.Clear();
                 if (shopScreen != null) screens.Push(shopScreen);
+                break;
+            case GameState.PerkSelection:
+                if (perkSelectionScreen != null) 
+                    screens.Push(perkSelectionScreen, hidePrevious: false); // Sobre HUD
+
                 break;
         }
     }

@@ -1,3 +1,4 @@
+using System;
 using Framework.Core;
 using Framework.UI;
 using TMPro;
@@ -23,17 +24,21 @@ public class ShopScreen : UIScreen
     [SerializeField] int refreshCost = 3;
     public void RefreshContainers(int cost = 1)
     {
-        if (!wallet.TrySpend(refreshCost * cost))
-        {
-            return;
-        }
+        if (wallet == null || upgradeService == null) return;
+        if (containers == null || containers.Length == 0) return;
+
+        if (!wallet.TrySpend(refreshCost * cost)) return;
 
         UpgradeData[] datas = upgradeService.ReturnRandomUpgradeDataArray();
-        Debug.Log(datas.Length);
+        // Debug.Log(datas.Length);
+
+        // Limitar el mínimo entre datos y contenedores
+        int count = Mathf.Min(datas.Length, containers.Length);
 
         for (int i = 0; i < datas.Length; i++)
         {
-            containers[i].SetContainer(datas[i], upgradeService.Level(datas[i]));
+            if (containers[i] != null && datas[i] != null)
+                containers[i].SetContainer(datas[i], upgradeService.Level(datas[i]));
         }
     }
     public void ChangeContainersFirstTime()
@@ -58,7 +63,26 @@ public class ShopScreen : UIScreen
         if (wallet == null) wallet = FindFirstObjectByType<Wallet>();
         if (flow == null) flow = FindFirstObjectByType<GameFlow>();
 
-        refreshButton.onClick.AddListener(ChangeContainers);
+        if (refreshButton != null)
+        {
+            refreshButton.onClick.AddListener(ChangeContainers);
+        }
+        else
+        {
+            Debug.LogWarning("[ShopScreen] refreshButton no asignado en Inspector");
+        }
+
+        if (containers == null || containers.Length == 0)
+        {
+            Debug.LogWarning("[ShopScreen] containers array vacio o null");
+        }
+        else
+        {
+            for (int i = 0; i < containers.Length; i++)
+            {
+                if (containers[i] == null) Debug.LogWarning($"[ShopScreen] containers[{i}] es null");
+            }
+        }
     }
 
     /// <summary>

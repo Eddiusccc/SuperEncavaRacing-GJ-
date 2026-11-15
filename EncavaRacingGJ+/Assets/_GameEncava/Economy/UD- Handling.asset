@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Mejora de Manejo
   description: Mejora el giro del volante
   stat: 3
-  bonusPerLevel: 4
+  bonusPerLevel: 0.1
   maxLevel: 6
   baseCost: 100
   costGrowth: 2

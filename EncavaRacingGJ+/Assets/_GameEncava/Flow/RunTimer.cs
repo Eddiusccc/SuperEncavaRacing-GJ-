@@ -32,8 +32,8 @@ public class RunTimer : MonoBehaviour
     void OnState(GameStateChanged e)
     {
         running = e.Current == GameState.Playing;
-        // Reanudar desde pausa NO reinicia el reloj
-        if (running && e.Previous != GameState.Paused)
+        // Reanudar desde pausa o perks NO reinicia el reloj
+        if (running && e.Previous != GameState.Paused && e.Previous != GameState.PerkSelection)
         {
             remaining = startTime;
             EventBus.Publish(new TimeChanged(remaining));

@@ -7,9 +7,11 @@ public class UpgradeData : ScriptableObject
     public string displayName;
     [TextArea] public string description;
     public StatType stat;
+    [Tooltip("Porcentaje por nivel")]
     public float bonusPerLevel = 0.08f;    // +8% por nivel
     [Min(1)] public int maxLevel = 6;
     public int baseCost = 100;
+    [Tooltip("Multiplicador de aumento de costo (1.6x)")]
     public float costGrowth = 1.6f;
 
     public int CostFor(int level) => Mathf.RoundToInt(baseCost * Mathf.Pow(costGrowth, level));

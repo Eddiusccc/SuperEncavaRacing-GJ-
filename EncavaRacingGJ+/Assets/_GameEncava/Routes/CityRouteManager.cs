@@ -14,10 +14,12 @@ public class CityRouteManager : MonoBehaviour
     [SerializeField] int initialActiveCalls = 2; // Cantidad inicial de paradas llamando
     [SerializeField] int maxActiveCalls = 6;     // Límite máximo incremental de llamadas simultáneas
     [SerializeField] float parSpeed = 16f;     // m/s velocidad media esperada en ciudad
+    [SerializeField] BusMotor bus;
 
     [Header("Pasajeros por Viaje")]
     [SerializeField] int minPassengers = 1;
     [SerializeField] int maxPassengers = 4;
+    
 
     [Header("RNG e Incremental")]
     [Tooltip("Tiempo mínimo y máximo (en segundos) de espera aleatoria antes de generar una nueva llamada.")]
@@ -40,6 +42,8 @@ public class CityRouteManager : MonoBehaviour
         {
             cityStops.AddRange(FindObjectsByType<BusStop>(FindObjectsSortMode.None));
         }
+
+        if (bus == null) bus = FindFirstObjectByType<BusMotor>();
 
         // Limpiar nulos y referencias duplicadas
         var uniqueStops = new HashSet<BusStop>();
@@ -79,17 +83,14 @@ public class CityRouteManager : MonoBehaviour
         EventBus.Unsubscribe<GameStateChanged>(OnGameState);
     }
 
-    void Start()
-    {
-        InitCityRoutes();
-    }
-
     void OnGameState(GameStateChanged e)
     {
-        if (e.Current == GameState.Playing && e.Previous != GameState.Paused)
-        {
-            InitCityRoutes();
-        }
+        if (e.Current != GameState.Playing) return;
+
+        // Reanudar desde Pausa o PerkSelection no debe regenerar las rutas.
+        if (e.Previous == GameState.Paused || e.Previous == GameState.PerkSelection) return;
+
+        InitCityRoutes();
     }
 
     public void InitCityRoutes()
@@ -284,23 +285,40 @@ public class CityRouteManager : MonoBehaviour
 
     /// <summary>
     /// Actualiza el destino de navegación de la flecha brújula (WaypointArrow):
-    /// 1. Prioridad: Si hay pasajeros a bordo, apunta a la parada de bajada (Drop-off).
-    /// 2. Si el bus está vacío: apunta a la parada de recogida activa (Pickup).
+    /// 1. Prioridad: Si hay pasajeros a bordo, apunta a la parada de bajada MÁS CERCANA.
+    /// 2. Si el bus está vacío: apunta a la parada de recogida MÁS CERCANA.
     /// </summary>
     public void UpdateWaypointObjective()
     {
-        if (fareBoard == null) return;
+        if (fareBoard == null || bus == null) return;
 
-        // 1) Si llevamos pasajeros a bordo, el objetivo es su parada de bajada (Drop-off)
+        Vector3 busPos = bus.transform.position;
+
+        // 1) Si llevamos pasajeros a bordo → parada de bajada más cercana
         if (fareBoard.OnboardFares.Count > 0)
         {
-            var firstOnboard = fareBoard.OnboardFares[0];
-            if (stopsByIndex.TryGetValue(firstOnboard.Destination, out var destStop))
+            BusStop closestDrop = null;
+            float closestDist = float.MaxValue;
+
+            foreach (var fare in fareBoard.OnboardFares)
+            {
+                if (stopsByIndex.TryGetValue(fare.Destination, out var stop) && stop != null)
+                {
+                    float dist = Vector3.Distance(busPos, stop.transform.position);
+                    if (dist < closestDist)
+                    {
+                        closestDist = dist;
+                        closestDrop = stop;
+                    }
+                }
+            }
+
+            if (closestDrop != null)
             {
                 EventBus.Publish(new TargetDestinationChanged(
-                    destStop.Index,
-                    destStop.StopName,
-                    destStop.transform.position,
+                    closestDrop.Index,
+                    closestDrop.StopName,
+                    closestDrop.transform.position,
                     hasTarget: true,
                     isDropOff: true
                 ));
@@ -308,16 +326,31 @@ public class CityRouteManager : MonoBehaviour
             }
         }
 
-        // 2) Si el bus está vacío: el objetivo es la parada de recogida activa
+        // 2) Bus vacío → parada de recogida más cercana
         if (fareBoard.WaitingFares.Count > 0)
         {
-            var firstWait = fareBoard.WaitingFares[0];
-            if (stopsByIndex.TryGetValue(firstWait.Origin, out var originStop))
+            BusStop closestPickup = null;
+            float closestDist = float.MaxValue;
+
+            foreach (var fare in fareBoard.WaitingFares)
+            {
+                if (stopsByIndex.TryGetValue(fare.Origin, out var stop) && stop != null)
+                {
+                    float dist = Vector3.Distance(busPos, stop.transform.position);
+                    if (dist < closestDist)
+                    {
+                        closestDist = dist;
+                        closestPickup = stop;
+                    }
+                }
+            }
+
+            if (closestPickup != null)
             {
                 EventBus.Publish(new TargetDestinationChanged(
-                    originStop.Index,
-                    originStop.StopName,
-                    originStop.transform.position,
+                    closestPickup.Index,
+                    closestPickup.StopName,
+                    closestPickup.transform.position,
                     hasTarget: true,
                     isDropOff: false
                 ));
