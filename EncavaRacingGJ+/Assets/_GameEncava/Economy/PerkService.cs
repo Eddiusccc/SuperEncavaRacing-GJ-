@@ -5,7 +5,7 @@ using Framework.Core;
 using UnityEngine;
 
 /// <summary>
-/// Evento que se publica cuando se ofrecen mejoras temporales (perks) al jugador.
+/// Evento que se publica cuando se ofrece un grupo de mejoras temporales (perks) al jugador.
 /// </summary>
 public readonly struct PerkOffered
 {
@@ -16,6 +16,21 @@ public readonly struct PerkOffered
     /// </summary>
     /// <param name="choices">Array de opciones.</param>
     public PerkOffered(PerkData[] choices) => Choices = choices;
+}
+
+/// <summary>
+/// Evento que se publica cuando el jugador confirma y aplica un perk.
+/// Permite que la UI y el estado de la partida reaccionen de inmediato.
+/// </summary>
+public readonly struct PerkApplied
+{
+    /// <summary>El perk que se acaba de aplicar.</summary>
+    public readonly PerkData Perk;
+    /// <summary>
+    /// Constructor para <see cref="PerkApplied"/>.
+    /// </summary>
+    /// <param name="perk">El perk aplicado.</param>
+    public PerkApplied(PerkData perk) => Perk = perk;
 }
 
 /// <summary>
@@ -86,6 +101,7 @@ public class PerkService : MonoBehaviour
 
     /// <summary>
     /// Aplica un perk seleccionado al autobús y lo añade a la lista de activos.
+    /// Se publica <see cref="PerkApplied"/> para que la UI y el estado de la partida se actualicen de inmediato.
     /// </summary>
     /// <param name="perk">El perk seleccionado por el jugador.</param>
     public void SelectPerk(PerkData perk)
@@ -93,6 +109,7 @@ public class PerkService : MonoBehaviour
         if (perk == null || bus == null) return;
         activePerks.Add(perk);
         bus.Stats.Set(perk, perk.stat, perk.multiplier);
+        EventBus.Publish(new PerkApplied(perk));
     }
 
     /// <summary>

@@ -6,6 +6,8 @@ public class RunTimer : MonoBehaviour
     [SerializeField] GameFlow flow;
     [SerializeField] float startTime = 90f;
     [SerializeField] float crashPenalty = 2f;
+    [Tooltip("Tiempo extra que se otorga de inmediato al aplicar un perk de bonus de tiempo.")]
+    [SerializeField] float bonusTimePerPerk = 4f;
 
     float remaining;
     bool running;
@@ -20,6 +22,7 @@ public class RunTimer : MonoBehaviour
         EventBus.Subscribe<GameStateChanged>(OnState);
         EventBus.Subscribe<FareDelivered>(OnDelivered);
         EventBus.Subscribe<BusCrashed>(OnCrashed);
+        EventBus.Subscribe<PerkApplied>(OnPerkApplied);
     }
 
     void OnDisable()
@@ -27,6 +30,7 @@ public class RunTimer : MonoBehaviour
         EventBus.Unsubscribe<GameStateChanged>(OnState);
         EventBus.Unsubscribe<FareDelivered>(OnDelivered);
         EventBus.Unsubscribe<BusCrashed>(OnCrashed);
+        EventBus.Unsubscribe<PerkApplied>(OnPerkApplied);
     }
 
     void OnState(GameStateChanged e)
@@ -50,6 +54,18 @@ public class RunTimer : MonoBehaviour
     {
         remaining -= crashPenalty;
         EventBus.Publish(new TimeChanged(Mathf.Max(remaining, 0f)));
+    }
+
+    /// <summary>
+    /// Aplica de inmediato el tiempo extra de un perk de bonus de tiempo al cronómetro de la partida.
+    /// </summary>
+    void OnPerkApplied(PerkApplied e)
+    {
+        if (e.Perk.stat == StatType.TimeBonus)
+        {
+            remaining += bonusTimePerPerk * e.Perk.multiplier;
+            EventBus.Publish(new TimeChanged(Mathf.Max(remaining, 0f)));
+        }
     }
 
     void Update()

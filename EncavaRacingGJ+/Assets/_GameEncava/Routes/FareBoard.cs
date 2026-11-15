@@ -27,8 +27,17 @@ public class FareBoard : MonoBehaviour
         if (reputation == null) reputation = FindFirstObjectByType<ReputationService>();
     }
 
-    void OnEnable()  => EventBus.Subscribe<BusArrivedAtStop>(OnArrived);
-    void OnDisable() => EventBus.Unsubscribe<BusArrivedAtStop>(OnArrived);
+    void OnEnable()
+    {
+        EventBus.Subscribe<BusArrivedAtStop>(OnArrived);
+        EventBus.Subscribe<PerkApplied>(OnPerkApplied);
+    }
+
+    void OnDisable()
+    {
+        EventBus.Unsubscribe<BusArrivedAtStop>(OnArrived);
+        EventBus.Unsubscribe<PerkApplied>(OnPerkApplied);
+    }
 
     public void AddWaiting(Fare f)
     {
@@ -75,6 +84,18 @@ public class FareBoard : MonoBehaviour
         }
 
         Publish();
+    }
+
+    /// <summary>
+    /// Cuando se aplica un perk que afecta la capacidad del autobús, refresca el UI de pasajeros
+    /// para que muestre la nueva capacidad de inmediato.
+    /// </summary>
+    void OnPerkApplied(PerkApplied e)
+    {
+        if (e.Perk.stat == StatType.Capacity)
+        {
+            Publish();
+        }
     }
 
     static int Count(List<Fare> list)
