@@ -162,7 +162,18 @@ public class BusMotor : MonoBehaviour
             float accel = Stats.Get(StatType.Acceleration, config.acceleration)
                           * config.accelerationBySpeed.Evaluate(ratio);
 
-            float throttle = input.Move.y;
+            float throttle = 0f;
+            if (input.MoveFromGamepad)
+            {
+                // En mando: A acelera, B frena/reversa. El stick Y no afecta la velocidad.
+                if (input.IsAccelerating) throttle = 1f;
+                else if (input.IsBraking) throttle = -1f;
+            }
+            else
+            {
+                // En teclado: W acelera, S frena/reversa (eje Y de Move).
+                throttle = input.Move.y;
+            }
             float brakeDecel = config.brakeDeceleration * Stats.Get(StatType.BrakeForce, 1f);
             if (speed > max)
                 speed = Mathf.MoveTowards(speed, max, config.coastDeceleration * 2f * dt);

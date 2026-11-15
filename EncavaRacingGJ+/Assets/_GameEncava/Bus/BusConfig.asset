@@ -59,10 +59,14 @@ MonoBehaviour:
   maxSteerAngleAtTopSpeed: 7
   steerAngleRate: 85
   steerReturnRate: 90
-  gripAcceleration: 40
+  gripAcceleration: 25
   yawResponse: 9
-  terrainAlignSpeed: 20
+  terrainAlignSpeed: 30
   crashImpactThreshold: 6
   invulnerability: 1.2
+  rightingAngleThreshold: 50
+  rightingMaxSpeed: 1
+  rightingSpeed: 70
+  rightingMaxGroundDistance: 2.5
   rollPerAccel: 0.6
   pitchPerAccel: 0.4
