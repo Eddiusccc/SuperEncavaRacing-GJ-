@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3884048533270936030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8119358067022520653}
+  - component: {fileID: 5709513131459948673}
+  - component: {fileID: 5162108579445170647}
+  - component: {fileID: 314562404372462053}
+  - component: {fileID: 5214092285816545355}
+  m_Layer: 9
+  m_Name: ViaSpline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8119358067022520653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3884048533270936030}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5709513131459948673
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3884048533270936030}
+  m_Mesh: {fileID: 0}
+--- !u!23 &5162108579445170647
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3884048533270936030}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9676bc8c9c08ebc41be5303a6d1d778c, type: 2}
+  - {fileID: 2100000, guid: 44bb360f6303f684fab8fa7d25ce2299, type: 2}
+  - {fileID: 2100000, guid: ba163300f00c60c44867906e989e0e20, type: 2}
+  - {fileID: 2100000, guid: 1776e2a27e3ac6d42a666b8b78ab77a3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &314562404372462053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3884048533270936030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24a0775f2fa9254bab2ecd93594762a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SplineRoadBuilder::SplineRoadBuilder
+  splineContainer: {fileID: 0}
+  splineIndex: 3
+  roadWidth: 9.5
+  curbWidth: 1
+  curbHeight: 0.3
+  sampleStep: 3
+  bankFactor: 0.15
+  roadUvTileSize: 8
+  roadMaterial: {fileID: 2100000, guid: 9676bc8c9c08ebc41be5303a6d1d778c, type: 2}
+  generateBridge: 1
+  bridgeDepth: 1
+  structureUvTileSize: 10
+  structureMaterial: {fileID: 2100000, guid: 44bb360f6303f684fab8fa7d25ce2299, type: 2}
+  generateRailings: 0
+  railingLeft: 1
+  railingRight: 1
+  railingHeight: 1.6
+  railingPostSpacing: 3
+  railingPostThickness: 0.08
+  railingBarThickness: 0.06
+  railingAtCurbEdge: 0
+  railingDistanceFromAsphalt: 0.5
+  railingStartDistance: 102.5
+  railingEndDistance: 156.5
+  railingMaterial: {fileID: 2100000, guid: ba163300f00c60c44867906e989e0e20, type: 2}
+  generatePiers: 1
+  pierPlacement: 1
+  pierSpacing: 12.1
+  pierStartOffset: 5
+  pierWidth: 1.2
+  pierInset: 0.3
+  pierTopEmbed: 0.3
+  pierBottomEmbed: 0.3
+  pierMinHeight: 1.5
+  pierGroundMask:
+    serializedVersion: 2
+    m_Bits: 128
+  pierMaxDepth: 80
+  pierUvTileSize: 2
+  pierMaterial: {fileID: 2100000, guid: 1776e2a27e3ac6d42a666b8b78ab77a3, type: 2}
+  generateCollider: 1
+--- !u!64 &5214092285816545355
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3884048533270936030}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}

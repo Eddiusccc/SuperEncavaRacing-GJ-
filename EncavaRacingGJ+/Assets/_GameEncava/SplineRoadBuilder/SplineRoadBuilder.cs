@@ -10,9 +10,9 @@ using UnityEngine.Splines;
 /// - Asfalto con UVs en metros (la textura no se estira a lo largo de toda la vía).
 /// - Bordillos a ambos lados con winding correcto (se ven las dos caras).
 /// - Modo puente: losa con laterales y fondo de profundidad configurable.
-/// - Barandillas opcionales con postes y barras en ambos lados.
-/// - Pilares opcionales que bajan hasta el terreno (raycast).
-/// - Tres submallas con materiales independientes: asfalto, estructura y metal.
+/// - Barandillas opcionales con postes y barras en ambos lados, limitables a un tramo (por ejemplo, solo el puente) y con distancia lateral configurable respecto al asfalto.
+/// - Pilares opcionales que bajan hasta el terreno (raycast), con material propio.
+/// - Cuatro submallas con materiales independientes: asfalto, estructura, metal y pilares.
 ///
 /// Requisitos: com.unity.splines 2.9.x (API probada con 2.9.2 en Unity 6.3).
 /// La malla se genera en espacio de mundo: el GameObject queda en identidad.
@@ -58,7 +58,7 @@ public class SplineRoadBuilder : MonoBehaviour
     [SerializeField] float bridgeDepth = 2.5f;
     [Tooltip("Metros que cubre una repetición de la textura de concreto/estructura.")]
     [SerializeField] float structureUvTileSize = 4f;
-    [Tooltip("Material de concreto/piedra para bordillos, laterales y pilares.")]
+    [Tooltip("Material de concreto/piedra para bordillos y laterales del puente.")]
     [SerializeField] Material structureMaterial;
 
     [Header("Barandillas")]
@@ -72,6 +72,14 @@ public class SplineRoadBuilder : MonoBehaviour
     [SerializeField] float railingPostSpacing = 3f;
     [SerializeField] float railingPostThickness = 0.08f;
     [SerializeField] float railingBarThickness = 0.06f;
+    [Tooltip("Coloca la barandilla en el borde exterior del bordillo (comportamiento clásico).")]
+    [SerializeField] bool railingAtCurbEdge = true;
+    [Tooltip("Si 'Railing At Curb Edge' está desactivado: distancia desde el borde del asfalto hasta la barandilla, en metros. Menor que Curb Width = sobre el bordillo; mayor = por fuera (puede quedar sin apoyo).")]
+    [SerializeField] float railingDistanceFromAsphalt = 1f;
+    [Tooltip("Distancia (m) desde el inicio del spline donde empieza la barandilla. 0 = desde el inicio.")]
+    [SerializeField] float railingStartDistance = 0f;
+    [Tooltip("Distancia (m) desde el inicio del spline donde termina la barandilla. 0 o menor que el inicio = hasta el final del spline.")]
+    [SerializeField] float railingEndDistance = 0f;
     [Tooltip("Material metálico para las barandillas.")]
     [SerializeField] Material railingMaterial;
 
@@ -98,6 +106,10 @@ public class SplineRoadBuilder : MonoBehaviour
     [SerializeField] LayerMask pierGroundMask = ~0;
     [Tooltip("Distancia máxima del raycast para encontrar el terreno.")]
     [SerializeField] float pierMaxDepth = 80f;
+    [Tooltip("Metros que cubre una repetición de la textura de los pilares.")]
+    [SerializeField] float pierUvTileSize = 2f;
+    [Tooltip("Material específico de los pilares (piedra, concreto, ladrillo...). Si se deja vacío, usa el material de estructura.")]
+    [SerializeField] Material pierMaterial;
 
     [Header("Colisiones")]
     [Tooltip("Genera o actualiza un MeshCollider usando la malla horneada.")]
@@ -139,6 +151,51 @@ public class SplineRoadBuilder : MonoBehaviour
     }
 
     /// <summary>
+    /// Dibuja en la escena el tramo exacto que cubrirá la barandilla.
+    /// Sirve para ajustar Railing Start/End Distance sin adivinar.
+    /// </summary>
+    void OnDrawGizmosSelected()
+    {
+        if (!generateRailings || splineContainer == null) return;
+        if (splineIndex < 0 || splineIndex >= splineContainer.Splines.Count) return;
+
+        float length = GetLength();
+        if (length <= 0f) return;
+
+        float start = Mathf.Clamp(railingStartDistance, 0f, length);
+        float end = railingEndDistance > start
+            ? Mathf.Clamp(railingEndDistance, 0f, length)
+            : length;
+
+        if (end <= start) return;
+
+        Gizmos.color = new Color(1f, 0.55f, 0f, 1f);
+
+        const int steps = 64;
+
+        // Dos líneas, una por cada barandilla, a la distancia lateral configurada.
+        for (int side = 0; side < 2; side++)
+        {
+            bool leftSide = side == 0;
+            Vector3 prev = GetRailingGizmoPoint(start, length, leftSide);
+
+            for (int i = 1; i <= steps; i++)
+            {
+                float d = Mathf.Lerp(start, end, i / (float)steps);
+                Vector3 p = GetRailingGizmoPoint(d, length, leftSide);
+                Gizmos.DrawLine(prev, p);
+                prev = p;
+            }
+        }
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(GetRailingGizmoPoint(start, length, true), 0.3f);
+        Gizmos.DrawSphere(GetRailingGizmoPoint(end, length, true), 0.3f);
+        Gizmos.DrawSphere(GetRailingGizmoPoint(start, length, false), 0.3f);
+        Gizmos.DrawSphere(GetRailingGizmoPoint(end, length, false), 0.3f);
+    }
+
+    /// <summary>
     /// Genera la malla completa desde el spline asignado.
     /// </summary>
     [ContextMenu("Bake Road")]
@@ -172,6 +229,9 @@ public class SplineRoadBuilder : MonoBehaviour
         railingPostSpacing = Mathf.Max(0.5f, railingPostSpacing);
         railingPostThickness = Mathf.Max(0.01f, railingPostThickness);
         railingBarThickness = Mathf.Max(0.01f, railingBarThickness);
+        railingDistanceFromAsphalt = Mathf.Max(0f, railingDistanceFromAsphalt);
+        railingStartDistance = Mathf.Max(0f, railingStartDistance);
+        railingEndDistance = Mathf.Max(0f, railingEndDistance);
         pierSpacing = Mathf.Max(1f, pierSpacing);
         pierStartOffset = Mathf.Max(0f, pierStartOffset);
         pierWidth = Mathf.Max(0.1f, pierWidth);
@@ -180,6 +240,7 @@ public class SplineRoadBuilder : MonoBehaviour
         pierBottomEmbed = Mathf.Max(0f, pierBottomEmbed);
         pierMinHeight = Mathf.Max(0f, pierMinHeight);
         pierMaxDepth = Mathf.Max(1f, pierMaxDepth);
+        pierUvTileSize = Mathf.Max(0.25f, pierUvTileSize);
 
         float length = splineContainer.CalculateLength(splineIndex);
         if (length <= 0f) return;
@@ -235,13 +296,14 @@ public class SplineRoadBuilder : MonoBehaviour
             prevTangent = tangent;
         }
 
-        // 2) Listas de malla. Tres submallas: 0 = asfalto, 1 = estructura, 2 = metal.
+        // 2) Listas de malla. Cuatro submallas: 0 = asfalto, 1 = estructura, 2 = metal, 3 = pilares.
         var vertices = new List<Vector3>();
         var normals = new List<Vector3>();
         var uvs = new List<Vector2>();
         var roadIndices = new List<int>();
         var structureIndices = new List<int>();
         var railingIndices = new List<int>();
+        var pierIndices = new List<int>();
 
         // 3) Carretera, bordillos, laterales y fondo.
         for (int i = 0; i < samples.Count - 1; i++)
@@ -306,20 +368,28 @@ public class SplineRoadBuilder : MonoBehaviour
         // 5) Barandillas.
         if (generateRailings)
         {
-            if (railingLeft) AddRailing(vertices, normals, uvs, railingIndices, samples, true);
-            if (railingRight) AddRailing(vertices, normals, uvs, railingIndices, samples, false);
+            float railStart = Mathf.Clamp(railingStartDistance, 0f, length);
+            float railEnd = railingEndDistance > railStart
+                ? Mathf.Clamp(railingEndDistance, 0f, length)
+                : length;
+
+            if (railEnd > railStart + 0.01f)
+            {
+                if (railingLeft) AddRailing(vertices, normals, uvs, railingIndices, samples, true, railStart, railEnd);
+                if (railingRight) AddRailing(vertices, normals, uvs, railingIndices, samples, false, railStart, railEnd);
+            }
         }
 
         // 6) Pilares opcionales.
         if (generateBridge && generatePiers)
         {
-            AddPiers(vertices, normals, uvs, structureIndices, samples);
+            AddPiers(vertices, normals, uvs, pierIndices, samples);
         }
 
         // 7) Construir el Mesh.
         if (roadMesh == null) roadMesh = new Mesh();
         roadMesh.Clear();
-        roadMesh.subMeshCount = 3;
+        roadMesh.subMeshCount = 4;
         roadMesh.SetVertices(vertices);
         roadMesh.SetNormals(normals);
         roadMesh.SetUVs(0, uvs);
@@ -327,6 +397,8 @@ public class SplineRoadBuilder : MonoBehaviour
         roadMesh.SetIndices(structureIndices.ToArray(), MeshTopology.Triangles, 1);
         if (railingIndices.Count > 0)
             roadMesh.SetIndices(railingIndices.ToArray(), MeshTopology.Triangles, 2);
+        if (pierIndices.Count > 0)
+            roadMesh.SetIndices(pierIndices.ToArray(), MeshTopology.Triangles, 3);
         roadMesh.RecalculateTangents();
         roadMesh.RecalculateBounds();
 
@@ -341,7 +413,8 @@ public class SplineRoadBuilder : MonoBehaviour
             Material asphalt = roadMaterial;
             Material structure = structureMaterial != null ? structureMaterial : asphalt;
             Material metal = railingMaterial != null ? railingMaterial : structure;
-            meshRenderer.sharedMaterials = new[] { asphalt, structure, metal };
+            Material piers = pierMaterial != null ? pierMaterial : structure;
+            meshRenderer.sharedMaterials = new[] { asphalt, structure, metal, piers };
         }
 
         // 9) Colisión.
@@ -392,7 +465,8 @@ public class SplineRoadBuilder : MonoBehaviour
     }
 
     void AddRailing(List<Vector3> vertices, List<Vector3> normals, List<Vector2> uvs,
-                    List<int> indices, List<Sample> samples, bool leftSide)
+                    List<int> indices, List<Sample> samples, bool leftSide,
+                    float startDistance, float endDistance)
     {
         float halfBar = railingBarThickness * 0.5f;
 
@@ -406,62 +480,211 @@ public class SplineRoadBuilder : MonoBehaviour
                 Sample a = samples[i];
                 Sample b = samples[i + 1];
 
-                Vector3 baseA = leftSide ? a.leftCurb : a.rightCurb;
-                Vector3 baseB = leftSide ? b.leftCurb : b.rightCurb;
+                // Solo los tramos que caen dentro del rango de la barandilla.
+                if (b.distance <= startDistance || a.distance >= endDistance) continue;
 
-                Vector3 ca = baseA + a.up * height;
-                Vector3 cb = baseB + b.up * height;
+                // Recorta el tramo en los extremos exactos del rango.
+                float t0 = 0f;
+                float t1 = 1f;
+                if (a.distance < startDistance)
+                    t0 = Mathf.InverseLerp(a.distance, b.distance, startDistance);
+                if (b.distance > endDistance)
+                    t1 = Mathf.InverseLerp(a.distance, b.distance, endDistance);
+
+                Sample sa = LerpSample(a, b, t0);
+                Sample sb = LerpSample(a, b, t1);
+
+                Vector3 baseA = GetRailingBasePoint(sa, leftSide);
+                Vector3 baseB = GetRailingBasePoint(sb, leftSide);
+
+                Vector3 ca = baseA + sa.up * height;
+                Vector3 cb = baseB + sb.up * height;
 
                 // Esquinas de la sección cuadrada de la barra.
-                Vector3 aTL = ca - a.right * halfBar + a.up * halfBar;
-                Vector3 aTR = ca + a.right * halfBar + a.up * halfBar;
-                Vector3 aBL = ca - a.right * halfBar - a.up * halfBar;
-                Vector3 aBR = ca + a.right * halfBar - a.up * halfBar;
+                Vector3 aTL = ca - sa.right * halfBar + sa.up * halfBar;
+                Vector3 aTR = ca + sa.right * halfBar + sa.up * halfBar;
+                Vector3 aBL = ca - sa.right * halfBar - sa.up * halfBar;
+                Vector3 aBR = ca + sa.right * halfBar - sa.up * halfBar;
 
-                Vector3 bTL = cb - b.right * halfBar + b.up * halfBar;
-                Vector3 bTR = cb + b.right * halfBar + b.up * halfBar;
-                Vector3 bBL = cb - b.right * halfBar - b.up * halfBar;
-                Vector3 bBR = cb + b.right * halfBar - b.up * halfBar;
+                Vector3 bTL = cb - sb.right * halfBar + sb.up * halfBar;
+                Vector3 bTR = cb + sb.right * halfBar + sb.up * halfBar;
+                Vector3 bBL = cb - sb.right * halfBar - sb.up * halfBar;
+                Vector3 bBR = cb + sb.right * halfBar - sb.up * halfBar;
 
-                float ua = a.distance / structureUvTileSize;
-                float ub = b.distance / structureUvTileSize;
+                float ua = sa.distance / structureUvTileSize;
+                float ub = sb.distance / structureUvTileSize;
 
                 // Cara superior.
                 AddQuad(vertices, normals, uvs, indices,
-                    aTL, aTR, bTR, bTL, a.up,
+                    aTL, aTR, bTR, bTL, sa.up,
                     new Vector2(ua, 0f), new Vector2(ua, 1f), new Vector2(ub, 1f), new Vector2(ub, 0f));
 
                 // Cara inferior.
                 AddQuad(vertices, normals, uvs, indices,
-                    aBL, aBR, bBR, bBL, -a.up,
+                    aBL, aBR, bBR, bBL, -sa.up,
                     new Vector2(ua, 0f), new Vector2(ua, 1f), new Vector2(ub, 1f), new Vector2(ub, 0f));
 
                 // Cara interior.
                 AddQuad(vertices, normals, uvs, indices,
-                    aTL, aBL, bBL, bTL, -a.right,
+                    aTL, aBL, bBL, bTL, -sa.right,
                     new Vector2(ua, 0f), new Vector2(ua, 1f), new Vector2(ub, 1f), new Vector2(ub, 0f));
 
                 // Cara exterior.
                 AddQuad(vertices, normals, uvs, indices,
-                    aTR, aBR, bBR, bTR, a.right,
+                    aTR, aBR, bBR, bTR, sa.right,
                     new Vector2(ua, 0f), new Vector2(ua, 1f), new Vector2(ub, 1f), new Vector2(ub, 0f));
+            }
+
+            // Tapas en los extremos del rango para cerrar el tubo de la barra.
+            Sample startSample = SampleAtDistance(samples, startDistance);
+            Sample endSample = SampleAtDistance(samples, endDistance);
+            AddRailingBarCap(vertices, normals, uvs, indices, startSample, height, leftSide, -startSample.tangent);
+            AddRailingBarCap(vertices, normals, uvs, indices, endSample, height, leftSide, endSample.tangent);
+        }
+
+        // Postes: empiezan en el inicio del rango y se repiten hasta el final.
+        float postDistance = startDistance;
+        float lastPostDistance = float.NegativeInfinity;
+
+        while (postDistance <= endDistance + 0.001f)
+        {
+            Sample s = SampleAtDistance(samples, postDistance);
+            AddRailingPost(vertices, normals, uvs, indices, s, leftSide);
+            lastPostDistance = postDistance;
+            postDistance += railingPostSpacing;
+        }
+
+        // Asegura un poste en el extremo final si el último quedó muy lejos.
+        if (endDistance - lastPostDistance > railingPostSpacing * 0.5f)
+        {
+            Sample s = SampleAtDistance(samples, endDistance);
+            AddRailingPost(vertices, normals, uvs, indices, s, leftSide);
+        }
+    }
+
+    void AddRailingPost(List<Vector3> vertices, List<Vector3> normals, List<Vector2> uvs,
+                        List<int> indices, Sample s, bool leftSide)
+    {
+        Vector3 basePoint = GetRailingBasePoint(s, leftSide);
+        Vector3 center = basePoint + s.up * (railingHeight * 0.5f);
+        Vector3 size = new Vector3(railingPostThickness, railingHeight, railingPostThickness);
+
+        AddBox(vertices, normals, uvs, indices,
+            center, size, s.right, s.up, s.tangent, 1f);
+    }
+
+    /// <summary>
+    /// Punto base de la barandilla (donde nace el poste) para un lado de la vía.
+    /// Si <see cref="railingAtCurbEdge"/> está activo usa el borde exterior del bordillo;
+    /// si no, usa <see cref="railingDistanceFromAsphalt"/> medido desde el borde del asfalto.
+    /// </summary>
+    Vector3 GetRailingBasePoint(Sample s, bool leftSide)
+    {
+        return GetRailingBasePoint(s.center, s.right, s.up, leftSide);
+    }
+
+    /// <summary>
+    /// Punto base de la barandilla a partir del centro, el vector derecha y el arriba.
+    /// </summary>
+    Vector3 GetRailingBasePoint(Vector3 center, Vector3 right, Vector3 up, bool leftSide)
+    {
+        float halfRoad = roadWidth * 0.5f;
+        float lateralDistance = halfRoad +
+            (railingAtCurbEdge ? curbWidth : Mathf.Max(0f, railingDistanceFromAsphalt));
+
+        // Altura de la superficie del bordillo en esa distancia lateral.
+        // En el borde del asfalto la altura es 0; en el borde exterior baja curbHeight.
+        float curbOffset = lateralDistance - halfRoad;
+        float surfaceDrop = curbWidth > 0.001f
+            ? curbHeight * Mathf.Clamp01(curbOffset / curbWidth)
+            : curbHeight;
+
+        Vector3 lateral = leftSide ? -right : right;
+        return center + lateral * lateralDistance - up * surfaceDrop;
+    }
+
+    /// <summary>
+    /// Punto de la barandilla a una distancia del spline, para dibujar el gizmo.
+    /// </summary>
+    Vector3 GetRailingGizmoPoint(float distance, float length, bool leftSide)
+    {
+        float t = length > 0f ? Mathf.Clamp01(distance / length) : 0f;
+
+        Vector3 pos = splineContainer.EvaluatePosition(splineIndex, t);
+        Vector3 tangent = ((Vector3)splineContainer.EvaluateTangent(splineIndex, t)).normalized;
+        Vector3 up = ((Vector3)splineContainer.EvaluateUpVector(splineIndex, t)).normalized;
+        Vector3 right = Vector3.Cross(tangent, up).normalized;
+        if (right.sqrMagnitude < 0.0001f) right = Vector3.right;
+
+        Vector3 basePoint = GetRailingBasePoint(pos, right, up, leftSide);
+        return basePoint + up * (railingHeight + 0.3f);
+    }
+
+    /// <summary>
+    /// Tapa el extremo de una barra de la barandilla (el tubo cuadrado).
+    /// </summary>
+    void AddRailingBarCap(List<Vector3> vertices, List<Vector3> normals, List<Vector2> uvs,
+                          List<int> indices, Sample s, float height, bool leftSide, Vector3 normal)
+    {
+        float halfBar = railingBarThickness * 0.5f;
+
+        Vector3 basePoint = GetRailingBasePoint(s, leftSide);
+        Vector3 c = basePoint + s.up * height;
+
+        Vector3 tl = c - s.right * halfBar + s.up * halfBar;
+        Vector3 tr = c + s.right * halfBar + s.up * halfBar;
+        Vector3 bl = c - s.right * halfBar - s.up * halfBar;
+        Vector3 br = c + s.right * halfBar - s.up * halfBar;
+
+        AddQuad(vertices, normals, uvs, indices,
+            tl, tr, br, bl, normal,
+            new Vector2(0f, 1f), new Vector2(1f, 1f), new Vector2(1f, 0f), new Vector2(0f, 0f));
+    }
+
+    /// <summary>
+    /// Interpola dos muestras del spline (posición, orientación y distancia).
+    /// Se usa para recortar las barandillas exactamente en los extremos del rango.
+    /// </summary>
+    Sample LerpSample(Sample a, Sample b, float t)
+    {
+        t = Mathf.Clamp01(t);
+
+        return new Sample
+        {
+            center = Vector3.Lerp(a.center, b.center, t),
+            tangent = Vector3.Slerp(a.tangent, b.tangent, t).normalized,
+            up = Vector3.Slerp(a.up, b.up, t).normalized,
+            right = Vector3.Slerp(a.right, b.right, t).normalized,
+            leftEdge = Vector3.Lerp(a.leftEdge, b.leftEdge, t),
+            rightEdge = Vector3.Lerp(a.rightEdge, b.rightEdge, t),
+            leftCurb = Vector3.Lerp(a.leftCurb, b.leftCurb, t),
+            rightCurb = Vector3.Lerp(a.rightCurb, b.rightCurb, t),
+            leftBottom = Vector3.Lerp(a.leftBottom, b.leftBottom, t),
+            rightBottom = Vector3.Lerp(a.rightBottom, b.rightBottom, t),
+            distance = Mathf.Lerp(a.distance, b.distance, t),
+            t = Mathf.Lerp(a.t, b.t, t)
+        };
+    }
+
+    /// <summary>
+    /// Devuelve una muestra interpolada a una distancia concreta del spline.
+    /// </summary>
+    Sample SampleAtDistance(List<Sample> samples, float distance)
+    {
+        if (samples == null || samples.Count == 0) return default;
+
+        if (distance <= samples[0].distance) return samples[0];
+
+        for (int i = 0; i < samples.Count - 1; i++)
+        {
+            if (distance <= samples[i + 1].distance)
+            {
+                float t = Mathf.InverseLerp(samples[i].distance, samples[i + 1].distance, distance);
+                return LerpSample(samples[i], samples[i + 1], t);
             }
         }
 
-        // Postes.
-        float nextPostDistance = 0f;
-        foreach (Sample s in samples)
-        {
-            if (s.distance < nextPostDistance) continue;
-            nextPostDistance += railingPostSpacing;
-
-            Vector3 basePoint = leftSide ? s.leftCurb : s.rightCurb;
-            Vector3 center = basePoint + s.up * (railingHeight * 0.5f);
-            Vector3 size = new Vector3(railingPostThickness, railingHeight, railingPostThickness);
-
-            AddBox(vertices, normals, uvs, indices,
-                center, size, s.right, s.up, s.tangent, 1f);
-        }
+        return samples[samples.Count - 1];
     }
 
     void AddPiers(List<Vector3> vertices, List<Vector3> normals, List<Vector2> uvs,
@@ -544,7 +767,7 @@ public class SplineRoadBuilder : MonoBehaviour
         Vector3 forward = Vector3.Cross(rightH, Vector3.up).normalized;
 
         AddBox(vertices, normals, uvs, indices,
-            center, size, rightH, Vector3.up, forward, structureUvTileSize);
+            center, size, rightH, Vector3.up, forward, pierUvTileSize);
     }
 
     /// <summary>

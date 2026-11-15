@@ -66,7 +66,8 @@ public class BusStop : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out BusMotor m))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player") &&
+            other.GetComponentInParent<BusMotor>() is BusMotor m)
         {
             bus = m;
             timer = 0f;
@@ -76,7 +77,8 @@ public class BusStop : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent(out BusMotor m) && m == bus)
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player") &&
+            other.GetComponentInParent<BusMotor>() is BusMotor m && m == bus)
         {
             bus = null;
             timer = 0f;
