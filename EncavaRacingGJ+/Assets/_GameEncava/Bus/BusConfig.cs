@@ -76,6 +76,16 @@ public class BusConfig : ScriptableObject
     [Tooltip("Tiempo de invulnerabilidad tras un choque en segundos.")]
     public float invulnerability = 1.2f;
 
+    [Header("Auto-righting (enderezamiento automático)")]
+    [Tooltip("Ángulo de inclinación mínimo (grados) entre el eje vertical del bus y el mundo para considerar que está volcado.")]
+    public float rightingAngleThreshold = 50f;
+    [Tooltip("Velocidad máxima (m/s) a la que se permite el enderezamiento automático. Debe estar detenido o casi.")]
+    public float rightingMaxSpeed = 1f;
+    [Tooltip("Velocidad de enderezamiento en grados por segundo.")]
+    public float rightingSpeed = 70f;
+    [Tooltip("Distancia máxima (m) hacia abajo del bus para considerar que hay suelo y puede enderezarse.")]
+    public float rightingMaxGroundDistance = 2.5f;
+
     [Header("Cuerpo (visual)")]
     [Tooltip("Grados de inclinación lateral (roll) generados por cada m/s² de aceleración lateral.")]
     public float rollPerAccel = 0.6f;

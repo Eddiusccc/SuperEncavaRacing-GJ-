@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b7de1784b33204abe2bb2b26da0b5d, type: 3}
   m_Name: BusConfig
   m_EditorClassIdentifier: GameEncava::BusConfig
-  maxSpeed: 25
+  maxSpeed: 20
   boostSpeed: 38
-  acceleration: 10
+  acceleration: 8
   brakeDeceleration: 30
   coastDeceleration: 3
   reverseSpeed: 8
-  reverseAcceleration: 6
-  boostDuration: 1.5
+  reverseAcceleration: 8
+  boostDuration: 2
   boostCooldown: 4
   accelerationBySpeed:
     serializedVersion: 2
@@ -35,7 +35,7 @@ MonoBehaviour:
       outWeight: 0
     - serializedVersion: 3
       time: 0.6
-      value: 0.55
+      value: 0.80904764
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -43,8 +43,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 0.15
+      time: 1.0166626
+      value: 0.35440674
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -55,14 +55,18 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   wheelBase: 5.5
-  maxSteerAngle: 28
+  maxSteerAngle: 32
   maxSteerAngleAtTopSpeed: 7
-  steerAngleRate: 60
+  steerAngleRate: 85
   steerReturnRate: 90
-  gripAcceleration: 40
-  yawResponse: 6
-  terrainAlignSpeed: 10
+  gripAcceleration: 25
+  yawResponse: 9
+  terrainAlignSpeed: 30
   crashImpactThreshold: 6
   invulnerability: 1.2
+  rightingAngleThreshold: 50
+  rightingMaxSpeed: 1
+  rightingSpeed: 70
+  rightingMaxGroundDistance: 2.5
   rollPerAccel: 0.6
   pitchPerAccel: 0.4

@@ -162,7 +162,18 @@ public class BusMotor : MonoBehaviour
             float accel = Stats.Get(StatType.Acceleration, config.acceleration)
                           * config.accelerationBySpeed.Evaluate(ratio);
 
-            float throttle = input.Move.y;
+            float throttle = 0f;
+            if (input.MoveFromGamepad)
+            {
+                // En mando: A acelera, B frena/reversa. El stick Y no afecta la velocidad.
+                if (input.IsAccelerating) throttle = 1f;
+                else if (input.IsBraking) throttle = -1f;
+            }
+            else
+            {
+                // En teclado: W acelera, S frena/reversa (eje Y de Move).
+                throttle = input.Move.y;
+            }
             float brakeDecel = config.brakeDeceleration * Stats.Get(StatType.BrakeForce, 1f);
             if (speed > max)
                 speed = Mathf.MoveTowards(speed, max, config.coastDeceleration * 2f * dt);
@@ -240,6 +251,20 @@ public class BusMotor : MonoBehaviour
         {
             lastPublished = shown;
             EventBus.Publish(new BusSpeedChanged(shown, normalMax));
+        }
+
+        // ----- 5) Auto-righting: enderezar el bus si queda volcado y detenido -----
+        float tiltAngle = Vector3.Angle(transform.up, Vector3.up);
+        if (tiltAngle > config.rightingAngleThreshold && Mathf.Abs(speed) < config.rightingMaxSpeed)
+        {
+            // Solo enderezar si hay suelo "debajo" del bus (hacia su eje down local)
+            if (Physics.Raycast(transform.position, -transform.up, out RaycastHit _, config.rightingMaxGroundDistance, ~0))
+            {
+                float yaw = rb.rotation.eulerAngles.y;
+                Quaternion target = Quaternion.Euler(0f, yaw, 0f);
+                rb.rotation = Quaternion.RotateTowards(rb.rotation, target, config.rightingSpeed * dt);
+                rb.angularVelocity = Vector3.zero;
+            }
         }
     }
 

@@ -28,12 +28,25 @@ namespace Framework.Input
         public event Action InteractPressed;
         public event Action PausePressed;
 
+        // Eventos de aceleración y frenado (botones A / B en mando, W / S en teclado como respaldo)
+        public event Action AcceleratePressed;
+        public event Action AccelerateReleased;
+        public event Action BrakePressed;
+        public event Action BrakeReleased;
+
         // Eventos NO Implementados
         public event Action AttackPressed;
         public event Action CrouchPresed;
         public event Action PreviousPressed;
         public event Action NextPressed;
         public bool GameplayEnable => controls != null && controls.Gameplay.enabled;
+
+        /// <summary>Indica si la última entrada de Move vino de un gamepad (stick izquierdo).</summary>
+        public bool MoveFromGamepad { get; private set; }
+        /// <summary>Indica si el botón de acelerar está presionado (A en mando / Space en teclado).</summary>
+        public bool IsAccelerating { get; private set; }
+        /// <summary>Indica si el botón de freno está presionado (B en mando / C en teclado).</summary>
+        public bool IsBraking { get; private set; }
 
         void OnEnable()
         {
@@ -78,7 +91,11 @@ namespace Framework.Input
         /// Procesa movimiento
         /// </summary>
         /// <param name="ctx"></param>
-        public void OnMove(InputAction.CallbackContext ctx) => Move = ctx.ReadValue<Vector2>();
+        public void OnMove(InputAction.CallbackContext ctx)
+        {
+            Move = ctx.ReadValue<Vector2>();
+            MoveFromGamepad = ctx.control != null && ctx.control.device is Gamepad;
+        }
 
         /// <summary>
         /// Procesa mirada
@@ -100,11 +117,15 @@ namespace Framework.Input
             {
                 JumpHeld = true;
                 JumpPressed?.Invoke();
+                IsAccelerating = true;
+                AcceleratePressed?.Invoke();
             }
             else if (ctx.canceled)
             {
                 JumpHeld = false;
                 JumpReleased?.Invoke();
+                IsAccelerating = false;
+                AccelerateReleased?.Invoke();
             }
         }
 
@@ -123,8 +144,19 @@ namespace Framework.Input
         /// <param name="ctx"></param>
         public void OnCrouch(InputAction.CallbackContext ctx)
         {
-            if (ctx.started) { CrouchHeld = true; CrouchPresed?.Invoke(); }
-            else if (ctx.canceled) { CrouchHeld = false; }
+            if (ctx.started)
+            {
+                CrouchHeld = true;
+                CrouchPresed?.Invoke();
+                IsBraking = true;
+                BrakePressed?.Invoke();
+            }
+            else if (ctx.canceled)
+            {
+                CrouchHeld = false;
+                IsBraking = false;
+                BrakeReleased?.Invoke();
+            }
         }
 
         /// <summary>

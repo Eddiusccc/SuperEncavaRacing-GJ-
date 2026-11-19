@@ -159,4 +159,10 @@ public class ReputationService : MonoBehaviour, ISaveable
             }
         }
     }
+
+    public void Reset()
+    {
+        stopLevels.Clear();
+        reputationPoints.Clear();
+    }
 }

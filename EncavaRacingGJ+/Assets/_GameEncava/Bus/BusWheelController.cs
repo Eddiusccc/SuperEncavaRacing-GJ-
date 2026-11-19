@@ -77,11 +77,7 @@ public class BusWheelController : MonoBehaviour
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.centerOfMass = centerOfMass ? centerOfMass.localPosition : new Vector3(0, -0.6f, 0);
-        rb.interpolation = RigidbodyInterpolation.Interpolate;
-        rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
-        rb.constraints = RigidbodyConstraints.FreezeRotationZ;
+        
 
         if (input != null)
             input.DashPressed += OnBoostPressed;
